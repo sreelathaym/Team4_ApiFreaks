@@ -115,7 +115,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"ContactNumber\": \"123456778\",\r\n  \"DateOfBirth\": \"gh69\",\r\n  \"Education\": \"Master\",\r\n  \"Email\": \"vidhya@gmail.com\",\r\n  \"Firstname\": \"Sri\",\r\n  \"HospitalCity\": \"\",\r\n  \"HospitalName\": \"hospital3\",\r\n  \"HospitalPincode\": \"097891\",\r\n  \"HospitalStreet\": \"hospitalst\",\r\n  \"Lastname\": \"Vidhya \"\r\n \r\n}\r\n",
+							"raw": "{\r\n  \"ContactNumber\": {{contactnumber}},\r\n  \"DateOfBirth\": {{Dateofbirth}},\r\n  \"Education\": {{education}},\r\n  \"Email\": {{email}},\r\n  \"Firstname\": {{firstname}},\r\n  \"HospitalCity\": {{hospitalcity}},\r\n  \"HospitalName\": {{hospitalname}},\r\n  \"HospitalPincode\": {{hospitalpincode}},\r\n  \"HospitalStreet\": {{hospitalstreet}},\r\n  \"Lastname\": {{lastname}}\r\n \r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
