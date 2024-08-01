@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "9512de91-be73-40e3-b455-d47b501eceb3",
+		"name": "Team4_Dietician",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Login",
+			"item": [
+				{
+					"name": "Logout",
+					"id": "8d89e839-ba61-47c4-b88d-507d0b3270fc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{baseurl}}/logoutdietician"
+					},
+					"response": []
+				},
+				{
+					"name": "User Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "64690d36-a955-41dd-9953-b95939376798",
+								"exec": [
+									"\r",
+									"\r",
+									"    pm.environment.set(\"Validtoken\",pm.response.json().token);\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "1770af99-cbdf-4f37-8f42-30b5edf2fe75",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Validtoken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"password\": \"test\",\r\n  \"userLoginEmail\": \"Team4@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/login"
+					},
+					"response": []
+				}
+			],
+			"id": "311b02f6-5c71-4bf8-a550-ae3e75b25613"
+		},
+		{
+			"name": "Dietician",
+			"item": [
+				{
+					"name": "Get All Dietician",
+					"id": "c0f5ed39-4cf3-407a-a971-360cae5de4c7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{baseurl}}/dietician"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Dietician",
+					"id": "de020b4c-9730-44f2-a046-caa650df3269",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"ContactNumber\": \"1234567890\",\r\n  \"DateOfBirth\": \"2024-07-26\",\r\n  \"Education\": \"Master\",\r\n  \"Email\": \"vidhya@gmail.com\",\r\n  \"Firstname\": \"Sri\",\r\n  \"HospitalCity\": \"\",\r\n  \"HospitalName\": \"hospital3\",\r\n  \"HospitalPincode\": \"097891\",\r\n  \"HospitalStreet\": \"hospitalst\",\r\n  \"Lastname\": \"vidhya\"\r\n \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/dietician"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Dietician",
+					"id": "c590d9c3-1161-4046-8fe7-cf67b53bf747",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Validtoken}}"
+							}
+						},
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get By ID",
+					"id": "731972a3-e516-49e2-848a-b5715ab16ca3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Validtoken}}"
+							}
+						},
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Delete By ID",
+					"id": "c68b884c-282c-44c1-a1f4-cf339acfd3ec",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Validtoken}}"
+							}
+						},
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "4312bc53-de6b-462c-815a-ba774278af50"
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "{{Validtoken}}"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "df902a2c-b2b3-4521-ae38-838e7d6dc6b7",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "96b3e0c7-9684-4f77-b7fe-1e30fe2dd407",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "baseurl",
+			"value": "https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician",
+			"type": "string"
+		}
+	]
+}
