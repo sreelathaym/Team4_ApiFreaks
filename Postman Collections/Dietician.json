@@ -154,11 +154,12 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{Validtoken}}"
+								"token": "{{token}}"
 							}
 						},
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "{{baseurl}}/dietician/365"
 					},
 					"response": []
 				},
@@ -172,11 +173,12 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{Validtoken}}"
+								"token": "{{token}}"
 							}
 						},
 						"method": "DELETE",
-						"header": []
+						"header": [],
+						"url": "{{baseurl}}/dietician/365"
 					},
 					"response": []
 				}
