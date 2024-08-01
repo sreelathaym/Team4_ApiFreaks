@@ -196,7 +196,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "08a1b575-3d31-4f97-906d-5900416e8147",
+				"id": "071f85cf-5f77-415b-bdc1-926c7010c92c",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -207,7 +207,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "ad310db0-d603-4052-ad4f-246e46d1e612",
+				"id": "72687d41-83e0-4069-a03f-b54208ad8f44",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -225,6 +225,56 @@
 		{
 			"key": "baseurl",
 			"value": "https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician",
+			"type": "string"
+		},
+		{
+			"key": "contactnumber",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "Dateofbirth",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "education",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "email",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "firstname",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "hospitalcity",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "hospitalname",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "hospitalpincode",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "hospitalstreet",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "lastname",
+			"value": "",
 			"type": "string"
 		}
 	]
