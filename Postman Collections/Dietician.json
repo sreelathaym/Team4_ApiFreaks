@@ -100,6 +100,58 @@
 				},
 				{
 					"name": "Create Dietician",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bd4cbc14-6622-48f5-a60e-bbb085ed13bf",
+								"exec": [
+									"var responseData=pm.response.json();\r",
+									"//var userId=responseData.user_id;\r",
+									"//pm.environment.set(\"userId\",userId);\r",
+									"\r",
+									"\r",
+									"\r",
+									"var userFirstName= responseData.user_first_name;\r",
+									"pm.environment.set(\"userFirstName\",userFirstName);\r",
+									"\r",
+									"var creation_time=responseData.creation_time;\r",
+									"pm.environment.set(\"creation_time\",creation_time);\r",
+									"\r",
+									"var last_mod_time=responseData.last_mod_time;\r",
+									"pm.environment.set(\"last_mod_time\",last_mod_time);\r",
+									"\r",
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([201,202]);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Verifying the status line\", function () {\r",
+									"    pm.response.to.have.status(\"Created\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifying the data of response body \", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"user_id\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Verifying the Header\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\", \"application/json\");\r",
+									"});\r",
+									"pm.test(\"Response time is less than 600ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(600);\r",
+									"});\r",
+									"pm.test(\"Response body is valid JSON\", function () {\r",
+									"    pm.response.to.be.json;\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "de020b4c-9730-44f2-a046-caa650df3269",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
