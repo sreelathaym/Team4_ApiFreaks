@@ -194,7 +194,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "df902a2c-b2b3-4521-ae38-838e7d6dc6b7",
+				"id": "577e2a31-de44-48ac-8aba-b782ee6ea6dc",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -205,7 +205,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "96b3e0c7-9684-4f77-b7fe-1e30fe2dd407",
+				"id": "9994c560-1974-48a0-bb75-f21c3b22afff",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -217,7 +217,7 @@
 	"variable": [
 		{
 			"key": "token",
-			"value": "",
+			"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJUZWFtNEBnbWFpbC5jb20iLCJpYXQiOjE3MjI1MjM5MTYsImV4cCI6MTcyMjU1MjcxNn0.WeiYu0Hx9uApruyJ6kyNKyIpYirhBqD3zoM03-dd3fx2OOtcmffAxnnmXdY7ev2uNLKTj5tSioLZHXpeerkaew",
 			"type": "string"
 		},
 		{
