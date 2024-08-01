@@ -111,8 +111,12 @@
 									"});\r",
 									"pm.test(\"Status code\", function () {\r",
 									"  \r",
-									"    pm.response.to.have.status(pm.iterationData['statuscode']);\r",
-									"});"
+									"    pm.expect(pm.response.status).to.eql(pm.iterationData['statuscode'])\r",
+									"});\r",
+									"\r",
+									"// pm.test(\"Status code is 200\", function () {\r",
+									"//     pm.response.to.have.status(200);\r",
+									"// });"
 								],
 								"type": "text/javascript",
 								"packages": {}
