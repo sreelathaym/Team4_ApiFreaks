@@ -109,8 +109,9 @@
 									"pm.test(\"Content-Type is present\", function () {\r",
 									"    pm.response.to.have.header(\"Content-Type\");\r",
 									"});\r",
-									"pm.test(\"Status code is 400\", function () {\r",
-									"    pm.response.to.have.status(400);\r",
+									"pm.test(\"Status code\", function () {\r",
+									"  \r",
+									"    pm.response.to.have.status(pm.iterationData['statuscode']);\r",
 									"});"
 								],
 								"type": "text/javascript",
