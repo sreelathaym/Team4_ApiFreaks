@@ -115,9 +115,8 @@
 							"script": {
 								"id": "bd4cbc14-6622-48f5-a60e-bbb085ed13bf",
 								"exec": [
-									"if(pm.iterationData.get('Request')!== \"CreateRequest\")\r",
-									"{\r",
-									"\r",
+									"if (pm.iterationData.get(\"Request\") !== 'CreateUser') {\r",
+									"    pm.execution.skipRequest();\r",
 									"}\r",
 									"\r",
 									"pm.test(\"Content-Type is present\", function () {\r",
@@ -130,7 +129,9 @@
 									"\r",
 									"pm.test(\"Status code\", function () {\r",
 									"    pm.response.to.have.status(pm.collectionVariables.get(\"statuscode\"));\r",
-									"});"
+									"});\r",
+									"\r",
+									""
 								],
 								"type": "text/javascript",
 								"packages": {}
