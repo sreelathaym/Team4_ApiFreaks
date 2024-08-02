@@ -740,6 +740,25 @@
 						"url": "{{base_URL}}/morbidity"
 					},
 					"response": []
+				},
+				{
+					"name": "Morbidities with invalid dietician bearer token and invalid End point",
+					"id": "8b0517bc-4d15-4a88-8e44-bebea1a63f75",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJUZWFtNEBnbWFpbC5jb20iLCJpYXQiOjE3MjI2MjE4ODIsImV4cCI6MTcyMjY1MDY4Mn0.tntmQ9i9uPNGEesMN_M7_FEz2Keub5IcadCzj5hSbBk0F4SGB80Sh4PJDcBbKKAvXB-7Z0cmalCQ6dnlENG"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/morbi"
+					},
+					"response": []
 				}
 			],
 			"id": "63eadd0b-84d2-47a1-9f83-f26f1d7e107f"
