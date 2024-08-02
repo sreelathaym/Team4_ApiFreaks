@@ -867,6 +867,18 @@
 						"header": []
 					},
 					"response": []
+				},
+				{
+					"name": "DieticianLogin",
+					"id": "f5181101-ac39-470f-9ecb-1bd53d03aa3f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "76a595f1-6075-403b-9569-eb87b5cda9ce"
