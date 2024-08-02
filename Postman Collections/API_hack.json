@@ -911,7 +911,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n \"password\": {{dieticianPsw}},\n \"userLoginEmail\": {{dieticianEmail}}\n}\n",
+							"raw": "{\n  \"password\": \"{{dieticianPsw}}\",\n  \"userLoginEmail\": \"{{dieticianEmail}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
