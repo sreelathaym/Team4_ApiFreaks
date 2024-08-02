@@ -685,7 +685,7 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Morbidities with valid Admin bearer token and valid End point",
 					"id": "e754616c-9561-4c60-9a49-bbb8d27d9955",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
