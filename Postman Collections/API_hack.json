@@ -1,0 +1,810 @@
+{
+	"info": {
+		"_postman_id": "e90aca48-5c27-40ef-8616-d3c6ee42c6d2",
+		"name": "Team4_ApiFreaks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "UserModule",
+			"item": [
+				{
+					"name": "UserloginWithvalidEndpoint",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d0f80eff-ad62-4f09-b844-d07c880a9f8b",
+								"exec": [
+									"let resp = pm.response.json();\r",
+									"pm.collectionVariables.set(\"Admin_Token\", resp.token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "0bef3515-1090-4a87-89ac-688545fca8f2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"test\",\r\n    \"userLoginEmail\": \"Team4@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_URL}}/login"
+					},
+					"response": []
+				},
+				{
+					"name": "UserloginWithinvalidEndpoint",
+					"id": "ba858357-5a7b-4527-a310-ee32a3f2f43b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"test\",\r\n    \"userLoginEmail\": \"Team4@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_URL}}/login123"
+					},
+					"response": []
+				},
+				{
+					"name": "UserloginWithInvalidCred",
+					"id": "faf6b330-a2b8-41da-9d78-402bbf7e225f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"abcd123\",\r\n    \"userLoginEmail\": \"xyz456@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_URL}}/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Logoutwithvalidendpoint",
+					"id": "2cb2551c-8cdb-4645-a6e5-30ba2fc8e988",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/logoutdietician"
+					},
+					"response": []
+				},
+				{
+					"name": "Logoutwithinvalidendpoint",
+					"id": "c664ea98-e140-49d6-8866-88ff38d87664",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/logoutdietician123"
+					},
+					"response": []
+				},
+				{
+					"name": "LogoutwithNoAuth",
+					"id": "5cbdb153-832f-4e89-826e-4dae09f4da1d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/logoutdietician"
+					},
+					"response": []
+				}
+			],
+			"id": "6b9bd3d0-9211-44e3-9d98-4927016f0963"
+		},
+		{
+			"name": "Dietician",
+			"item": [
+				{
+					"name": "GetallDietcianinfo",
+					"id": "a15bb1e6-62dd-4424-8a23-a00136223659",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/dietician"
+					},
+					"response": []
+				},
+				{
+					"name": "GetallDieticianInvalidEndpoint",
+					"id": "c74a4707-0a10-4766-b86d-644609f64c5e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/dietician123"
+					},
+					"response": []
+				},
+				{
+					"name": "GetallDieticianInvalidBaseURI",
+					"id": "9cbf65f6-4a6b-4fab-8a5d-0d40c0fa6faa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "https://dietician1-dec1-api-hackathon-80f2590665cc.herokuapp.com/dietician/dietician"
+					},
+					"response": []
+				},
+				{
+					"name": "GetallDieticianNoAuth",
+					"id": "a159f603-de53-4533-8873-e86f74571d8f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/dietician"
+					},
+					"response": []
+				},
+				{
+					"name": "GetDietcianinfoByValidID",
+					"id": "61a7ed2e-cae8-414d-9106-686a1269daa3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/dietician/{{dietician_id}}"
+					},
+					"response": []
+				},
+				{
+					"name": "GetDieticianByInvalidID",
+					"id": "aa736f16-7931-45df-8ae6-972c68420573",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/dietician/{25665567}"
+					},
+					"response": []
+				},
+				{
+					"name": "GetDieticianByInvalidEndpoint",
+					"id": "27710a1c-a9b6-4fdd-b37a-c1edf66309e6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/{{dietician_id}}"
+					},
+					"response": []
+				},
+				{
+					"name": "GetDieticianByNoAuth",
+					"id": "fb268134-25d5-4a18-a8ba-cbfdbb035ac9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/{{dietician_id}}"
+					},
+					"response": []
+				},
+				{
+					"name": "DeletedieticanByVldID",
+					"id": "abc139b1-06b6-40d0-800c-9ba1ccac2efe",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_URL}}/dietician/{{dietician_id}}}"
+					},
+					"response": []
+				},
+				{
+					"name": "DeletedieticanByInvdID",
+					"id": "991c95e1-96ed-44ee-ab1e-abe78b611eac",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_URL}}/dietician/{{132187}}}"
+					},
+					"response": []
+				},
+				{
+					"name": "DeletedieticanByNoAuth",
+					"id": "aa68ee76-6657-48c3-96e5-e2f75a4b78c2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_URL}}/dietician/{{dietician_id}}"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "5c1634cc-d140-4001-8b82-bcfae82a2004",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Create Dietician",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f4ca442d-8e35-488a-8175-1537189fce0d",
+								"exec": [
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"// pm.test(\"Status code\", function () {\r",
+									"  \r",
+									"//     pm.expect(pm.response.status).to.eql(pm.iterationData['statuscode'])\r",
+									"// });\r",
+									"\r",
+									"pm.test(\"Status code\", function () {\r",
+									"    pm.response.to.have.status(pm.collectionVariables.get(\"statuscode\"));\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "5b4459cc-18af-4817-b3fa-cb0d2835621f",
+								"exec": [
+									"pm.collectionVariables.set(\"statuscode\", pm.iterationData.get('statuscode'));\r",
+									"let statuscode1 = pm.collectionVariables.get(\"statuscode\");\r",
+									"console.log(statuscode1);\r",
+									"\r",
+									"if (pm.iterationData.get(\"Request\") !== 'CreateRequest') {\r",
+									"    pm.execution.skipRequest();\r",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "ad2cf518-7360-4663-ba0b-ac52644227cf",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"ContactNumber\": \"{{contactnumber}}\",\r\n  \"DateOfBirth\": \"{{Dateofbirth}}\",\r\n  \"Education\": \"{{education}}\",\r\n  \"Email\": \"{{email}}\",\r\n  \"Firstname\": \"{{firstname}}\",\r\n  \"HospitalCity\":\" {{hospitalcity}}\",\r\n  \"HospitalName\": \"{{hospitalname}}\",\r\n  \"HospitalPincode\": \"{{hospitalpincode}}\",\r\n  \"HospitalStreet\":\"{{hospitalstreet}}\",\r\n  \"Lastname\": \"{{lastname}}\"\r\n\r\n}\r\n\r\n// {\r\n//   \"ContactNumber\": \"7678687675\",\r\n//   \"DateOfBirth\": \"1985-06-21T00:00:00.000+00:00\",\r\n//   \"Education\": \"edu1\",\r\n//   \"Email\": \"vidhya@gmail.com\",\r\n//   \"Firstname\": \"Sri\",\r\n//   \"HospitalCity\": \"hoscit\",\r\n//   \"HospitalName\": \"hosnam\",\r\n//   \"HospitalPincode\": \"896879\",\r\n//   \"HospitalStreet\": \"hosstr\",\r\n//   \"Lastname\": \"vidhya\"\r\n\r\n// }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_URL}}/dietician"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Dietician",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "0bc97771-a44d-41e6-8223-3230175e1671",
+								"exec": [
+									"pm.collectionVariables.set(\"statuscode\", pm.iterationData.get('statuscode'));\r",
+									"let statuscode1 = pm.collectionVariables.get(\"statuscode\");\r",
+									"console.log(statuscode1);\r",
+									"\r",
+									"if (pm.iterationData.get(\"Request\") !== 'UpdateRequest') {\r",
+									"    pm.execution.skipRequest();\r",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "9930ae85-9889-442f-8edf-db5e33873f0f",
+								"exec": [
+									"\r",
+									"\r",
+									"pm.test(\"Status code\", function () {\r",
+									"    pm.response.to.have.status(pm.collectionVariables.get(\"statuscode\"));\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "9b87989e-9e5b-4f6e-be96-0b349666d6f0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"id\": \"{{dieticianid}}\",\r\n  \"ContactNumber\": \"{{contactnumber}}\",\r\n  \"DateOfBirth\": \"{{Dateofbirth}}\",\r\n  \"Education\": \"{{education}}\",\r\n  \"Email\": \"{{email}}\",\r\n  \"Firstname\": \"{{firstname}}\",\r\n  \"HospitalCity\":\" {{hospitalcity}}\",\r\n  \"HospitalName\": \"{{hospitalname}}\",\r\n  \"HospitalPincode\": \"{{hospitalpincode}}\",\r\n  \"HospitalStreet\":\"{{hospitalstreet}}\",\r\n  \"Lastname\": \"{{lastname}}\"\r\n \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_URL}}/dietician/{{dieticianid}}"
+					},
+					"response": []
+				}
+			],
+			"id": "8743a1e3-504f-4e46-b409-678331ee8f67"
+		},
+		{
+			"name": "Morbidity",
+			"item": [
+				{
+					"name": "Get all Morbidities",
+					"id": "011bbad4-f72f-4c7a-92c2-e4f9fe37c560",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/morbidity"
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Morbidity condition by Test name(Fasting Glucose)",
+					"id": "4b9295a6-f5c9-492e-8f21-1bf5d3f1ce88",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/morbidity/Fasting Glucose"
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Morbidity condition by Test name(Average Glucose)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e87022e8-eb5b-4d79-9ac2-18ebea33886a",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {",
+									"  pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response is in JSON format\", function () {",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response time is within acceptable range\", function () {",
+									"  pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"",
+									"",
+									"pm.test(\"MorbidityId is present and is a non-negative integer\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('array');",
+									"    responseData.forEach(function(item) {",
+									"        pm.expect(item.morbidityId).to.exist;",
+									"        pm.expect(item.morbidityId).to.be.a('number');",
+									"       // pm.expect(item.morbidityId).to.satisfy((val) => val >= 121, \"mim value\");",
+									"        pm.expect(item.morbidityMarkerMinVal).to.be.a(121);",
+									"         //pm.expect(item.morbidityId).to.satisfy((val) => val <= 150, \"max value\");",
+									"    });",
+									"});",
+									"",
+									"",
+									"pm.test(\"Morbidity test ID is a non-empty string\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    responseData.forEach(function(item) {",
+									"        pm.expect(item.morbidityTestId).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Morbidity test ID should not be empty\");",
+									"    });",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "90c5ab08-e33f-4be6-844a-427bd651bb47",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/morbidity/Average Glucose"
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Morbidity condition by Test name(Plasma Glucose)",
+					"id": "a8f0bcfc-f67d-470f-aa16-3f0543883063",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/morbidity/Plasma Glucose"
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Morbidity condition by Test name(Thyroid/TSH)",
+					"id": "18288117-188a-42e4-b4f8-d353d2c08e1f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/morbidity/TSH"
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Morbidity condition by Test name(Thyroid/T3)",
+					"id": "dd96c12c-654b-44ee-a36a-bd907ee17b7d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/morbidity/T3"
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Morbidity condition by Test name(Thyroid/T4)",
+					"id": "df321cb3-2048-468c-9994-766d30d101b6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/morbidity/T4"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "e754616c-9561-4c60-9a49-bbb8d27d9955",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJUZWFtNEBnbWFpbC5jb20iLCJpYXQiOjE3MjI2MjE4ODIsImV4cCI6MTcyMjY1MDY4Mn0.tntmQ9i9uPNGEesMN_M7_FEz2Keub5IcadCzj5hSbBk0F4SGB80Sh4PJDcBbKKAvXB-7Z0cmalCQ6dnlENGNOg"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/morbidity"
+					},
+					"response": []
+				}
+			],
+			"id": "63eadd0b-84d2-47a1-9f83-f26f1d7e107f"
+		},
+		{
+			"name": "Patient_v2",
+			"item": [],
+			"id": "76a595f1-6075-403b-9569-eb87b5cda9ce"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "73ae09ae-f413-448e-9ba0-8d6360a9378c",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "f10adf07-df3e-40b7-83a5-7aea4430f9f7",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Admin_Token",
+			"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJUZWFtNEBnbWFpbC5jb20iLCJpYXQiOjE3MjI1NzUwODEsImV4cCI6MTcyMjYwMzg4MX0.fzLWA5FHOwD4-ffaSWgp_AHfGxYyVc9Rsfi3OBY-b2_Enk2yU5ooQicSMEAG7EoQmEag4PhJpT4jjp3r3fdTig"
+		},
+		{
+			"key": "base_URL",
+			"value": "https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician",
+			"type": "string"
+		},
+		{
+			"key": "contactnumber",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "Dateofbirth",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "education",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "email",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "firstname",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "hospitalcity",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "hospitalname",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "hospitalpincode",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "hospitalstreet",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "lastname",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "statuscode",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "dieticianid",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
