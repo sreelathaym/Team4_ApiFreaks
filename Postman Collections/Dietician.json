@@ -218,7 +218,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n   \"id\": \"{{dieticianid}}\",\r\n  \"ContactNumber\": \"{{updatecontactnumber}}\",\r\n  \"DateOfBirth\": \"{{updateDateofbirth}}\",\r\n  \"Education\": \"{{updateeducation}}\",\r\n  \"Email\": \"{{updateemail}}\",\r\n  \"Firstname\": \"{{updatefirstname}}\",\r\n  \"HospitalCity\":\" {{updatehospitalcity}}\",\r\n  \"HospitalName\": \"{{updatehospitalname}}\",\r\n  \"HospitalPincode\": \"{{updatehospitalpincode}}\",\r\n  \"HospitalStreet\":\"{{updatehospitalstreet}}\",\r\n  \"Lastname\": \"{{updatelastname}}\"\r\n \r\n}",
+							"raw": "{\r\n   \"id\": \"{{dieticianid}}\",\r\n  \"ContactNumber\": \"{{updatecontactnumber}}\",\r\n  \"DateOfBirth\": \"{{updateDateofbirth}}\",\r\n  \"Education\": \"{{updateeducation}}\",\r\n  \"Email\": \"{{updateemail}}\",\r\n  \"Firstname\": \"{{updatefirstname}}\",\r\n  \"HospitalCity\":\"{{updatehospitalcity}}\",\r\n  \"HospitalName\": \"{{updatehospitalname}}\",\r\n  \"HospitalPincode\": \"{{updatehospitalpincode}}\",\r\n  \"HospitalStreet\":\"{{updatehospitalstreet}}\",\r\n  \"Lastname\": \"{{updatelastname}}\"\r\n \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
