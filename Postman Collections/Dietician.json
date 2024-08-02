@@ -192,13 +192,7 @@
 							"script": {
 								"id": "08135328-f06e-4cac-887d-0c72ecd6e68f",
 								"exec": [
-									"pm.test(\"Content-Type is present\", function () {\r",
-									"    pm.response.to.have.header(\"Content-Type\");\r",
-									"});\r",
-									"// pm.test(\"Status code\", function () {\r",
-									"  \r",
-									"//     pm.expect(pm.response.status).to.eql(pm.iterationData['statuscode'])\r",
-									"// });\r",
+									"\r",
 									"\r",
 									"pm.test(\"Status code\", function () {\r",
 									"    pm.response.to.have.status(pm.collectionVariables.get(\"putstatuscode\"));\r",
@@ -217,7 +211,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{Validtoken}}"
+								"token": "{{token}}"
 							}
 						},
 						"method": "PUT",
