@@ -115,6 +115,11 @@
 							"script": {
 								"id": "bd4cbc14-6622-48f5-a60e-bbb085ed13bf",
 								"exec": [
+									"if(pm.iterationData.get('Request')!== \"CreateRequest\")\r",
+									"{\r",
+									"\r",
+									"}\r",
+									"\r",
 									"pm.test(\"Content-Type is present\", function () {\r",
 									"    pm.response.to.have.header(\"Content-Type\");\r",
 									"});\r",
@@ -136,9 +141,9 @@
 							"script": {
 								"id": "b7aee965-59c2-438b-a40e-23a5b3173343",
 								"exec": [
-									"pm.collectionVariables.set(\"poststatuscode\", pm.iterationData.get('poststatuscode'));\r",
-									"let statuscode1 = pm.collectionVariables.get(\"poststatuscode\");\r",
-									"console.log(statuscode1);"
+									"// pm.collectionVariables.set(\"poststatuscode\", pm.iterationData.get('poststatuscode'));\r",
+									"// let statuscode1 = pm.collectionVariables.get(\"poststatuscode\");\r",
+									"// console.log(statuscode1);"
 								],
 								"type": "text/javascript",
 								"packages": {}
