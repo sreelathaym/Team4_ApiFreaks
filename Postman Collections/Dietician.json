@@ -224,13 +224,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n   \"id\": \"{{updatedieticianid}}\",\r\n  \"ContactNumber\": \"{{updatecontactnumber}}\",\r\n  \"DateOfBirth\": \"{{updateDateofbirth}}\",\r\n  \"Education\": \"{{updateeducation}}\",\r\n  \"Email\": \"{{updateemail}}\",\r\n  \"Firstname\": \"{{updatefirstname}}\",\r\n  \"HospitalCity\":\" {{updatehospitalcity}}\",\r\n  \"HospitalName\": \"{{updatehospitalname}}\",\r\n  \"HospitalPincode\": \"{{updatehospitalpincode}}\",\r\n  \"HospitalStreet\":\"{{updatehospitalstreet}}\",\r\n  \"Lastname\": \"{{updatelastname}}\"\r\n \r\n}",
+							"raw": "{\r\n   \"id\": \"{{dieticianId}}\",\r\n  \"ContactNumber\": \"{{updatecontactnumber}}\",\r\n  \"DateOfBirth\": \"{{updateDateofbirth}}\",\r\n  \"Education\": \"{{updateeducation}}\",\r\n  \"Email\": \"{{updateemail}}\",\r\n  \"Firstname\": \"{{updatefirstname}}\",\r\n  \"HospitalCity\":\" {{updatehospitalcity}}\",\r\n  \"HospitalName\": \"{{updatehospitalname}}\",\r\n  \"HospitalPincode\": \"{{updatehospitalpincode}}\",\r\n  \"HospitalStreet\":\"{{updatehospitalstreet}}\",\r\n  \"Lastname\": \"{{updatelastname}}\"\r\n \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
-						}
+						},
+						"url": "{{baseurl}}/dietician//{{dieticianId}}"
 					},
 					"response": []
 				},
@@ -286,7 +287,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "0e1360c9-209b-457c-b83b-012786ce8881",
+				"id": "4166a06d-f32c-4109-ae9d-1c743b78343d",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -297,7 +298,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "11b9b42a-004b-4c86-b625-5e41eda73726",
+				"id": "164376d1-b8a9-4bce-9930-68caa4b3b7c3",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -378,7 +379,7 @@
 			"type": "string"
 		},
 		{
-			"key": "updatedieticianid",
+			"key": "dieticianid",
 			"value": "",
 			"type": "string"
 		},
