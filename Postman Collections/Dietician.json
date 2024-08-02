@@ -250,7 +250,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "3e42f9bd-664b-4591-91f1-0c7f52168391",
+				"id": "0e1360c9-209b-457c-b83b-012786ce8881",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -261,7 +261,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "c12e55a5-eeb4-44e2-95cf-85c64aee3779",
+				"id": "11b9b42a-004b-4c86-b625-5e41eda73726",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -383,6 +383,16 @@
 		},
 		{
 			"key": "updatehospitalstreet",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "updatehospitalpincode",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "updatelastname",
 			"value": "",
 			"type": "string"
 		}
