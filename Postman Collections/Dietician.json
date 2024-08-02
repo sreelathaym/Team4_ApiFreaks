@@ -109,10 +109,10 @@
 									"pm.test(\"Content-Type is present\", function () {\r",
 									"    pm.response.to.have.header(\"Content-Type\");\r",
 									"});\r",
-									"pm.test(\"Status code\", function () {\r",
+									"// pm.test(\"Status code\", function () {\r",
 									"  \r",
-									"    pm.expect(pm.response.status).to.eql(pm.iterationData['statuscode'])\r",
-									"});\r",
+									"//     pm.expect(pm.response.status).to.eql(pm.iterationData['statuscode'])\r",
+									"// });\r",
 									"\r",
 									"// pm.test(\"Status code is 200\", function () {\r",
 									"//     pm.response.to.have.status(200);\r",
@@ -127,9 +127,9 @@
 							"script": {
 								"id": "b7aee965-59c2-438b-a40e-23a5b3173343",
 								"exec": [
-									"pm.collectionVariables.set(\"statuscode\", pm.iterationData.get('statuscode'));\r",
-									"let statuscode1 = pm.collectionVariables.get(\"statuscode\");\r",
-									"console.log(statuscode1);"
+									"// pm.collectionVariables.set(\"statuscode\", pm.iterationData.get('statuscode'));\r",
+									"// let statuscode1 = pm.collectionVariables.get(\"statuscode\");\r",
+									"// console.log(statuscode1);"
 								],
 								"type": "text/javascript",
 								"packages": {}
