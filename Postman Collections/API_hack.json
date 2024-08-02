@@ -685,7 +685,7 @@
 					"response": []
 				},
 				{
-					"name": "Morbidities with valid Dietian bearer token and valid End point",
+					"name": "Morbidities with valid Dietician bearer token and valid End point",
 					"id": "e754616c-9561-4c60-9a49-bbb8d27d9955",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -704,7 +704,7 @@
 					"response": []
 				},
 				{
-					"name": "Morbidities with valid Admin bearer token and Invalid End point Copy",
+					"name": "Morbidities with valid Dietician bearer token and Invalid End point Copy",
 					"id": "33ee56d2-a3c2-45bf-a8f4-fe59b065f83e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -723,7 +723,7 @@
 					"response": []
 				},
 				{
-					"name": "Morbidities with invalid Admin bearer token and valid End point",
+					"name": "Morbidities with invalid dietician bearer token and valid End point",
 					"id": "064b33a1-595b-46fe-8a9b-5fc11ea759f5",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -732,12 +732,12 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJUZWFtNEBnbWFpbC5jb20iLCJpYXQiOjE3MjI2MjE4ODIsImV4cCI6MTcyMjY1MDY4Mn0.tntmQ9i9uPNGEesMN_M7_FEz2Keub5IcadCzj5hSbBk0F4SGB80Sh4PJDcBbKKAvXB-7Z0cmalCQ6dnlENGNOg"
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJUZWFtNEBnbWFpbC5jb20iLCJpYXQiOjE3MjI2MjE4ODIsImV4cCI6MTcyMjY1MDY4Mn0.tntmQ9i9uPNGEesMN_M7_FEz2Keub5IcadCzj5hSbBk0F4SGB80Sh4PJDcBbKKAvXB-7Z0cmalCQ6dnlENG"
 							}
 						},
 						"method": "GET",
 						"header": [],
-						"url": "{{base_URL}}/morbidit"
+						"url": "{{base_URL}}/morbidity"
 					},
 					"response": []
 				}
