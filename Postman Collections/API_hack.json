@@ -786,14 +786,15 @@
 			"name": "Patient",
 			"item": [
 				{
-					"name": "New Request",
+					"name": "GetAllPatients",
 					"id": "736bccf5-71d8-4b49-96b1-be6512e93f7a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "{{base_URL}}/patient"
 					},
 					"response": []
 				}
