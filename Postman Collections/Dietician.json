@@ -445,6 +445,10 @@
 			"value": "",
 			"type": "string",
 			"disabled": true
+		},
+		{
+			"key": "putstatuscode",
+			"value": ""
 		}
 	]
 }
