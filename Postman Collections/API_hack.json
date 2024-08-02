@@ -818,7 +818,20 @@
 		},
 		{
 			"name": "Patient",
-			"item": [],
+			"item": [
+				{
+					"name": "New Request",
+					"id": "e66afa2e-2498-4d54-a554-3a5131cf2b11",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
 			"id": "76a595f1-6075-403b-9569-eb87b5cda9ce"
 		}
 	],
