@@ -965,6 +965,14 @@
 			"key": "dieticianid",
 			"value": "",
 			"type": "string"
+		},
+		{
+			"key": "userId",
+			"value": ""
+		},
+		{
+			"key": "password",
+			"value": ""
 		}
 	]
 }
