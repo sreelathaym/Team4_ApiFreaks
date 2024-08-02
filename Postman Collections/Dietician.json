@@ -115,7 +115,7 @@
 							"script": {
 								"id": "bd4cbc14-6622-48f5-a60e-bbb085ed13bf",
 								"exec": [
-									"if (pm.iterationData.get(\"Request\") !== 'CreateUser') {\r",
+									"if (pm.iterationData.get(\"Request\") !== 'CreateRequest') {\r",
 									"    pm.execution.skipRequest();\r",
 									"}\r",
 									"\r",
@@ -199,7 +199,9 @@
 								"id": "08135328-f06e-4cac-887d-0c72ecd6e68f",
 								"exec": [
 									"\r",
-									"\r",
+									"if (pm.iterationData.get(\"Request\") !== 'UpdateRequest') {\r",
+									"    pm.execution.skipRequest();\r",
+									"}\r",
 									"pm.test(\"Status code\", function () {\r",
 									"    pm.response.to.have.status(pm.collectionVariables.get(\"statuscode\"));\r",
 									"});"
