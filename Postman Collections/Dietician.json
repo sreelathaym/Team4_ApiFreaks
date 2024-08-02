@@ -225,7 +225,7 @@
 								}
 							}
 						},
-						"url": "{{baseurl}}/dietician//{{dieticianid}}"
+						"url": "{{baseurl}}/dietician/{{dieticianid}}"
 					},
 					"response": []
 				},
