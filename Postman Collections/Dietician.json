@@ -214,7 +214,7 @@
 						},
 						"method": "DELETE",
 						"header": [],
-						"url": "{{baseurl}}/dietician/365"
+						"url": "{{baseurl}}/dietician/614"
 					},
 					"response": []
 				}
