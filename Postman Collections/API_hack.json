@@ -45,6 +45,42 @@
 					"response": []
 				},
 				{
+					"name": "UserloginWithvalidEndpoint Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d0f80eff-ad62-4f09-b844-d07c880a9f8b",
+								"exec": [
+									"let resp = pm.response.json();\r",
+									"pm.collectionVariables.set(\"Admin_Token\", resp.token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "60bf1bf0-7a9e-48ae-b06e-71b18465a256",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"test\",\r\n    \"userLoginEmail\": \"Team4@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_URL}}/login"
+					},
+					"response": []
+				},
+				{
 					"name": "UserloginWithinvalidEndpoint",
 					"id": "ba858357-5a7b-4527-a310-ee32a3f2f43b",
 					"protocolProfileBehavior": {
@@ -855,74 +891,7 @@
 		},
 		{
 			"name": "Patient",
-			"item": [
-				{
-					"name": "DieticianLogin",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "c9812c2a-fbe3-4e2f-8503-2c4c9d5be4b8",
-								"exec": [
-									"const response = pm.response.json();",
-									"",
-									"",
-									"// Extract the program name and program status",
-									"const Dietician_Token = response.token;",
-									"",
-									"",
-									"if (pm.response.code === 200) {",
-									"  // Set collection variables for later use",
-									"pm.collectionVariables.set(\"Dietician_Token\", Dietician_Token);",
-									"",
-									"",
-									"console.log(\"Dietician_Token\", Dietician_Token);",
-									"//Before storing collection variable validating",
-									"pm.test(\"Token is stored as a collection variable\", function () {",
-									"   pm.expect(pm.collectionVariables.get(\"Dietician_Token\")).to.eql(Dietician_Token);",
-									"});",
-									"",
-									"",
-									"pm.test(\"Status code is 200\", function () {",
-									"   pm.response.to.have.status(200);",
-									"});",
-									"",
-									"",
-									"}",
-									""
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"id": "f5181101-ac39-470f-9ecb-1bd53d03aa3f",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{Admin_Token}}"
-							}
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"password\": \"{{dieticianPsw}}\",\n  \"userLoginEmail\": \"{{dieticianEmail}}\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{base_URL}}/login"
-					},
-					"response": []
-				}
-			],
+			"item": [],
 			"id": "76a595f1-6075-403b-9569-eb87b5cda9ce"
 		}
 	],
