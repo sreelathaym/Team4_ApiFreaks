@@ -124,7 +124,7 @@
 									"// });\r",
 									"\r",
 									"pm.test(\"Status code\", function () {\r",
-									"    pm.response.to.have.status(pm.collectionVariables.get(\"poststatuscode\"));\r",
+									"    pm.response.to.have.status(pm.collectionVariables.get(\"statuscode\"));\r",
 									"});"
 								],
 								"type": "text/javascript",
@@ -195,7 +195,7 @@
 									"\r",
 									"\r",
 									"pm.test(\"Status code\", function () {\r",
-									"    pm.response.to.have.status(pm.collectionVariables.get(\"putstatuscode\"));\r",
+									"    pm.response.to.have.status(pm.collectionVariables.get(\"statuscode\"));\r",
 									"});"
 								],
 								"type": "text/javascript",
@@ -218,7 +218,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n   \"id\": \"{{dieticianid}}\",\r\n  \"ContactNumber\": \"{{updatecontactnumber}}\",\r\n  \"DateOfBirth\": \"{{updateDateofbirth}}\",\r\n  \"Education\": \"{{updateeducation}}\",\r\n  \"Email\": \"{{updateemail}}\",\r\n  \"Firstname\": \"{{updatefirstname}}\",\r\n  \"HospitalCity\":\"{{updatehospitalcity}}\",\r\n  \"HospitalName\": \"{{updatehospitalname}}\",\r\n  \"HospitalPincode\": \"{{updatehospitalpincode}}\",\r\n  \"HospitalStreet\":\"{{updatehospitalstreet}}\",\r\n  \"Lastname\": \"{{updatelastname}}\"\r\n \r\n}",
+							"raw": "{\r\n   \"id\": \"{{dieticianid}}\",\r\n  \"ContactNumber\": \"{{contactnumber}}\",\r\n  \"DateOfBirth\": \"{{Dateofbirth}}\",\r\n  \"Education\": \"{{education}}\",\r\n  \"Email\": \"{{email}}\",\r\n  \"Firstname\": \"{{firstname}}\",\r\n  \"HospitalCity\":\" {{hospitalcity}}\",\r\n  \"HospitalName\": \"{{hospitalname}}\",\r\n  \"HospitalPincode\": \"{{hospitalpincode}}\",\r\n  \"HospitalStreet\":\"{{hospitalstreet}}\",\r\n  \"Lastname\": \"{{lastname}}\"\r\n \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -281,7 +281,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "98f293cf-7ac2-4513-ab2a-f6b1a343a6f1",
+				"id": "4b77f868-af6e-4cca-a0c3-43c04b21b3a7",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -292,7 +292,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "e29b8319-6696-48c9-8a55-e12552bda4c4",
+				"id": "b2e5aeed-48bc-4722-8627-12ca370eaeec",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -363,14 +363,15 @@
 			"type": "string"
 		},
 		{
-			"key": "poststatuscode",
+			"key": "statuscode",
 			"value": "",
 			"type": "string"
 		},
 		{
 			"key": "putstatuscode",
 			"value": "400",
-			"type": "string"
+			"type": "string",
+			"disabled": true
 		},
 		{
 			"key": "dieticianid",
@@ -380,52 +381,62 @@
 		{
 			"key": "updatecontactnumber",
 			"value": "",
-			"type": "string"
+			"type": "string",
+			"disabled": true
 		},
 		{
 			"key": "updateDateofbirth",
 			"value": "",
-			"type": "string"
+			"type": "string",
+			"disabled": true
 		},
 		{
 			"key": "updateeducation",
 			"value": "",
-			"type": "string"
+			"type": "string",
+			"disabled": true
 		},
 		{
 			"key": "updateemail",
 			"value": "",
-			"type": "string"
+			"type": "string",
+			"disabled": true
 		},
 		{
 			"key": "updatefirstname",
 			"value": "",
-			"type": "string"
+			"type": "string",
+			"disabled": true
 		},
 		{
 			"key": "updatehospitalcity",
 			"value": "",
-			"type": "string"
+			"type": "string",
+			"disabled": true
 		},
 		{
 			"key": "updatehospitalname",
 			"value": "",
-			"type": "string"
+			"type": "string",
+			"disabled": true
 		},
 		{
 			"key": "updatehospitalstreet",
 			"value": "",
-			"type": "string"
+			"type": "string",
+			"disabled": true
 		},
 		{
 			"key": "updatehospitalpincode",
 			"value": "",
-			"type": "string"
+			"type": "string",
+			"disabled": true
 		},
 		{
 			"key": "updatelastname",
 			"value": "",
-			"type": "string"
+			"type": "string",
+			"disabled": true
 		}
 	]
 }
