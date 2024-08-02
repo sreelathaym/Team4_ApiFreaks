@@ -121,6 +121,19 @@
 								"type": "text/javascript",
 								"packages": {}
 							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "b7aee965-59c2-438b-a40e-23a5b3173343",
+								"exec": [
+									"pm.collectionVariables.set(\"statuscode\", pm.iterationData.get('statuscode'));\r",
+									"let statuscode1 = pm.collectionVariables.get(\"statuscode\");\r",
+									"console.log(statuscode1);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
 						}
 					],
 					"id": "de020b4c-9730-44f2-a046-caa650df3269",
@@ -219,7 +232,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "071f85cf-5f77-415b-bdc1-926c7010c92c",
+				"id": "a2a30791-a461-4f66-a78b-1fad003085c6",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -230,7 +243,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "72687d41-83e0-4069-a03f-b54208ad8f44",
+				"id": "07f25c5f-78cf-48d2-82ea-dfe80bf4b406",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -297,6 +310,11 @@
 		},
 		{
 			"key": "lastname",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "statuscode",
 			"value": "",
 			"type": "string"
 		}
