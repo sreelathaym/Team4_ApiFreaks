@@ -250,7 +250,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "f9ffcb3e-38bf-43f7-9f12-32a033e46e2d",
+				"id": "3e42f9bd-664b-4591-91f1-0c7f52168391",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -261,7 +261,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "ab6041cf-64bc-48a3-9a79-9ac442988a52",
+				"id": "c12e55a5-eeb4-44e2-95cf-85c64aee3779",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -363,6 +363,26 @@
 		},
 		{
 			"key": "updateemail",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "updatefirstname",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "updatehospitalcity",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "updatehospitalname",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "updatehospitalstreet",
 			"value": "",
 			"type": "string"
 		}
