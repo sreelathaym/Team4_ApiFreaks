@@ -778,6 +778,25 @@
 						"url": "{{base_URL}}/morbidity"
 					},
 					"response": []
+				},
+				{
+					"name": "Retrieve Morbidity condition by Test name(Fasting Glucose) using path variables",
+					"id": "b1ce2d49-64c3-4f81-9f08-af1537be3311",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/morbidity/Fasting Glucose"
+					},
+					"response": []
 				}
 			],
 			"id": "63eadd0b-84d2-47a1-9f83-f26f1d7e107f"
@@ -795,6 +814,18 @@
 						"method": "GET",
 						"header": [],
 						"url": "{{base_URL}}/patient"
+					},
+					"response": []
+				},
+				{
+					"name": "DieticianLogin",
+					"id": "180d41c2-2d6a-424c-a7bf-d6959f169dd7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				}
