@@ -94,6 +94,15 @@
 						},
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"id\": \"{{id}}\"\r\n  \"ContactNumber\": \"{{contactnumber}}\",\r\n  \"DateOfBirth\": \"{{Dateofbirth}}\",\r\n  \"Education\": \"{{education}}\",\r\n  \"Email\": \"{{email}}\",\r\n  \"Firstname\": \"{{firstname}}\",\r\n  \"HospitalCity\":\" {{hospitalcity}}\",\r\n  \"HospitalName\": \"{{hospitalname}}\",\r\n  \"HospitalPincode\": \"{{hospitalpincode}}\",\r\n  \"HospitalStreet\":\"{{hospitalstreet}}\",\r\n  \"Lastname\": \"{{lastname}}\"\r\n \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": "{{baseurl}}/dietician"
 					},
 					"response": []
@@ -232,7 +241,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "868227de-42f0-4c07-abc1-fe5347dd0600",
+				"id": "ae7fb626-e174-4a94-8adb-55fd861d77b2",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -243,7 +252,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "d606220a-323c-403d-86a3-6db9a5d0db93",
+				"id": "8b5c3803-bd03-4e9f-8702-2f3b3ec8fd92",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -315,6 +324,16 @@
 		},
 		{
 			"key": "poststatuscode",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "putstatuscode",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "dieticianid",
 			"value": "",
 			"type": "string"
 		}
