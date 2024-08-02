@@ -281,7 +281,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "72d6aa0e-feb6-422e-bb2c-77e029a7e26f",
+				"id": "91e7c2a7-8183-4e7d-96cf-aee4c3e38d23",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -292,7 +292,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "48f8df72-71db-4330-a2e1-89dd0528f207",
+				"id": "d2c9c031-7e18-4ec1-ba86-74f90613fed7",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -369,7 +369,7 @@
 		},
 		{
 			"key": "putstatuscode",
-			"value": "",
+			"value": "400",
 			"type": "string"
 		},
 		{
