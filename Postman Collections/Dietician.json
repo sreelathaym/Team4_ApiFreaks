@@ -115,7 +115,7 @@
 									"// });\r",
 									"\r",
 									"pm.test(\"Status code\", function () {\r",
-									"    pm.response.to.have.status(pm.collectionVariables.get(\"statuscode\"));\r",
+									"    pm.response.to.have.status(pm.collectionVariables.get(\"poststatuscode\"));\r",
 									"});"
 								],
 								"type": "text/javascript",
@@ -127,7 +127,7 @@
 							"script": {
 								"id": "b7aee965-59c2-438b-a40e-23a5b3173343",
 								"exec": [
-									"pm.collectionVariables.set(\"statuscode\", pm.iterationData.get('statuscode'));\r",
+									"pm.collectionVariables.set(\"poststatuscode\", pm.iterationData.get('statuscode'));\r",
 									"let statuscode1 = pm.collectionVariables.get(\"statuscode\");\r",
 									"console.log(statuscode1);"
 								],
@@ -232,7 +232,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "ecaa2665-2ba3-4f73-a931-ddddc12151e5",
+				"id": "868227de-42f0-4c07-abc1-fe5347dd0600",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -243,7 +243,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "c47395d3-c4be-4e71-ae76-0619261acb39",
+				"id": "d606220a-323c-403d-86a3-6db9a5d0db93",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -314,7 +314,7 @@
 			"type": "string"
 		},
 		{
-			"key": "statuscode",
+			"key": "poststatuscode",
 			"value": "",
 			"type": "string"
 		}
