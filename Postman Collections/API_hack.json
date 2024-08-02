@@ -857,26 +857,68 @@
 			"name": "Patient",
 			"item": [
 				{
-					"name": "New Request",
-					"id": "e66afa2e-2498-4d54-a554-3a5131cf2b11",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": []
-					},
-					"response": []
-				},
-				{
 					"name": "DieticianLogin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c9812c2a-fbe3-4e2f-8503-2c4c9d5be4b8",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"",
+									"// Extract the program name and program status",
+									"const Dietician_Token = response.token;",
+									"",
+									"",
+									"if (pm.response.code === 200) {",
+									"  // Set collection variables for later use",
+									"pm.collectionVariables.set(\"Dietician_Token\", Dietician_Token);",
+									"",
+									"",
+									"console.log(\"Dietician_Token\", Dietician_Token);",
+									"//Before storing collection variable validating",
+									"pm.test(\"Token is stored as a collection variable\", function () {",
+									"   pm.expect(pm.collectionVariables.get(\"Dietician_Token\")).to.eql(Dietician_Token);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Status code is 200\", function () {",
+									"   pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"}",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "f5181101-ac39-470f-9ecb-1bd53d03aa3f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"password\": \"Just00\",\n \"userLoginEmail\": \"kiran12345@gmail.com\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_URL}}/login"
 					},
 					"response": []
 				}
