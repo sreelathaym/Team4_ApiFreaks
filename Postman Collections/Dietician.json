@@ -250,7 +250,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "c0ee07c4-4f94-4591-8bdc-8d7cdc916507",
+				"id": "f9ffcb3e-38bf-43f7-9f12-32a033e46e2d",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -261,7 +261,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "b4c3e4a3-28d6-41a9-bd8d-17c105515734",
+				"id": "ab6041cf-64bc-48a3-9a79-9ac442988a52",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -343,6 +343,26 @@
 		},
 		{
 			"key": "updatedieticianid",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "updatecontactnumber",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "updateDateofbirth",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "updateeducation",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "updateemail",
 			"value": "",
 			"type": "string"
 		}
