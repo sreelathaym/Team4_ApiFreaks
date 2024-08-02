@@ -794,7 +794,22 @@
 						},
 						"method": "GET",
 						"header": [],
-						"url": "{{base_URL}}/morbidity/Fasting Glucose"
+						"url": {
+							"raw": "{{base_URL}}/morbidity/:name",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"morbidity",
+								":name"
+							],
+							"variable": [
+								{
+									"key": "name",
+									"value": "Fasting Glucose"
+								}
+							]
+						}
 					},
 					"response": []
 				}
@@ -803,33 +818,7 @@
 		},
 		{
 			"name": "Patient",
-			"item": [
-				{
-					"name": "GetAllPatients",
-					"id": "736bccf5-71d8-4b49-96b1-be6512e93f7a",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": "{{base_URL}}/patient"
-					},
-					"response": []
-				},
-				{
-					"name": "DieticianLogin",
-					"id": "180d41c2-2d6a-424c-a7bf-d6959f169dd7",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": []
-					},
-					"response": []
-				}
-			],
+			"item": [],
 			"id": "76a595f1-6075-403b-9569-eb87b5cda9ce"
 		}
 	],
