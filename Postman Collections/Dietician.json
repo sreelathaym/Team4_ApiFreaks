@@ -142,9 +142,9 @@
 							"script": {
 								"id": "b7aee965-59c2-438b-a40e-23a5b3173343",
 								"exec": [
-									"// pm.collectionVariables.set(\"poststatuscode\", pm.iterationData.get('poststatuscode'));\r",
-									"// let statuscode1 = pm.collectionVariables.get(\"poststatuscode\");\r",
-									"// console.log(statuscode1);\r",
+									"pm.collectionVariables.set(\"statuscode\", pm.iterationData.get('statuscode'));\r",
+									"let statuscode1 = pm.collectionVariables.get(\"statuscode\");\r",
+									"console.log(statuscode1);\r",
 									"\r",
 									"if (pm.iterationData.get(\"Request\") !== 'CreateRequest') {\r",
 									"    pm.execution.skipRequest();\r",
@@ -189,9 +189,9 @@
 							"script": {
 								"id": "650aeb29-7316-4618-b98e-11d082964385",
 								"exec": [
-									"// pm.collectionVariables.set(\"putstatuscode\", pm.iterationData.get('putstatuscode'));\r",
-									"// let statuscode1 = pm.collectionVariables.get(\"putstatuscode\");\r",
-									"// console.log(statuscode1);\r",
+									"pm.collectionVariables.set(\"statuscode\", pm.iterationData.get('statuscode'));\r",
+									"let statuscode1 = pm.collectionVariables.get(\"statuscode\");\r",
+									"console.log(statuscode1);\r",
 									"\r",
 									"if (pm.iterationData.get(\"Request\") !== 'UpdateRequest') {\r",
 									"    pm.execution.skipRequest();\r",
