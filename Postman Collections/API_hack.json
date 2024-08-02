@@ -45,42 +45,6 @@
 					"response": []
 				},
 				{
-					"name": "UserloginWithvalidEndpoint Copy",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "d0f80eff-ad62-4f09-b844-d07c880a9f8b",
-								"exec": [
-									"let resp = pm.response.json();\r",
-									"pm.collectionVariables.set(\"Admin_Token\", resp.token);"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"id": "60bf1bf0-7a9e-48ae-b06e-71b18465a256",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"password\": \"test\",\r\n    \"userLoginEmail\": \"Team4@gmail.com\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{base_URL}}/login"
-					},
-					"response": []
-				},
-				{
 					"name": "UserloginWithinvalidEndpoint",
 					"id": "ba858357-5a7b-4527-a310-ee32a3f2f43b",
 					"protocolProfileBehavior": {
@@ -891,7 +855,44 @@
 		},
 		{
 			"name": "Patient",
-			"item": [],
+			"item": [
+				{
+					"name": "Dietician_login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d0f80eff-ad62-4f09-b844-d07c880a9f8b",
+								"exec": [
+									"let resp = pm.response.json();\r",
+									"pm.collectionVariables.set(\"Dietician_Token\", resp.token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "60bf1bf0-7a9e-48ae-b06e-71b18465a256",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"{{dieticianPsw}}\",\r\n    \"userLoginEmail\": \"{{dieticianEmail}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_URL}}/login"
+					},
+					"response": []
+				}
+			],
 			"id": "76a595f1-6075-403b-9569-eb87b5cda9ce"
 		}
 	],
@@ -1007,6 +1008,10 @@
 		},
 		{
 			"key": "dieticianEmail",
+			"value": ""
+		},
+		{
+			"key": "Dietician_Token",
 			"value": ""
 		}
 	]
