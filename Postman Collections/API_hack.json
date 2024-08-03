@@ -337,60 +337,6 @@
 					"response": []
 				},
 				{
-					"name": "DeletedieticanByVldID",
-					"id": "abc139b1-06b6-40d0-800c-9ba1ccac2efe",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{Admin_Token}}"
-							}
-						},
-						"method": "DELETE",
-						"header": [],
-						"url": "{{base_URL}}/dietician/{{dietician_id}}}"
-					},
-					"response": []
-				},
-				{
-					"name": "DeletedieticanByInvdID",
-					"id": "991c95e1-96ed-44ee-ab1e-abe78b611eac",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{Admin_Token}}"
-							}
-						},
-						"method": "DELETE",
-						"header": [],
-						"url": "{{base_URL}}/dietician/{{132187}}}"
-					},
-					"response": []
-				},
-				{
-					"name": "DeletedieticanByNoAuth",
-					"id": "aa68ee76-6657-48c3-96e5-e2f75a4b78c2",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "DELETE",
-						"header": [],
-						"url": "{{base_URL}}/dietician/{{dietician_id}}"
-					},
-					"response": []
-				},
-				{
 					"name": "New Request",
 					"id": "5c1634cc-d140-4001-8b82-bcfae82a2004",
 					"protocolProfileBehavior": {
@@ -891,6 +837,60 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "DeletedieticanByNoAuth",
+					"id": "aa68ee76-6657-48c3-96e5-e2f75a4b78c2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_URL}}/dietician/{{dietician_id}}"
+					},
+					"response": []
+				},
+				{
+					"name": "DeletedieticanByInvdID",
+					"id": "991c95e1-96ed-44ee-ab1e-abe78b611eac",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_URL}}/dietician/{{132187}}}"
+					},
+					"response": []
+				},
+				{
+					"name": "DeletedieticanByVldID",
+					"id": "abc139b1-06b6-40d0-800c-9ba1ccac2efe",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_URL}}/dietician/{{dietician_id}}}"
+					},
+					"response": []
 				}
 			],
 			"id": "63eadd0b-84d2-47a1-9f83-f26f1d7e107f"
@@ -1316,7 +1316,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"h\",\n\"LastName\": \"d\",\n\"ContactNumber\": \"1110000000\",\n\"Email\": \"S124@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1988-07-05\"}"
+									"value": "{ \"FirstName\": \"Hello\",\n\"LastName\": \"Ninjas\",\n\"ContactNumber\": \"1110000000\",\n\"Email\": \"S124@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1988-07-05\"}"
 								},
 								{
 									"key": "file",
@@ -1465,7 +1465,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "53c3d117-1c32-4332-b1c3-22241ca9df81",
+				"id": "e20c40fc-6fe4-429a-a609-32b2dcb20ca3",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -1476,7 +1476,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "2caee2db-fdd6-4fa8-8724-26210a7b0ec6",
+				"id": "eeadb82f-f2a2-48d6-b04a-fd58172ed574",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -1488,7 +1488,7 @@
 	"variable": [
 		{
 			"key": "Admin_Token",
-			"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJUZWFtNEBnbWFpbC5jb20iLCJpYXQiOjE3MjI2NTY2ODMsImV4cCI6MTcyMjY4NTQ4M30.TVEavr_2t_oifP0EQdD6nidZdcqnPGOsCaxp3ADrnNTONBNlhF6OigoJX_YGe5QhCeWxVc_fCXCzPEzfe85hvw"
+			"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJUZWFtNEBnbWFpbC5jb20iLCJpYXQiOjE3MjI2NTg5NDEsImV4cCI6MTcyMjY4Nzc0MX0.nfL-d6ZN2VNX6uTXAlVu-zNnDNrKL0Ny3OKrR1QrA3J7g8vOVLeVAvnArBz2PurHGGaeFCpxqPC-ieJCBtUGwA"
 		},
 		{
 			"key": "base_URL",
