@@ -933,7 +933,12 @@
 									" if (pm.response.code === 201) {",
 									"   // Set collection variables for later use",
 									"pm.collectionVariables.set(\"patienyId\", patienyId);",
-									""
+									" }",
+									" console.log(\"patienyId\", patienyId);",
+									"//Before storing collection variable validating",
+									"pm.test(\"Token is stored as a collection variable\", function () {",
+									"    pm.expect(pm.collectionVariables.get(\"patienyId\")).to.eql(patienyId);",
+									"});"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -958,7 +963,7 @@
 							"formdata": [
 								{
 									"key": "patientInfo",
-									"value": "{ \"FirstName\": \"sdetabcr\",\n\"LastName\": \"sdetxyze\",\n\"ContactNumber\": \"9123656789\",\n\"Email\": \"asddetb@gmail.com\",\n\"Allergy\": \"PECAN\",\n\"FoodPreference\": \"Vegan\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1986-12-14\"\n}\n",
+									"value": "{ \"FirstName\": \"sdetabyr\",\n\"LastName\": \"sdetxyke\",\n\"ContactNumber\": \"9123656789\",\n\"Email\": \"asddetb@gmail.com\",\n\"Allergy\": \"PECAN\",\n\"FoodPreference\": \"Vegan\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1906-12-14\"\n}\n",
 									"type": "text"
 								},
 								{
@@ -1092,6 +1097,10 @@
 		},
 		{
 			"key": "Dietician_Token",
+			"value": ""
+		},
+		{
+			"key": "patienyId",
 			"value": ""
 		}
 	]
