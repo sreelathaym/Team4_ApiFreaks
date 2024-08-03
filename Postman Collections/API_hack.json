@@ -985,7 +985,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "b10dd806-53d4-40ce-92b5-08e77cbf0605",
+				"id": "89fa8a67-7f00-4928-a28d-b60db0110237",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -996,7 +996,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "3858f7a7-a7ea-4f6e-8e39-772f5d535d2c",
+				"id": "b4b40067-78cc-4735-b68c-a6b2827e5c86",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -1102,46 +1102,6 @@
 		{
 			"key": "patienyId",
 			"value": ""
-		},
-		{
-			"key": "PatientFirstName",
-			"value": "",
-			"type": "string"
-		},
-		{
-			"key": "PatientLastName",
-			"value": "",
-			"type": "string"
-		},
-		{
-			"key": "PatientEmail",
-			"value": "",
-			"type": "string"
-		},
-		{
-			"key": "Allergy",
-			"value": "",
-			"type": "string"
-		},
-		{
-			"key": "FoodPreference",
-			"value": "",
-			"type": "string"
-		},
-		{
-			"key": "CuisineCategory",
-			"value": "",
-			"type": "string"
-		},
-		{
-			"key": "PatientDateOfBirth",
-			"value": "",
-			"type": "string"
-		},
-		{
-			"key": "PatientContactNumber",
-			"value": "",
-			"type": "string"
 		}
 	]
 }
