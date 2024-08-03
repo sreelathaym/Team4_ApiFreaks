@@ -1343,26 +1343,7 @@
 					"response": []
 				},
 				{
-					"name": "Delete_PatientById",
-					"id": "143a7951-681b-4555-99f5-a58382291da1",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{Dietician_Token}}"
-							}
-						},
-						"method": "DELETE",
-						"header": [],
-						"url": "{{base_URL}}/patient/{{patientId}}"
-					},
-					"response": []
-				},
-				{
-					"name": "Delete_PatientByInval-ID",
+					"name": "N-Delete_PatientByInval-ID",
 					"id": "20cffdc6-0f7e-484a-889e-708f073a5b1e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -1381,6 +1362,25 @@
 					"response": []
 				},
 				{
+					"name": "N-Delete_PatientByInval-endpt",
+					"id": "ee669b80-5105-4e14-97d7-d325581f0f21",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Dietician_Token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_URL}}/pat/{{patientId}}"
+					},
+					"response": []
+				},
+				{
 					"name": "N-Delete_PatientById-noAuth",
 					"id": "7e10e1bc-f82b-4bfa-b1d0-a742abfb049b",
 					"protocolProfileBehavior": {
@@ -1389,6 +1389,44 @@
 					"request": {
 						"auth": {
 							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_URL}}/patient/{{patientId}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_PatientById Copy",
+					"id": "70d3d6e5-d3b6-422c-bc12-3d84bdbf3ae3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Dietician_Token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_URL}}/patient/{{patientId}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_PatientById",
+					"id": "143a7951-681b-4555-99f5-a58382291da1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Dietician_Token}}"
+							}
 						},
 						"method": "DELETE",
 						"header": [],
