@@ -2070,19 +2070,22 @@
 									"",
 									"// Assuming you have loaded the jsonObjects from the output.json file",
 									"const jsonObjects = [",
-									"  {",
-									"    \"key\": \"patientInfo1\",",
-									"    \"value\": \"{\\\"FirstName\\\":\\\"abcd\\\",\\\"LastName\\\":\\\"xyza\\\",\\\"ContactNumber\\\":\\\"9123456789\\\",\\\"Email\\\":\\\"abc123@gmail.com\\\",\\\"Allergy\\\":\\\"PECAN\\\",\\\"FoodPreference\\\":\\\"NonVeg\\\",\\\"CuisineCategory\\\":\\\"Bengali\\\",\\\"DateOfBirth\\\":\\\"1986-12-16\\\"}\"",
-									"  },",
-									"  {",
-									"    \"key\": \"patientInfo2\",",
-									"    \"value\": \"{\\\"FirstName\\\":\\\"efgh\\\",\\\"LastName\\\":\\\"uvwx\\\",\\\"ContactNumber\\\":\\\"9876543210\\\",\\\"Email\\\":\\\"efgh123@gmail.com\\\",\\\"Allergy\\\":\\\"None\\\",\\\"FoodPreference\\\":\\\"Veg\\\",\\\"CuisineCategory\\\":\\\"Indian\\\",\\\"DateOfBirth\\\":\\\"1990-05-20\\\"}\"",
-									"  }",
+									"  ",
+									"  { \"FirstName\": \"abcd\",",
+									"\"LastName\": \"xyza\",",
+									"\"ContactNumber\": \"9123456789\",",
+									"\"Email\": \"abc123@gmail.com\",",
+									"\"Allergy\": \"PECAN\",",
+									"\"FoodPreference\": \"NonVeg\",",
+									"\"CuisineCategory\":\"Bengali\",",
+									"\"DateOfBirth\": \"1986-12-16\"",
+									"}",
+									"",
 									"];",
 									"",
 									"// Set the variables in Postman environment",
 									"jsonObjects.forEach(obj => {",
-									"    pm.environment.set(obj.key, obj.value);",
+									"    pm.collectionVariables.set(obj.key, obj.value);",
 									"});"
 								],
 								"type": "text/javascript",
@@ -2108,8 +2111,8 @@
 							"formdata": [
 								{
 									"key": "patientInfo",
-									"type": "file",
-									"value": null
+									"type": "text",
+									"value": "'{{patientInfo1}}'"
 								},
 								{
 									"key": "Reports",
@@ -3048,6 +3051,14 @@
 		},
 		{
 			"key": "fileId",
+			"value": ""
+		},
+		{
+			"key": "patientInfo1",
+			"value": ""
+		},
+		{
+			"key": "patientInfo2",
 			"value": ""
 		}
 	]
