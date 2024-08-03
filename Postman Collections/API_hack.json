@@ -1035,10 +1035,20 @@
 									"key": "patientInfo",
 									"type": "file",
 									"src": "1xUN7vBTr/PatientInfo.rtf"
+								},
+								{
+									"key": "Reports",
+									"type": "file",
+									"src": "_DuXivL8A/Diabetic and Hemogram Test_Thyrocare lab.pdf.pdf"
+								},
+								{
+									"key": "vitals",
+									"value": "{\n       “Weight“ : 45.0,\n       “Height” : 5.5,\n        “Temperature” : 99.0,\n        “SP” : 4,\n        “DP” : 5\n \n             \t}\n",
+									"type": "text"
 								}
 							]
 						},
-						"url": "{{base_URL}}/patient/468"
+						"url": "{{base_URL}}/patient/73"
 					},
 					"response": []
 				}
