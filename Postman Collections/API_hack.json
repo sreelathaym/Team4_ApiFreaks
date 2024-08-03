@@ -898,6 +898,21 @@
 				},
 				{
 					"name": "N_GetAllPatients_without_Auth",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "10cbe64c-344e-4818-9988-bd7a8ef0a46b",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "c13043e3-377f-4ab2-9420-163b87360dfb",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -2233,6 +2248,21 @@
 				},
 				{
 					"name": "GetPatientsMorbidityDetails",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9e55a389-9817-4d76-9659-104ef45848b6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "2e1e84fe-14fc-4240-a100-79fdd84e1d5b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -2277,10 +2307,7 @@
 					},
 					"request": {
 						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{Dietician_Token}}"
-							}
+							"type": "noauth"
 						},
 						"method": "GET",
 						"header": [],
