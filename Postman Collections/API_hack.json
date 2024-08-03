@@ -1038,7 +1038,7 @@
 								}
 							]
 						},
-						"url": "{{base_URL}}/patient"
+						"url": "{{base_URL}}/patient/468"
 					},
 					"response": []
 				}
