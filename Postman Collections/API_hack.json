@@ -2060,6 +2060,34 @@
 								"type": "text/javascript",
 								"packages": {}
 							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "3a778074-4e90-4405-bb72-149073b20c31",
+								"exec": [
+									"const fs = require('fs');",
+									"",
+									"// Assuming you have loaded the jsonObjects from the output.json file",
+									"const jsonObjects = [",
+									"  {",
+									"    \"key\": \"patientInfo1\",",
+									"    \"value\": \"{\\\"FirstName\\\":\\\"abcd\\\",\\\"LastName\\\":\\\"xyza\\\",\\\"ContactNumber\\\":\\\"9123456789\\\",\\\"Email\\\":\\\"abc123@gmail.com\\\",\\\"Allergy\\\":\\\"PECAN\\\",\\\"FoodPreference\\\":\\\"NonVeg\\\",\\\"CuisineCategory\\\":\\\"Bengali\\\",\\\"DateOfBirth\\\":\\\"1986-12-16\\\"}\"",
+									"  },",
+									"  {",
+									"    \"key\": \"patientInfo2\",",
+									"    \"value\": \"{\\\"FirstName\\\":\\\"efgh\\\",\\\"LastName\\\":\\\"uvwx\\\",\\\"ContactNumber\\\":\\\"9876543210\\\",\\\"Email\\\":\\\"efgh123@gmail.com\\\",\\\"Allergy\\\":\\\"None\\\",\\\"FoodPreference\\\":\\\"Veg\\\",\\\"CuisineCategory\\\":\\\"Indian\\\",\\\"DateOfBirth\\\":\\\"1990-05-20\\\"}\"",
+									"  }",
+									"];",
+									"",
+									"// Set the variables in Postman environment",
+									"jsonObjects.forEach(obj => {",
+									"    pm.environment.set(obj.key, obj.value);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
 						}
 					],
 					"id": "49f97a21-6c0d-4469-97d5-cc0ca712d6cf",
@@ -2081,7 +2109,7 @@
 								{
 									"key": "patientInfo",
 									"type": "file",
-									"src": "1yPiWz252/PatientInfo.rtf"
+									"value": null
 								},
 								{
 									"key": "Reports",
