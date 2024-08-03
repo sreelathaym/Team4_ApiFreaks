@@ -327,26 +327,22 @@
 					"response": []
 				},
 				{
-					"name": "GetallDietcianinfo",
-					"id": "a15bb1e6-62dd-4424-8a23-a00136223659",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{Admin_Token}}"
-							}
-						},
-						"method": "GET",
-						"header": [],
-						"url": "{{base_URL}}/dietician"
-					},
-					"response": []
-				},
-				{
 					"name": "GetallDieticianInvalidEndpoint",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "07498148-ce77-40ca-8cef-60d284aebc04",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "c74a4707-0a10-4766-b86d-644609f64c5e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -400,8 +396,8 @@
 					"response": []
 				},
 				{
-					"name": "GetDietcianinfoByValidID",
-					"id": "61a7ed2e-cae8-414d-9106-686a1269daa3",
+					"name": "GetallDietcianinfo",
+					"id": "a15bb1e6-62dd-4424-8a23-a00136223659",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -414,7 +410,7 @@
 						},
 						"method": "GET",
 						"header": [],
-						"url": "{{base_URL}}/dietician/{{dietician_id}}"
+						"url": "{{base_URL}}/dietician"
 					},
 					"response": []
 				},
@@ -473,14 +469,21 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
-					"id": "5c1634cc-d140-4001-8b82-bcfae82a2004",
+					"name": "GetDietcianinfoByValidID",
+					"id": "61a7ed2e-cae8-414d-9106-686a1269daa3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "{{base_URL}}/dietician/{{dietician_id}}"
 					},
 					"response": []
 				},
