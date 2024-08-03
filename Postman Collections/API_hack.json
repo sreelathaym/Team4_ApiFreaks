@@ -724,14 +724,11 @@
 					},
 					"request": {
 						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{Dietician_Token}}"
-							}
+							"type": "noauth"
 						},
 						"method": "GET",
 						"header": [],
-						"url": "{{base_URL}}/patient1"
+						"url": "{{base_URL}}/patient"
 					},
 					"response": [
 						{
@@ -1840,6 +1837,44 @@
 						"method": "GET",
 						"header": [],
 						"url": "{{base_URL}}/patient/testReports/{{patientId}}"
+					},
+					"response": []
+				},
+				{
+					"name": "N_GetPatientsMorbidityDetails_invalid_Endpoint",
+					"id": "9c2ec3f1-8a13-4980-9171-16f4b7c8a147",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Dietician_Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/patient/testReports/patientId"
+					},
+					"response": []
+				},
+				{
+					"name": "N_GetPatientsMorbidityDetails_invalid_Endpoint Copy",
+					"id": "f2be467c-cf84-4d5a-8591-1790d27de7eb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Dietician_Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/patient/testReports/patientId"
 					},
 					"response": []
 				},
