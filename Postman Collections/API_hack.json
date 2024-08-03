@@ -410,6 +410,50 @@
 				},
 				{
 					"name": "GetallDieticianNoAuth",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1054b8cb-313c-4083-a013-21a19355efff",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});\r",
+									"const schema = {\r",
+									"  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\r",
+									"  \"type\": \"object\",\r",
+									"  \"properties\": {\r",
+									"    \"timestamp\": {\r",
+									"      \"type\": \"string\"\r",
+									"    },\r",
+									"    \"status\": {\r",
+									"      \"type\": \"integer\"\r",
+									"    },\r",
+									"    \"error\": {\r",
+									"      \"type\": \"string\"\r",
+									"    },\r",
+									"    \"path\": {\r",
+									"      \"type\": \"string\"\r",
+									"    }\r",
+									"  },\r",
+									"  \"required\": [\r",
+									"    \"timestamp\",\r",
+									"    \"status\",\r",
+									"    \"error\",\r",
+									"    \"path\"\r",
+									"  ]\r",
+									"}\r",
+									"pm.test(\"Response contsins valid schema data\", function () {\r",
+									"    pm.response.to.have.jsonSchema(schema);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "a159f603-de53-4533-8873-e86f74571d8f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
