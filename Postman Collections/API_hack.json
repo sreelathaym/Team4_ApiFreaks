@@ -963,7 +963,7 @@
 							"formdata": [
 								{
 									"key": "patientInfo",
-									"value": "{\n\"FirstName\": \"{{PatientFirstName}}\",\n\"LastName\": \"{{PatientLastName}}”,\n\"ContactNumber:”{{PatientContactNumber}}”,\n\"Email\":”{{ patientEmail}}”,\n\"Allergy\": “{{Allergy}}”,\n\"FoodPreference\": “{{FoodPreference}}”,\n\"CuisineCategory\":\"{{CuisineCategory}}\",\n\"DateOfBirth\": \"{{PatientDateOfBirth}}\"\n}\n",
+									"value": "{\n\"FirstName\": \"{{PatientFirstName}}\",\n\"LastName\": \"{{PatientLastName}}”,\n\"ContactNumber:”{{PatientContactNumber}}”,\n\"Email\":”{{PatientEmail}}”,\n\"Allergy\": “{{Allergy}}”,\n\"FoodPreference\": “{{FoodPreference}}”,\n\"CuisineCategory\":\"{{CuisineCategory}}\",\n\"DateOfBirth\": \"{{PatientDateOfBirth}}\"\n}\n",
 									"type": "text"
 								},
 								{
@@ -985,7 +985,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "d248174a-725f-4227-a6c8-8ef8990a9b3e",
+				"id": "b10dd806-53d4-40ce-92b5-08e77cbf0605",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -996,7 +996,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "f651913a-c9bc-4f8b-b9ab-3b303336bb97",
+				"id": "3858f7a7-a7ea-4f6e-8e39-772f5d535d2c",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -1114,7 +1114,7 @@
 			"type": "string"
 		},
 		{
-			"key": "patientEmail",
+			"key": "PatientEmail",
 			"value": "",
 			"type": "string"
 		},
