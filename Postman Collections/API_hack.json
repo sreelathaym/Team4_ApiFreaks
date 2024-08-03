@@ -985,7 +985,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "c339d273-537e-4e1e-853c-ae2b6c66cbfd",
+				"id": "abde0aca-b0ce-4d0e-a868-b0c5f8d9326c",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -996,7 +996,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "25083482-d5ff-4af5-9126-8907d8879aef",
+				"id": "460c9599-48c3-4ec2-bcd8-6bc690d473af",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -1135,6 +1135,16 @@
 		},
 		{
 			"key": "PatientDateOfBirth",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "PatientContactNumber",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "patientEmail",
 			"value": "",
 			"type": "string"
 		}
