@@ -1066,6 +1066,18 @@
 							"body": "{\n    \"patientId\": 472,\n    \"FirstName\": \"h\",\n    \"LastName\": \"d\",\n    \"ContactNumber\": \"1110000000\",\n    \"Email\": \"S124@acbd.com\",\n    \"Allergy\": \"Soy\",\n    \"FoodPreference\": \"jain\",\n    \"CuisineCategory\": \"Indian\",\n    \"FileMorbidity\": {\n        \"66adae9f4717cf471aaad21d\": {\n            \"HbA1c\": \"6.5 %\",\n            \"Average Glucose\": \"131.0 mg/dl\"\n        }\n    },\n    \"FileMorbidityCondition\": {\n        \"66adae9f4717cf471aaad21d\": \"Prediabetic \\nBlood Pressure: Hypotension \\n\"\n    },\n    \"DateOfBirth\": \"1988-07-05\",\n    \"DieticianId\": 871,\n    \"Vitals\": {\n        \"66adae9f4717cf471aaad21d\": {\n            \"Weight\": 0,\n            \"Height\": 0,\n            \"Temperature\": 0,\n            \"SP\": 0,\n            \"DP\": 0\n        }\n    },\n    \"LastVisitDate\": \"2024-08-03T04:14:23.627+00:00\"\n}"
 						}
 					]
+				},
+				{
+					"name": "Update",
+					"id": "f21df221-d3e6-4138-8138-f584d1c4d837",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "76a595f1-6075-403b-9569-eb87b5cda9ce"
@@ -1404,6 +1416,25 @@
 					"response": []
 				},
 				{
+					"name": "Delete_PatientById Copy",
+					"id": "20cffdc6-0f7e-484a-889e-708f073a5b1e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Dietician_Token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_URL}}/patient/{{patientId}}"
+					},
+					"response": []
+				},
+				{
 					"name": "N-Delete_PatientById-noAuth",
 					"id": "7e10e1bc-f82b-4bfa-b1d0-a742abfb049b",
 					"protocolProfileBehavior": {
@@ -1481,7 +1512,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "9ceea5d7-da63-4405-9cd2-4869bf71fc45",
+				"id": "fce5a305-51e0-4b83-97a7-85f932e99101",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -1492,7 +1523,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "573a85fa-524f-40d1-86bd-570f556b4930",
+				"id": "31599695-6359-4034-951f-88a45e00ccc0",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
