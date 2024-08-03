@@ -1635,25 +1635,6 @@
 						"url": "{{base_URL}}/patient/testReports/viewFile/{{fileId}}"
 					},
 					"response": []
-				},
-				{
-					"name": "GetOperatioRetrievePatientfilebyFileId Copy",
-					"id": "d730a772-0dbb-4b01-887b-1c0ee117e91b",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{Dietician_Token}}"
-							}
-						},
-						"method": "GET",
-						"header": [],
-						"url": "{{base_URL}}/patient/testReports/viewFile/{{fileId}}"
-					},
-					"response": []
 				}
 			],
 			"id": "76a595f1-6075-403b-9569-eb87b5cda9ce"
