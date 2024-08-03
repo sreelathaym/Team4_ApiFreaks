@@ -65,6 +65,12 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -76,7 +82,7 @@
 								}
 							}
 						},
-						"url": "{{base_URL}}/login"
+						"url": "https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login"
 					},
 					"response": []
 				},
