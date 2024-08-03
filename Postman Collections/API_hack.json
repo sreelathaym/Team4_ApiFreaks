@@ -928,17 +928,23 @@
 									"const response = pm.response.json();",
 									"",
 									"// // Extract the program name and program status",
-									" const patienyId = response.patientId;",
+									" const patientId = response.patientId;",
 									"",
 									" if (pm.response.code === 201) {",
 									"   // Set collection variables for later use",
-									"pm.collectionVariables.set(\"patientId\", patienyId);",
+									"pm.collectionVariables.set(\"patientId\", patientId);",
 									" }",
-									" console.log(\"patientId\", patienyId);",
+									" console.log(\"patientId\", patientId);",
 									"//Before storing collection variable validating",
 									"pm.test(\"Token is stored as a collection variable\", function () {",
 									"    pm.expect(pm.collectionVariables.get(\"patientId\")).to.eql(patientId);",
-									"});"
+									"});",
+									"// Extract the fileId",
+									"let fileId = Object.keys(jsonData.FileMorbidity)[0];",
+									"pm.collectionVariables.set(\"fileId\", fileId);",
+									"",
+									"// Optionally, log the fileId to verify",
+									"console.log(\"fileId saved to collection variable: \", fileId);"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -947,7 +953,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "9cf90cad-adfd-495d-ad85-801a29930b46",
+								"id": "2fe8a705-1b5e-4ec3-adc0-e3b57ed53f08",
 								"exec": [],
 								"type": "text/javascript"
 							}
@@ -993,7 +999,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "0d351d69-1d84-4bf8-bcdc-bc7c3fd37549",
+				"id": "53c3d117-1c32-4332-b1c3-22241ca9df81",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -1004,7 +1010,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "620c84cd-4648-40d0-aa1e-3b1c285e6649",
+				"id": "2caee2db-fdd6-4fa8-8724-26210a7b0ec6",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
