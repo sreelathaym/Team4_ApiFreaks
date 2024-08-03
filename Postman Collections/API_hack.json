@@ -596,7 +596,7 @@
 						},
 						"method": "GET",
 						"header": [],
-						"url": "{{base_URL}}/morbidi"
+						"url": "{{base_URL}}/morbidity"
 					},
 					"response": []
 				},
@@ -932,16 +932,24 @@
 									"",
 									" if (pm.response.code === 201) {",
 									"   // Set collection variables for later use",
-									"pm.collectionVariables.set(\"patienyId\", patienyId);",
+									"pm.collectionVariables.set(\"patientId\", patienyId);",
 									" }",
-									" console.log(\"patienyId\", patienyId);",
+									" console.log(\"patientId\", patienyId);",
 									"//Before storing collection variable validating",
 									"pm.test(\"Token is stored as a collection variable\", function () {",
-									"    pm.expect(pm.collectionVariables.get(\"patienyId\")).to.eql(patienyId);",
+									"    pm.expect(pm.collectionVariables.get(\"patientId\")).to.eql(patientId);",
 									"});"
 								],
 								"type": "text/javascript",
 								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "9cf90cad-adfd-495d-ad85-801a29930b46",
+								"exec": [],
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -963,13 +971,13 @@
 							"formdata": [
 								{
 									"key": "patientInfo",
-									"type": "file",
-									"value": ""
+									"type": "text",
+									"value": "{ \"FirstName\": \"h\",\n\"LastName\": \"d\",\n\"ContactNumber\": \"1000000000\",\n\"Email\": \"S124@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1988-07-08\"}"
 								},
 								{
 									"key": "file",
 									"type": "file",
-									"src": "PE_VUKxel/Diabetic and Hemogram Test_Thyrocare lab.pdf.pdf"
+									"src": "9Xsx4k7uG/Diabetic and Hemogram Test_Thyrocare lab.pdf (1).pdf"
 								}
 							]
 						},
@@ -985,7 +993,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "3c621c61-66a4-4590-a03f-e584594e7dc7",
+				"id": "835ff677-d2fa-4b73-bb2b-ae559d4be409",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -996,7 +1004,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "5de288cb-4635-4def-a027-cc887025ea2b",
+				"id": "deac2bba-ae29-4716-a414-4ec0846a8146",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -1008,7 +1016,7 @@
 	"variable": [
 		{
 			"key": "Admin_Token",
-			"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJUZWFtNEBnbWFpbC5jb20iLCJpYXQiOjE3MjI1NzUwODEsImV4cCI6MTcyMjYwMzg4MX0.fzLWA5FHOwD4-ffaSWgp_AHfGxYyVc9Rsfi3OBY-b2_Enk2yU5ooQicSMEAG7EoQmEag4PhJpT4jjp3r3fdTig"
+			"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJUZWFtNEBnbWFpbC5jb20iLCJpYXQiOjE3MjI2NTY2ODMsImV4cCI6MTcyMjY4NTQ4M30.TVEavr_2t_oifP0EQdD6nidZdcqnPGOsCaxp3ADrnNTONBNlhF6OigoJX_YGe5QhCeWxVc_fCXCzPEzfe85hvw"
 		},
 		{
 			"key": "base_URL",
@@ -1101,6 +1109,10 @@
 		},
 		{
 			"key": "patienyId",
+			"value": ""
+		},
+		{
+			"key": "patientId",
 			"value": ""
 		}
 	]
