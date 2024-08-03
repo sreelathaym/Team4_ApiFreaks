@@ -60,7 +60,7 @@
 							"script": {
 								"id": "d0f80eff-ad62-4f09-b844-d07c880a9f8b",
 								"exec": [
-									"let resp = pm.response.json();\r",
+									"var resp = pm.response.json();\r",
 									"pm.collectionVariables.set(\"Admin_Token\", resp.token);"
 								],
 								"type": "text/javascript",
@@ -679,15 +679,11 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"h\",\n\"LastName\": \"d\",\n\"ContactNumber\": \"1110000002\",\n\"Email\": \"S124@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1989-08-05\"}"
+									"value": "{ \"FirstName\": \"h\",\n\"LastName\": \"d\",\n\"ContactNumber\": \"1111000002\",\n\"Email\": \"S124@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1989-08-04\"}"
 								},
 								{
 									"key": "file",
 									"type": "file",
-									"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
-									"filesNotInWorkingDirectory": [
-										"9Xsx4k7uG/Diabetic and Hemogram Test_Thyrocare lab.pdf (1).pdf"
-									],
 									"src": "9Xsx4k7uG/Diabetic and Hemogram Test_Thyrocare lab.pdf (1).pdf"
 								}
 							]
@@ -1225,22 +1221,7 @@
 								}
 							]
 						},
-						"url": {
-							"raw": "{{base_URL}}/patient/:patient",
-							"host": [
-								"{{base_URL}}"
-							],
-							"path": [
-								"patient",
-								":patient"
-							],
-							"variable": [
-								{
-									"key": "patient",
-									"value": "73"
-								}
-							]
-						}
+						"url": "{{base_URL}}/patient/468"
 					},
 					"response": []
 				}
