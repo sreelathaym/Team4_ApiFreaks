@@ -963,7 +963,7 @@
 							"formdata": [
 								{
 									"key": "patientInfo",
-									"value": "{ \"FirstName\": \"sdetabyr\",\n\"LastName\": \"sdetxyke\",\n\"ContactNumber\": \"9123656789\",\n\"Email\": \"asddetb@gmail.com\",\n\"Allergy\": \"PECAN\",\n\"FoodPreference\": \"Vegan\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1906-12-14\"\n}\n",
+									"value": "{\n\"FirstName\": \"{{PatientFirstName}}\",\n\"LastName\": \"{{PatientLastName}}”,\n\"ContactNumber:”{{PatientContactNumber}}”,\n\"Email\":”{{ patientEmail}}”,\n\"Allergy\": “{{Allergy}}”,\n\"FoodPreference\": “{{FoodPreference}}”,\n\"CuisineCategory\":\"{{CuisineCategory}}\",\n\"DateOfBirth\": \"{{PatientDateOfBirth}}\"\n}\n",
 									"type": "text"
 								},
 								{
@@ -985,7 +985,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "abde0aca-b0ce-4d0e-a868-b0c5f8d9326c",
+				"id": "d248174a-725f-4227-a6c8-8ef8990a9b3e",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -996,7 +996,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "460c9599-48c3-4ec2-bcd8-6bc690d473af",
+				"id": "f651913a-c9bc-4f8b-b9ab-3b303336bb97",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -1140,11 +1140,6 @@
 		},
 		{
 			"key": "PatientContactNumber",
-			"value": "",
-			"type": "string"
-		},
-		{
-			"key": "patientEmail",
 			"value": "",
 			"type": "string"
 		}
