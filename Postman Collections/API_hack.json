@@ -2069,7 +2069,7 @@
 									"const fs = require('fs');",
 									"",
 									"// Assuming you have loaded the jsonObjects from the output.json file",
-									"const jsonObjects = [",
+									"const jsonObjects = ",
 									"  ",
 									"  { \"FirstName\": \"abcd\",",
 									"\"LastName\": \"xyza\",",
@@ -2081,12 +2081,12 @@
 									"\"DateOfBirth\": \"1986-12-16\"",
 									"}",
 									"",
-									"];",
+									"",
 									"",
 									"// Set the variables in Postman environment",
-									"jsonObjects.forEach(obj => {",
+									"",
 									"    pm.collectionVariables.set(obj.key, obj.value);",
-									"});"
+									""
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -3059,6 +3059,9 @@
 		},
 		{
 			"key": "patientInfo2",
+			"value": ""
+		},
+		{
 			"value": ""
 		}
 	]
