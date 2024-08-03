@@ -129,60 +129,6 @@
 						"url": "{{base_URL}}/login"
 					},
 					"response": []
-				},
-				{
-					"name": "Logoutwithvalidendpoint",
-					"id": "2cb2551c-8cdb-4645-a6e5-30ba2fc8e988",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{Admin_Token}}"
-							}
-						},
-						"method": "GET",
-						"header": [],
-						"url": "{{base_URL}}/logoutdietician"
-					},
-					"response": []
-				},
-				{
-					"name": "Logoutwithinvalidendpoint",
-					"id": "c664ea98-e140-49d6-8866-88ff38d87664",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{Admin_Token}}"
-							}
-						},
-						"method": "GET",
-						"header": [],
-						"url": "{{base_URL}}/logoutdietician123"
-					},
-					"response": []
-				},
-				{
-					"name": "LogoutwithNoAuth",
-					"id": "5cbdb153-832f-4e89-826e-4dae09f4da1d",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "GET",
-						"header": [],
-						"url": "{{base_URL}}/logoutdietician"
-					},
-					"response": []
 				}
 			],
 			"id": "6b9bd3d0-9211-44e3-9d98-4927016f0963"
@@ -1068,13 +1014,13 @@
 					]
 				},
 				{
-					"name": "Update",
+					"name": "UpdateAddNewReprts",
 					"id": "f21df221-d3e6-4138-8138-f584d1c4d837",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
+						"method": "PUT",
 						"header": []
 					},
 					"response": []
@@ -1416,7 +1362,7 @@
 					"response": []
 				},
 				{
-					"name": "Delete_PatientById Copy",
+					"name": "Delete_PatientByInval-ID",
 					"id": "20cffdc6-0f7e-484a-889e-708f073a5b1e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -1430,7 +1376,7 @@
 						},
 						"method": "DELETE",
 						"header": [],
-						"url": "{{base_URL}}/patient/{{patientId}}"
+						"url": "{{base_URL}}/patient/{{patd}}"
 					},
 					"response": []
 				},
@@ -1501,6 +1447,60 @@
 						"method": "DELETE",
 						"header": [],
 						"url": "{{base_URL}}/dietician/{{dietician_id}}}"
+					},
+					"response": []
+				},
+				{
+					"name": "LogoutwithNoAuth",
+					"id": "5cbdb153-832f-4e89-826e-4dae09f4da1d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/logoutdietician"
+					},
+					"response": []
+				},
+				{
+					"name": "Logoutwithinvalidendpoint",
+					"id": "c664ea98-e140-49d6-8866-88ff38d87664",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/logoutdietician123"
+					},
+					"response": []
+				},
+				{
+					"name": "Logoutwithvalidendpoint",
+					"id": "2cb2551c-8cdb-4645-a6e5-30ba2fc8e988",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/logoutdietician"
 					},
 					"response": []
 				}
