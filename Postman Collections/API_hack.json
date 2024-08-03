@@ -45,48 +45,6 @@
 					"response": []
 				},
 				{
-					"name": "Dietician_login",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "d0f80eff-ad62-4f09-b844-d07c880a9f8b",
-								"exec": [
-									"let resp = pm.response.json();\r",
-									"pm.collectionVariables.set(\"Dietician_Token\", resp.token);"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"id": "60bf1bf0-7a9e-48ae-b06e-71b18465a256",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{Admin_Token}}"
-							}
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"password\": \"{{dieticianPsw}}\",\r\n    \"userLoginEmail\": \"{{dieticianEmail}}\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{base_URL}}/login"
-					},
-					"response": []
-				},
-				{
 					"name": "UserloginWithinvalidEndpoint",
 					"id": "ba858357-5a7b-4527-a310-ee32a3f2f43b",
 					"protocolProfileBehavior": {
@@ -473,6 +431,48 @@
 		{
 			"name": "Patient",
 			"item": [
+				{
+					"name": "Dietician_login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d0f80eff-ad62-4f09-b844-d07c880a9f8b",
+								"exec": [
+									"let resp = pm.response.json();\r",
+									"pm.collectionVariables.set(\"Dietician_Token\", resp.token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "60bf1bf0-7a9e-48ae-b06e-71b18465a256",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"{{dieticianPsw}}\",\r\n    \"userLoginEmail\": \"{{dieticianEmail}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_URL}}/login"
+					},
+					"response": []
+				},
 				{
 					"name": "GetAllPatients",
 					"id": "1e566add-363e-4c3a-83f3-53aed026f73f",
@@ -1389,25 +1389,6 @@
 					"request": {
 						"auth": {
 							"type": "noauth"
-						},
-						"method": "DELETE",
-						"header": [],
-						"url": "{{base_URL}}/patient/{{patientId}}"
-					},
-					"response": []
-				},
-				{
-					"name": "Delete_PatientById Copy",
-					"id": "70d3d6e5-d3b6-422c-bc12-3d84bdbf3ae3",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{Dietician_Token}}"
-							}
 						},
 						"method": "DELETE",
 						"header": [],
