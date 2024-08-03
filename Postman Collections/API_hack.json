@@ -919,13 +919,56 @@
 				},
 				{
 					"name": "New Request",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9278e75e-9340-4fff-b6c3-27740f54607e",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"// // Extract the program name and program status",
+									" const patienyId = response.patientId;",
+									"",
+									" if (pm.response.code === 201) {",
+									"   // Set collection variables for later use",
+									"pm.collectionVariables.set(\"patienyId\", patienyId);",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "e7076d92-246f-4a29-87ba-be5679ce5ba8",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Dietician_Token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "patientInfo",
+									"value": "{ \"FirstName\": \"sdetabcr\",\n\"LastName\": \"sdetxyze\",\n\"ContactNumber\": \"9123656789\",\n\"Email\": \"asddetb@gmail.com\",\n\"Allergy\": \"PECAN\",\n\"FoodPreference\": \"Vegan\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1986-12-14\"\n}\n",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "PE_VUKxel/Diabetic and Hemogram Test_Thyrocare lab.pdf.pdf"
+								}
+							]
+						},
+						"url": "{{base_URL}}/patient"
 					},
 					"response": []
 				}
