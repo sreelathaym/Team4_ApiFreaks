@@ -785,6 +785,21 @@
 				},
 				{
 					"name": "N_GetAllPatients_Invalid_endpoint",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d45c3c7d-9141-406a-bab4-56d11c829c3d",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "c83f1170-1766-40fe-a1b1-29e04d848bcf",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -3057,7 +3072,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "fce5a305-51e0-4b83-97a7-85f932e99101",
+				"id": "c8e88a80-0ab0-49ef-aa1f-601a0e536524",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -3068,7 +3083,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "31599695-6359-4034-951f-88a45e00ccc0",
+				"id": "4df73dc2-2415-4715-80bc-921e53673a4a",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
