@@ -18,7 +18,9 @@
 								"exec": [
 									"pm.test(\"Status code is 401\", function () {\r",
 									"    pm.response.to.have.status(401);\r",
-									"});"
+									"});\r",
+									"\r",
+									""
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -1592,7 +1594,7 @@
 								}
 							]
 						},
-						"url": "{{base_URL}}/patient/468"
+						"url": "{{base_URL}}/patient/{{patientId}}"
 					},
 					"response": []
 				},
@@ -1612,6 +1614,18 @@
 						"method": "GET",
 						"header": [],
 						"url": "{{base_URL}}/patient/testReports/{{patientId}}"
+					},
+					"response": []
+				},
+				{
+					"name": "GetOperatioRetrievePatient file by FileId",
+					"id": "37596610-c6cd-42ca-bed7-aa255014d81e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				}
