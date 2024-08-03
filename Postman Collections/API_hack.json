@@ -2282,6 +2282,21 @@
 				},
 				{
 					"name": "N_GetPatientsMorbidityDetails_invalid_Endpoint",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "261986ef-b8ab-4052-927c-1f15b4741328",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "9c2ec3f1-8a13-4980-9171-16f4b7c8a147",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -2301,6 +2316,21 @@
 				},
 				{
 					"name": "N_GetPatientsMorbidityDetails_invalid_Endpoint_without_Auth",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f71989ea-6731-44c7-ac24-132333a5fde2",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "f2be467c-cf84-4d5a-8591-1790d27de7eb",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -2317,6 +2347,21 @@
 				},
 				{
 					"name": "GetOperatioRetrievePatientfilebyFileId",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2e8e1614-eb68-476c-9e46-7fbbcff663c5",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "37596610-c6cd-42ca-bed7-aa255014d81e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -2336,6 +2381,21 @@
 				},
 				{
 					"name": "N_GetOperatioRetrievePatientfilebyFileId _Without_Auth",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "432fe67f-80c6-4368-bb92-007d4877655e",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "3f4f5974-850b-4998-83ef-ba006bf2db90",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -2352,6 +2412,21 @@
 				},
 				{
 					"name": "N_GetOperatioRetrievePatientfilebyFileId_Invalid_endPoint",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e928ca12-4ef4-4e26-83ee-cea98c228c82",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "4d219272-ade5-4380-a952-b6f859dfe4bd",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
