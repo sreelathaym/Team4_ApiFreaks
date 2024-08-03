@@ -1048,7 +1048,22 @@
 								}
 							]
 						},
-						"url": "{{base_URL}}/patient/73"
+						"url": {
+							"raw": "{{base_URL}}/patient/:patient",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"patient",
+								":patient"
+							],
+							"variable": [
+								{
+									"key": "patient",
+									"value": "73"
+								}
+							]
+						}
 					},
 					"response": []
 				}
