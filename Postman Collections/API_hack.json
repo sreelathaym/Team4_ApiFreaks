@@ -596,7 +596,7 @@
 						},
 						"method": "GET",
 						"header": [],
-						"url": "{{base_URL}}/morbidity"
+						"url": "{{base_URL}}/morbidi"
 					},
 					"response": []
 				},
@@ -964,7 +964,7 @@
 								{
 									"key": "patientInfo",
 									"type": "file",
-									"src": "Rucn2iOkA/PatientInfo.rtf"
+									"value": ""
 								},
 								{
 									"key": "file",
