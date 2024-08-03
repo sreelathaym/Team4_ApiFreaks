@@ -2228,8 +2228,8 @@
 							"formdata": [
 								{
 									"key": "patientInfo",
-									"type": "text",
-									"value": "{ \"FirstName\": \"setabcr\",\n\"LastName\": \"sdetyze\",\n\"ContactNumber\": \"9123656789\",\n\"Email\": \"asddetb@gmail.com\",\n\"Allergy\": \"PECAN\",\n\"FoodPreference\": \"Vegan\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1985-12-14\"\n}\n"
+									"type": "file",
+									"src": "yRo6FHDny/patient.json"
 								},
 								{
 									"key": "Reports",
