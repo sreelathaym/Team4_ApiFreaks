@@ -82,7 +82,7 @@
 								}
 							}
 						},
-						"url": "https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login"
+						"url": "{{base_URL}}/login"
 					},
 					"response": []
 				},
@@ -1411,10 +1411,7 @@
 					},
 					"request": {
 						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{Dietician_Token}}"
-							}
+							"type": "noauth"
 						},
 						"method": "DELETE",
 						"header": [],
@@ -1484,7 +1481,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "e20c40fc-6fe4-429a-a609-32b2dcb20ca3",
+				"id": "9ceea5d7-da63-4405-9cd2-4869bf71fc45",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -1495,7 +1492,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "eeadb82f-f2a2-48d6-b04a-fd58172ed574",
+				"id": "573a85fa-524f-40d1-86bd-570f556b4930",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
