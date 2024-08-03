@@ -993,7 +993,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "835ff677-d2fa-4b73-bb2b-ae559d4be409",
+				"id": "0d351d69-1d84-4bf8-bcdc-bc7c3fd37549",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -1004,7 +1004,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "deac2bba-ae29-4716-a414-4ec0846a8146",
+				"id": "620c84cd-4648-40d0-aa1e-3b1c285e6649",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -1079,15 +1079,6 @@
 			"type": "string"
 		},
 		{
-			"key": "dieticianid",
-			"value": "",
-			"type": "string"
-		},
-		{
-			"key": "userId",
-			"value": ""
-		},
-		{
 			"key": "password",
 			"value": ""
 		},
@@ -1105,10 +1096,6 @@
 		},
 		{
 			"key": "Dietician_Token",
-			"value": ""
-		},
-		{
-			"key": "patienyId",
 			"value": ""
 		},
 		{
