@@ -1618,14 +1618,40 @@
 					"response": []
 				},
 				{
-					"name": "GetOperatioRetrievePatient file by FileId",
+					"name": "GetOperatioRetrievePatientfilebyFileId",
 					"id": "37596610-c6cd-42ca-bed7-aa255014d81e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Dietician_Token}}"
+							}
+						},
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "{{base_URL}}/patient/testReports/viewFile/{{fileId}}"
+					},
+					"response": []
+				},
+				{
+					"name": "GetOperatioRetrievePatientfilebyFileId Copy",
+					"id": "d730a772-0dbb-4b01-887b-1c0ee117e91b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Dietician_Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/patient/testReports/viewFile/{{fileId}}"
 					},
 					"response": []
 				}
