@@ -2452,6 +2452,21 @@
 			"item": [
 				{
 					"name": "Get all Morbidities",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "553b74a4-b57c-44bb-97bc-fde29514a318",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "011bbad4-f72f-4c7a-92c2-e4f9fe37c560",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
