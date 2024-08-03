@@ -10,6 +10,21 @@
 			"item": [
 				{
 					"name": "UserloginWithinvalidEndpoint",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "fb7efa7f-68e3-4c9a-bcbf-859de8e14e22",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "ba858357-5a7b-4527-a310-ee32a3f2f43b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -802,72 +817,7 @@
 							"cookie": [],
 							"responseTime": null,
 							"body": "{\n    \"patientId\": 472,\n    \"FirstName\": \"h\",\n    \"LastName\": \"d\",\n    \"ContactNumber\": \"1110000000\",\n    \"Email\": \"S124@acbd.com\",\n    \"Allergy\": \"Soy\",\n    \"FoodPreference\": \"jain\",\n    \"CuisineCategory\": \"Indian\",\n    \"FileMorbidity\": {\n        \"66adae9f4717cf471aaad21d\": {\n            \"HbA1c\": \"6.5 %\",\n            \"Average Glucose\": \"131.0 mg/dl\"\n        }\n    },\n    \"FileMorbidityCondition\": {\n        \"66adae9f4717cf471aaad21d\": \"Prediabetic \\nBlood Pressure: Hypotension \\n\"\n    },\n    \"DateOfBirth\": \"1988-07-05\",\n    \"DieticianId\": 871,\n    \"Vitals\": {\n        \"66adae9f4717cf471aaad21d\": {\n            \"Weight\": 0,\n            \"Height\": 0,\n            \"Temperature\": 0,\n            \"SP\": 0,\n            \"DP\": 0\n        }\n    },\n    \"LastVisitDate\": \"2024-08-03T04:14:23.627+00:00\"\n}"
-						}
-					]
-				},
-				{
-					"name": "N-create_Patient_invalid_endpt",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "9278e75e-9340-4fff-b6c3-27740f54607e",
-								"exec": [
-									"pm.test(\"Status code is 401\", function () {",
-									"    pm.response.to.have.status(401);",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
 						},
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "27cd307c-b49b-4959-8cf1-5539bdd1082d",
-								"exec": [
-									""
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"id": "ce0e336e-5a4d-4ff3-bc77-f595a3f0f5db",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "basic",
-							"basic": {
-								"username": "{{Dietician_Token}}"
-							}
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "patientInfo",
-									"type": "text",
-									"value": "{ \"FirstName\": \"h\",\n\"LastName\": \"d\",\n\"ContactNumber\": \"1110000001\",\n\"Email\": \"S124@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1988-08-05\"}"
-								},
-								{
-									"key": "file",
-									"type": "file",
-									"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
-									"filesNotInWorkingDirectory": [
-										"9Xsx4k7uG/Diabetic and Hemogram Test_Thyrocare lab.pdf (1).pdf"
-									],
-									"src": "9Xsx4k7uG/Diabetic and Hemogram Test_Thyrocare lab.pdf (1).pdf"
-								}
-							]
-						},
-						"url": "{{base_URL}}/patient-"
-					},
-					"response": [
 						{
 							"id": "caaf56fa-1dc4-46bf-955e-6af4d619c92f",
 							"name": "New Request",
@@ -975,7 +925,72 @@
 							"cookie": [],
 							"responseTime": null,
 							"body": "{\n    \"patientId\": 472,\n    \"FirstName\": \"h\",\n    \"LastName\": \"d\",\n    \"ContactNumber\": \"1110000000\",\n    \"Email\": \"S124@acbd.com\",\n    \"Allergy\": \"Soy\",\n    \"FoodPreference\": \"jain\",\n    \"CuisineCategory\": \"Indian\",\n    \"FileMorbidity\": {\n        \"66adae9f4717cf471aaad21d\": {\n            \"HbA1c\": \"6.5 %\",\n            \"Average Glucose\": \"131.0 mg/dl\"\n        }\n    },\n    \"FileMorbidityCondition\": {\n        \"66adae9f4717cf471aaad21d\": \"Prediabetic \\nBlood Pressure: Hypotension \\n\"\n    },\n    \"DateOfBirth\": \"1988-07-05\",\n    \"DieticianId\": 871,\n    \"Vitals\": {\n        \"66adae9f4717cf471aaad21d\": {\n            \"Weight\": 0,\n            \"Height\": 0,\n            \"Temperature\": 0,\n            \"SP\": 0,\n            \"DP\": 0\n        }\n    },\n    \"LastVisitDate\": \"2024-08-03T04:14:23.627+00:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "N-create_Patient_invalid_endpt",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9278e75e-9340-4fff-b6c3-27740f54607e",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
 						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "27cd307c-b49b-4959-8cf1-5539bdd1082d",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "ce0e336e-5a4d-4ff3-bc77-f595a3f0f5db",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{Dietician_Token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "patientInfo",
+									"type": "text",
+									"value": "{ \"FirstName\": \"h\",\n\"LastName\": \"d\",\n\"ContactNumber\": \"1110000001\",\n\"Email\": \"S124@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1988-08-05\"}"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
+									"filesNotInWorkingDirectory": [
+										"9Xsx4k7uG/Diabetic and Hemogram Test_Thyrocare lab.pdf (1).pdf"
+									],
+									"src": "9Xsx4k7uG/Diabetic and Hemogram Test_Thyrocare lab.pdf (1).pdf"
+								}
+							]
+						},
+						"url": "{{base_URL}}/patient-"
+					},
+					"response": [
 						{
 							"id": "e02ed9d9-6f30-4d12-b9eb-bf4375ef8f34",
 							"name": "errorMSg-create_Patient_invalid_endpt",
@@ -1582,14 +1597,21 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "GetPatientsMorbidityDetails",
 					"id": "2e1e84fe-14fc-4240-a100-79fdd84e1d5b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Dietician_Token}}"
+							}
+						},
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "{{base_URL}}/patient/testReports/{{patientId}}"
 					},
 					"response": []
 				}
