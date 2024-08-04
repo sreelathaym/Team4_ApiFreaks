@@ -213,7 +213,7 @@
 			"id": "6b9bd3d0-9211-44e3-9d98-4927016f0963"
 		},
 		{
-			"name": "Dietician",
+			"name": "Admin",
 			"item": [
 				{
 					"name": "Create Dietician",
@@ -1833,6 +1833,65 @@
 					]
 				},
 				{
+					"name": "GetPatientsMorbidityDetails",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9e55a389-9817-4d76-9659-104ef45848b6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"// Check if the response time is less than 500ms",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"",
+									"// Check if the response has a JSON content type",
+									"pm.test(\"Content-Type is application/json\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\", /application/json);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "3e62f405-b007-4ecf-8294-bcc622ffde43",
+								"exec": [
+									"console.log(pm.info.iteration, pm.info.iterationCount)\r",
+									"if ( pm.info.iteration < pm.info.iterationCount - 1) {\r",
+									"    pm.execution.skipRequest();\r",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "2e1e84fe-14fc-4240-a100-79fdd84e1d5b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Dietician_Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/patient/testReports/{{patientId}}"
+					},
+					"response": []
+				},
+				{
 					"name": "update_Patient",
 					"event": [
 						{
@@ -2456,65 +2515,6 @@
 							]
 						},
 						"url": "{{base_URL}}/patient/{{patientId}}"
-					},
-					"response": []
-				},
-				{
-					"name": "GetPatientsMorbidityDetails",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "9e55a389-9817-4d76-9659-104ef45848b6",
-								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});",
-									"",
-									"// Check if the response time is less than 500ms",
-									"pm.test(\"Response time is less than 500ms\", function () {",
-									"    pm.expect(pm.response.responseTime).to.be.below(500);",
-									"});",
-									"",
-									"// Check if the response has a JSON content type",
-									"pm.test(\"Content-Type is application/json\", function () {",
-									"    pm.response.to.have.header(\"Content-Type\", /application/json);",
-									"});",
-									""
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						},
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "3e62f405-b007-4ecf-8294-bcc622ffde43",
-								"exec": [
-									"console.log(pm.info.iteration, pm.info.iterationCount)\r",
-									"if ( pm.info.iteration < pm.info.iterationCount - 1) {\r",
-									"    pm.execution.skipRequest();\r",
-									"}"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"id": "2e1e84fe-14fc-4240-a100-79fdd84e1d5b",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{Dietician_Token}}"
-							}
-						},
-						"method": "GET",
-						"header": [],
-						"url": "{{base_URL}}/patient/testReports/{{patientId}}"
 					},
 					"response": []
 				},
