@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "UserModule",
+			"name": "Admin",
 			"item": [
 				{
 					"name": "UserloginWithinvalidEndpoint",
@@ -208,13 +208,7 @@
 						"url": "{{base_URL}}/login"
 					},
 					"response": []
-				}
-			],
-			"id": "6b9bd3d0-9211-44e3-9d98-4927016f0963"
-		},
-		{
-			"name": "Admin",
-			"item": [
+				},
 				{
 					"name": "N-CreateDieticianInvalidendpoint",
 					"event": [
