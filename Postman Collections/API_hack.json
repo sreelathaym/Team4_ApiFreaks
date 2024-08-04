@@ -521,7 +521,7 @@
 						},
 						"method": "GET",
 						"header": [],
-						"url": "{{base_URL}}/{{dietician_id}}"
+						"url": "{{base_URL}}/{{dieticianId}}"
 					},
 					"response": []
 				},
@@ -537,7 +537,7 @@
 						},
 						"method": "GET",
 						"header": [],
-						"url": "{{base_URL}}/{{dietician_id}}"
+						"url": "{{base_URL}}/dietician/{{dieticianId}}"
 					},
 					"response": []
 				},
@@ -556,7 +556,7 @@
 						},
 						"method": "GET",
 						"header": [],
-						"url": "{{base_URL}}/dietician/{{dietician_id}}"
+						"url": "{{base_URL}}/dietician/{{dieticianId}}"
 					},
 					"response": []
 				},
