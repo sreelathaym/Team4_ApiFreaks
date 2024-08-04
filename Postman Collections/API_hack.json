@@ -2345,7 +2345,18 @@
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
-									"});"
+									"});",
+									"",
+									"// Check if the response time is less than 500ms",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"",
+									"// Check if the response has a JSON content type",
+									"pm.test(\"Content-Type is application/json\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\", /application/json);",
+									"});",
+									""
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -2379,7 +2390,8 @@
 								"exec": [
 									"pm.test(\"Status code is 400\", function () {",
 									"    pm.response.to.have.status(400);",
-									"});"
+									"});",
+									""
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -2444,6 +2456,16 @@
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"// Check if the response time is less than 500ms",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"",
+									"// Check if the response has a JSON content type",
+									"pm.test(\"Content-Type is application/json\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\", /application/json);",
 									"});"
 								],
 								"type": "text/javascript",
