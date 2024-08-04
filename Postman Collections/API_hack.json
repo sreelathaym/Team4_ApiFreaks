@@ -2026,22 +2026,14 @@
 									"",
 									"// // Extract the program name and program status",
 									" const patientId = response.patientId;",
-									" var patientPsw = response.loginPassword;",
-									" var Patient_Email=response.Email;",
-									"",
-									"",
+									" ",
 									" if (pm.response.code === 201) {",
 									"   // Set collection variables for later use",
 									"pm.collectionVariables.set(\"patientId\", patientId);",
-									"pm.collectionVariables.set(\"patientPsw\",patientPsw);",
-									"pm.collectionVariables.set(\"Patient_Email\",Patient_Email)",
+									"",
 									" }",
 									" console.log(\"patientId\", patientId);",
-									" console.log(\"patientPsw\",patientPsw)",
-									" console.log(\"Patient_Email\",Patient_Email)",
 									" ",
-									"",
-									"",
 									"//Before storing collection variable validating",
 									"pm.test(\"Token is stored as a collection variable\", function () {",
 									"    pm.expect(pm.collectionVariables.get(\"patientId\")).to.eql(patientId);",
@@ -2120,7 +2112,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"hjjjgnd\",\n\"LastName\": \"dhjtd\",\n\"ContactNumber\": \"1128070002\",\n\"Email\": \"Sss2841@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1979-08-05\"}"
+									"value": "{ \"FirstName\": \"hjjgnd\",\n\"LastName\": \"dhtd\",\n\"ContactNumber\": \"1127070002\",\n\"Email\": \"Ss92841@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1979-08-05\"}"
 								},
 								{
 									"key": "file",
