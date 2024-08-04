@@ -2732,86 +2732,6 @@
 					"response": []
 				},
 				{
-					"name": "N_GetPatientsMorbidityDetails_invalid_Endpoint",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "261986ef-b8ab-4052-927c-1f15b4741328",
-								"exec": [
-									"pm.test(\"Status code is 400\", function () {",
-									"    pm.response.to.have.status(400);",
-									"});",
-									""
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						},
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "3327b0ef-615e-49d1-ae74-56fe715fa7ec",
-								"exec": [
-									"console.log(pm.info.iteration, pm.info.iterationCount)\r",
-									"if ( pm.info.iteration < pm.info.iterationCount - 1) {\r",
-									"    pm.execution.skipRequest();\r",
-									"}"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"id": "9c2ec3f1-8a13-4980-9171-16f4b7c8a147",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{Dietician_Token}}"
-							}
-						},
-						"method": "GET",
-						"header": [],
-						"url": "{{base_URL}}/patient/testReports/patientId"
-					},
-					"response": []
-				},
-				{
-					"name": "N_GetPatientsMorbidityDetails_invalid_Endpoint_without_Auth",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "f71989ea-6731-44c7-ac24-132333a5fde2",
-								"exec": [
-									"pm.test(\"Status code is 401\", function () {",
-									"    pm.response.to.have.status(401);",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"id": "f2be467c-cf84-4d5a-8591-1790d27de7eb",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "GET",
-						"header": [],
-						"url": "{{base_URL}}/patient/testReports/patientId"
-					},
-					"response": []
-				},
-				{
 					"name": "GetOperatioRetrievePatientfilebyFileId",
 					"event": [
 						{
@@ -3687,6 +3607,86 @@
 					"response": []
 				},
 				{
+					"name": "N_GetPatientsMorbidityDetailswithout_Auth",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f71989ea-6731-44c7-ac24-132333a5fde2",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "f2be467c-cf84-4d5a-8591-1790d27de7eb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/patient/testReports/patientId"
+					},
+					"response": []
+				},
+				{
+					"name": "N_GetPatientsMorbidityDetails_invalid_Endpoint",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "261986ef-b8ab-4052-927c-1f15b4741328",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "3327b0ef-615e-49d1-ae74-56fe715fa7ec",
+								"exec": [
+									"console.log(pm.info.iteration, pm.info.iterationCount)\r",
+									"if ( pm.info.iteration < pm.info.iterationCount - 1) {\r",
+									"    pm.execution.skipRequest();\r",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "9c2ec3f1-8a13-4980-9171-16f4b7c8a147",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Dietician_Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/patient/testReports/patientId"
+					},
+					"response": []
+				},
+				{
 					"name": "GetPatientsMorbidityDetails",
 					"event": [
 						{
@@ -3753,7 +3753,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "2f506823-2c5a-4393-b4aa-ab24567b7e59",
+				"id": "cf14539a-f4f3-4c63-b1d7-2737b1ca2b00",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -3764,7 +3764,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "f14ac6da-f1b9-4130-af7d-954421df9a4e",
+				"id": "d3844294-e7dd-4100-82bf-0dbae3bcf161",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -3779,12 +3779,22 @@
 			"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJUZWFtNEBnbWFpbC5jb20iLCJpYXQiOjE3MjI3NDIzNDEsImV4cCI6MTcyMjc3MTE0MX0.ZcfdvI8GCgNBq6Ke1fHpIOK3UV1VJB8ZRmpsGmJK-MQl5lYdQ_2frr3EAzUURAVdEhlimxPevqZDwtqPMlltNQ"
 		},
 		{
+			"key": "AdminEmail",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "AdminPsw",
+			"value": "",
+			"type": "string"
+		},
+		{
 			"key": "base_URL",
 			"value": "https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician",
 			"type": "string"
 		},
 		{
-			"key": "password",
+			"key": "patientPsw",
 			"value": ""
 		},
 		{
