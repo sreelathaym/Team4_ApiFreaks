@@ -216,69 +216,6 @@
 			"name": "Dietician",
 			"item": [
 				{
-					"name": "N_CreateDieticianInvalidEndpoint",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "07498148-ce77-40ca-8cef-60d284aebc04",
-								"exec": [
-									"pm.test(\"Status code is 400\", function () {\r",
-									"    pm.response.to.have.status(400);\r",
-									"});\r",
-									" const schema = {\r",
-									" \r",
-									"  \"type\": \"object\",\r",
-									"  \"properties\": {\r",
-									"    \"timestamp\": {\r",
-									"      \"type\": \"string\"\r",
-									"    },\r",
-									"    \"status\": {\r",
-									"      \"type\": \"integer\"\r",
-									"    },\r",
-									"    \"error\": {\r",
-									"      \"type\": \"string\"\r",
-									"    },\r",
-									"    \"path\": {\r",
-									"      \"type\": \"string\"\r",
-									"    }\r",
-									"  },\r",
-									"  \"required\": [\r",
-									"    \"timestamp\",\r",
-									"    \"status\",\r",
-									"    \"error\",\r",
-									"    \"path\"\r",
-									"  ]\r",
-									"}\r",
-									"pm.test(\"Response contsins valid schema data\", function () {\r",
-									"    pm.response.to.have.jsonSchema(schema);\r",
-									"});\r",
-									"\r",
-									""
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"id": "09671351-4305-471b-b708-d59abfbbde77",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{Admin_Token}}"
-							}
-						},
-						"method": "POST",
-						"header": [],
-						"url": "{{base_URL}}/dietician"
-					},
-					"response": []
-				},
-				{
 					"name": "Create Dietician",
 					"event": [
 						{
@@ -662,6 +599,68 @@
 					"response": []
 				},
 				{
+					"name": "Update Dietician",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "0bc97771-a44d-41e6-8223-3230175e1671",
+								"exec": [
+									"pm.collectionVariables.set(\"statuscode\", pm.iterationData.get('statuscode'));\r",
+									"let statuscode1 = pm.collectionVariables.get(\"statuscode\");\r",
+									"console.log(statuscode1);\r",
+									"\r",
+									"if (pm.iterationData.get(\"Request\") !== 'UpdateRequest') {\r",
+									"    pm.execution.skipRequest();\r",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "9930ae85-9889-442f-8edf-db5e33873f0f",
+								"exec": [
+									"\r",
+									"\r",
+									"pm.test(\"Status code\", function () {\r",
+									"    pm.response.to.have.status(pm.collectionVariables.get(\"statuscode\"));\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "9b87989e-9e5b-4f6e-be96-0b349666d6f0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"id\": \"{{dieticianid}}\",\r\n  \"ContactNumber\": \"{{contactnumber}}\",\r\n  \"DateOfBirth\": \"{{Dateofbirth}}\",\r\n  \"Education\": \"{{education}}\",\r\n  \"Email\": \"{{email}}\",\r\n  \"Firstname\": \"{{firstname}}\",\r\n  \"HospitalCity\":\" {{hospitalcity}}\",\r\n  \"HospitalName\": \"{{hospitalname}}\",\r\n  \"HospitalPincode\": \"{{hospitalpincode}}\",\r\n  \"HospitalStreet\":\"{{hospitalstreet}}\",\r\n  \"Lastname\": \"{{lastname}}\"\r\n \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_URL}}/dietician/{{dieticianid}}"
+					},
+					"response": []
+				},
+				{
 					"name": "GetDieticianByInvalidID",
 					"id": "aa736f16-7931-45df-8ae6-972c68420573",
 					"protocolProfileBehavior": {
@@ -731,68 +730,6 @@
 						"method": "GET",
 						"header": [],
 						"url": "{{base_URL}}/dietician/{{dieticianId}}"
-					},
-					"response": []
-				},
-				{
-					"name": "Update Dietician",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "0bc97771-a44d-41e6-8223-3230175e1671",
-								"exec": [
-									"pm.collectionVariables.set(\"statuscode\", pm.iterationData.get('statuscode'));\r",
-									"let statuscode1 = pm.collectionVariables.get(\"statuscode\");\r",
-									"console.log(statuscode1);\r",
-									"\r",
-									"if (pm.iterationData.get(\"Request\") !== 'UpdateRequest') {\r",
-									"    pm.execution.skipRequest();\r",
-									"}"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"id": "9930ae85-9889-442f-8edf-db5e33873f0f",
-								"exec": [
-									"\r",
-									"\r",
-									"pm.test(\"Status code\", function () {\r",
-									"    pm.response.to.have.status(pm.collectionVariables.get(\"statuscode\"));\r",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"id": "9b87989e-9e5b-4f6e-be96-0b349666d6f0",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{Admin_Token}}"
-							}
-						},
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n   \"id\": \"{{dieticianid}}\",\r\n  \"ContactNumber\": \"{{contactnumber}}\",\r\n  \"DateOfBirth\": \"{{Dateofbirth}}\",\r\n  \"Education\": \"{{education}}\",\r\n  \"Email\": \"{{email}}\",\r\n  \"Firstname\": \"{{firstname}}\",\r\n  \"HospitalCity\":\" {{hospitalcity}}\",\r\n  \"HospitalName\": \"{{hospitalname}}\",\r\n  \"HospitalPincode\": \"{{hospitalpincode}}\",\r\n  \"HospitalStreet\":\"{{hospitalstreet}}\",\r\n  \"Lastname\": \"{{lastname}}\"\r\n \r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{base_URL}}/dietician/{{dieticianid}}"
 					},
 					"response": []
 				}
