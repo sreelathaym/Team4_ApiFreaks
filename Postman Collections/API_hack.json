@@ -3473,6 +3473,21 @@
 				},
 				{
 					"name": "N-Morbidities with valid Dietician bearer token and Invalid End point Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5365ac73-865b-4227-b808-6d3276d8e827",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {",
+									"  pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "33ee56d2-a3c2-45bf-a8f4-fe59b065f83e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
