@@ -2868,99 +2868,6 @@
 						"url": "{{base_URL}}/patient/testReports/viewFile/{{fileId}}"
 					},
 					"response": []
-				},
-				{
-					"name": "N_GetOperatioRetrievePatientfilebyFileId _Without_Auth",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "432fe67f-80c6-4368-bb92-007d4877655e",
-								"exec": [
-									"pm.test(\"Status code is 401\", function () {",
-									"    pm.response.to.have.status(401);",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						},
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "8745352a-7e0e-4623-bb7c-bd866825aaf9",
-								"exec": [
-									"console.log(pm.info.iteration, pm.info.iterationCount)\r",
-									"if ( pm.info.iteration < pm.info.iterationCount - 1) {\r",
-									"    pm.execution.skipRequest();\r",
-									"}"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"id": "3f4f5974-850b-4998-83ef-ba006bf2db90",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "GET",
-						"header": [],
-						"url": "{{base_URL}}/patient/testReports/viewFile/{{fileId}}"
-					},
-					"response": []
-				},
-				{
-					"name": "N_GetOperatioRetrievePatientfilebyFileId_Invalid_endPoint",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "e928ca12-4ef4-4e26-83ee-cea98c228c82",
-								"exec": [
-									"pm.test(\"Status code is 400\", function () {",
-									"    pm.response.to.have.status(400);",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						},
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "57dd6ea4-a2d2-4801-92a7-2e440c7e6e8c",
-								"exec": [
-									"console.log(pm.info.iteration, pm.info.iterationCount)\r",
-									"if ( pm.info.iteration < pm.info.iterationCount - 1) {\r",
-									"    pm.execution.skipRequest();\r",
-									"}"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"id": "4d219272-ade5-4380-a952-b6f859dfe4bd",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{Dietician_Token}}"
-							}
-						},
-						"method": "GET",
-						"header": [],
-						"url": "{{base_URL}}/patient/testReports/viewFile/fieldId"
-					},
-					"response": []
 				}
 			],
 			"id": "76a595f1-6075-403b-9569-eb87b5cda9ce"
@@ -3625,6 +3532,99 @@
 							}
 						},
 						"url": "{{base_URL}}/login"
+					},
+					"response": []
+				},
+				{
+					"name": "N_GetPatientfilebyFileId _Without_Auth",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "432fe67f-80c6-4368-bb92-007d4877655e",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "8745352a-7e0e-4623-bb7c-bd866825aaf9",
+								"exec": [
+									"console.log(pm.info.iteration, pm.info.iterationCount)\r",
+									"if ( pm.info.iteration < pm.info.iterationCount - 1) {\r",
+									"    pm.execution.skipRequest();\r",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "3f4f5974-850b-4998-83ef-ba006bf2db90",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/patient/testReports/viewFile/{{fileId}}"
+					},
+					"response": []
+				},
+				{
+					"name": "N_GetPatientfilebyFileId_Invalid_endPoint",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e928ca12-4ef4-4e26-83ee-cea98c228c82",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "57dd6ea4-a2d2-4801-92a7-2e440c7e6e8c",
+								"exec": [
+									"console.log(pm.info.iteration, pm.info.iterationCount)\r",
+									"if ( pm.info.iteration < pm.info.iterationCount - 1) {\r",
+									"    pm.execution.skipRequest();\r",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "4d219272-ade5-4380-a952-b6f859dfe4bd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Dietician_Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/patient/testReports/viewFile/fieldId"
 					},
 					"response": []
 				},
