@@ -2086,7 +2086,7 @@
 									"// if (pm.iterationData.get(\"Request\") !== 'CreatePatient') {\r",
 									"//     pm.execution.skipRequest();\r",
 									"// }\r",
-									"pm.collectionVariables.set(\"patientEmail\", patientEmail);"
+									""
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -2972,7 +2972,7 @@
 								"id": "d0f80eff-ad62-4f09-b844-d07c880a9f8b",
 								"exec": [
 									"let resp = pm.response.json();\r",
-									"pm.collectionVariables.set(\"Dietician_Token\", resp.token);"
+									"pm.collectionVariables.set(\"Patient_Token\", resp.token);"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -3007,7 +3007,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"password\": \"{{patientPsw}}\",\r\n    \"userLoginEmail\": \"{{patientEmail}}\"\r\n}",
+							"raw": "{\r\n    \"password\": \"{{patientPsw}}\",\r\n    //\"userLoginEmail\": \"{{patientEmail}}\"\r\n    \"userLoginEmail\":\"Sss2541@acbd.com\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
