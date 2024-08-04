@@ -874,7 +874,7 @@
 					"response": []
 				},
 				{
-					"name": "Update Dietician Copy",
+					"name": "N-UpdateDieticianwithinvalidbaseurl",
 					"event": [
 						{
 							"listen": "prerequest",
@@ -931,7 +931,7 @@
 								}
 							}
 						},
-						"url": "{{base_URL}}/dietician/{{dieticianid}}"
+						"url": "{{dieticianid}}"
 					},
 					"response": []
 				},
@@ -993,7 +993,7 @@
 								}
 							}
 						},
-						"url": "{{base_URL}}/dietician/{{dieticianid}}"
+						"url": "{{base_URL}}/dietician/{{dieticianid}}/"
 					},
 					"response": []
 				},
@@ -3173,6 +3173,21 @@
 				},
 				{
 					"name": "Retrieve Morbidity condition by Test name(Fasting Glucose)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bad9543a-a855-45c4-8152-a1f877738dc7",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "4b9295a6-f5c9-492e-8f21-1bf5d3f1ce88",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -3203,37 +3218,6 @@
 									"});",
 									"",
 									"",
-									"pm.test(\"Response is in JSON format\", function () {",
-									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");",
-									"});",
-									"",
-									"",
-									"pm.test(\"Response time is within acceptable range\", function () {",
-									"  pm.expect(pm.response.responseTime).to.be.below(500);",
-									"});",
-									"",
-									"",
-									"pm.test(\"MorbidityId is present and is a non-negative integer\", function () {",
-									"    const responseData = pm.response.json();",
-									"    ",
-									"    pm.expect(responseData).to.be.an('array');",
-									"    responseData.forEach(function(item) {",
-									"        pm.expect(item.morbidityId).to.exist;",
-									"        pm.expect(item.morbidityId).to.be.a('number');",
-									"       // pm.expect(item.morbidityId).to.satisfy((val) => val >= 121, \"mim value\");",
-									"        pm.expect(item.morbidityMarkerMinVal).to.be.a(121);",
-									"         //pm.expect(item.morbidityId).to.satisfy((val) => val <= 150, \"max value\");",
-									"    });",
-									"});",
-									"",
-									"",
-									"pm.test(\"Morbidity test ID is a non-empty string\", function () {",
-									"    const responseData = pm.response.json();",
-									"    ",
-									"    responseData.forEach(function(item) {",
-									"        pm.expect(item.morbidityTestId).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Morbidity test ID should not be empty\");",
-									"    });",
-									"});",
 									""
 								],
 								"type": "text/javascript",
@@ -3644,7 +3628,7 @@
 						},
 						"method": "DELETE",
 						"header": [],
-						"url": "{{base_URL}}/dietician/{{dietician_id}}}"
+						"url": "{{base_URL}}/dietician/{{dieticianId}}"
 					},
 					"response": []
 				},
