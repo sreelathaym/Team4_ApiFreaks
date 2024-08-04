@@ -2030,13 +2030,13 @@
 									" if (pm.response.code === 201) {",
 									"   // Set collection variables for later use",
 									"pm.collectionVariables.set(\"patientId\", patientId);",
-									"pm.collectionVariables.set(\"patientEmail\", patientEmail);",
+									"",
 									" }",
 									" console.log(\"patientId\", patientId);",
+									" ",
 									"//Before storing collection variable validating",
 									"pm.test(\"Token is stored as a collection variable\", function () {",
 									"    pm.expect(pm.collectionVariables.get(\"patientId\")).to.eql(patientId);",
-									"    pm.expect(pm.collectionVariables.get(\"patientEmail\")).to.eql(patientEmail);",
 									"});",
 									"pm.test(\"First name is not empty\", function () {",
 									"    pm.expect(jsonData.FirstName).to.not.be.empty;",
@@ -2085,7 +2085,8 @@
 								"exec": [
 									"// if (pm.iterationData.get(\"Request\") !== 'CreatePatient') {\r",
 									"//     pm.execution.skipRequest();\r",
-									"// }"
+									"// }\r",
+									"pm.collectionVariables.set(\"patientEmail\", patientEmail);"
 								],
 								"type": "text/javascript",
 								"packages": {}
