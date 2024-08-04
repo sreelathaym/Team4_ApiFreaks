@@ -2972,7 +2972,7 @@
 								"id": "d0f80eff-ad62-4f09-b844-d07c880a9f8b",
 								"exec": [
 									"let resp = pm.response.json();\r",
-									"pm.collectionVariables.set(\"Patient_Token\", resp.token);"
+									"pm.collectionVariables.set(\"Dietician_Token\", resp.token);"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -3007,7 +3007,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"password\": \"{{patientPsw}}\",\r\n    //\"userLoginEmail\": \"{{patientEmail}}\"\r\n    \"userLoginEmail\":\"Sss2541@acbd.com\"\r\n}",
+							"raw": "{\r\n    \"password\": \"{{patientPsw}}\",\r\n    \"userLoginEmail\": \"{{patientEmail}}\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -3961,7 +3961,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "0f068746-cfbb-4508-876d-f3d500e806ec",
+				"id": "5a23d0dc-6a85-49ad-afaa-802649d8e8f8",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -3972,7 +3972,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "efe38c16-d892-4c86-9d7d-9a486cd15982",
+				"id": "480e1641-9c55-4897-9e35-2a5b527501d6",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -4003,7 +4003,7 @@
 		},
 		{
 			"key": "patientPsw",
-			"value": "test"
+			"value": ""
 		},
 		{
 			"key": "dieticianId",
@@ -4034,10 +4034,6 @@
 		},
 		{
 			"key": "statuscode",
-			"value": ""
-		},
-		{
-			"key": "Patient_Token",
 			"value": ""
 		}
 	]
