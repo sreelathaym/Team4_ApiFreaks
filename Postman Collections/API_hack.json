@@ -327,7 +327,7 @@
 					"response": []
 				},
 				{
-					"name": "Create Dietician Copy",
+					"name": "N-CreateDieticianInvalidendpoint",
 					"event": [
 						{
 							"listen": "test",
@@ -411,7 +411,7 @@
 							}
 						}
 					],
-					"id": "fefcc503-0d18-4baa-8fb2-c6e2b9b401ea",
+					"id": "c2f26dfe-3e03-4d37-a515-216bc0d53efb",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -426,14 +426,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"ContactNumber\": \"1342900000\",\r\n  \"DateOfBirth\": \"1985-11-05\",\r\n  \"Education\": \"string\",\r\n  \"Email\": \"before_222@abc.com\",\r\n  \"Firstname\": \"TeamFour\",\r\n  \"HospitalCity\": \"Dallas\",\r\n  \"HospitalName\": \"AMC\",\r\n  \"HospitalPincode\": \"345123\",\r\n  \"HospitalStreet\": \"lane end\",\r\n  \"Lastname\": \"hackathon\"\r\n \r\n}",
+							"raw": "{\r\n  \"ContactNumber\": \"{{contactnumber}}\",\r\n  \"DateOfBirth\": \"{{Dateofbirth}}\",\r\n  \"Education\": \"{{education}}\",\r\n  \"Email\": \"{{email}}\",\r\n  \"Firstname\": \"{{firstname}}\",\r\n  \"HospitalCity\":\" {{hospitalcity}}\",\r\n  \"HospitalName\": \"{{hospitalname}}\",\r\n  \"HospitalPincode\": \"{{hospitalpincode}}\",\r\n  \"HospitalStreet\":\"{{hospitalstreet}}\",\r\n  \"Lastname\": \"{{lastname}}\"\r\n\r\n}\r\n\r\n// {\r\n//   \"ContactNumber\": \"7678687675\",\r\n//   \"DateOfBirth\": \"1985-06-21T00:00:00.000+00:00\",\r\n//   \"Education\": \"edu1\",\r\n//   \"Email\": \"vidhya@gmail.com\",\r\n//   \"Firstname\": \"Sri\",\r\n//   \"HospitalCity\": \"hoscit\",\r\n//   \"HospitalName\": \"hosnam\",\r\n//   \"HospitalPincode\": \"896879\",\r\n//   \"HospitalStreet\": \"hosstr\",\r\n//   \"Lastname\": \"vidhya\"\r\n\r\n// }\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{base_URL}}/dietician"
+						"url": "{{base_URL}}/dieticianinv"
 					},
 					"response": []
 				},
@@ -737,7 +737,7 @@
 			"id": "8743a1e3-504f-4e46-b409-678331ee8f67"
 		},
 		{
-			"name": "Patient",
+			"name": "Dietician",
 			"item": [
 				{
 					"name": "Dietician_login",
@@ -3356,6 +3356,67 @@
 				}
 			],
 			"id": "63eadd0b-84d2-47a1-9f83-f26f1d7e107f"
+		},
+		{
+			"name": "Patient",
+			"item": [
+				{
+					"name": "Dietician_login Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d0f80eff-ad62-4f09-b844-d07c880a9f8b",
+								"exec": [
+									"let resp = pm.response.json();\r",
+									"pm.collectionVariables.set(\"Dietician_Token\", resp.token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "6237db0f-0e85-4bd1-b186-f4b323ed46cf",
+								"exec": [
+									"// if (pm.info.iteration !== 0) { \r",
+									"//       pm.execution.skipRequest();\r",
+									"// }"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "4a60463d-5ab4-461d-8790-75c1de474665",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"{{dieticianPsw}}\",\r\n    \"userLoginEmail\": \"{{dieticianEmail}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_URL}}/login"
+					},
+					"response": []
+				}
+			],
+			"id": "79efb4d0-725e-4043-a8c5-75e6f8acaaac"
 		}
 	],
 	"event": [
