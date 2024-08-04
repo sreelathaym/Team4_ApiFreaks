@@ -208,55 +208,6 @@
 						"url": "{{base_URL}}/login"
 					},
 					"response": []
-				},
-				{
-					"name": "Dietician_login",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "d0f80eff-ad62-4f09-b844-d07c880a9f8b",
-								"exec": [
-									"let resp = pm.response.json();\r",
-									"pm.collectionVariables.set(\"Dietician_Token\", resp.token);"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						},
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "6237db0f-0e85-4bd1-b186-f4b323ed46cf",
-								"exec": [
-									"// if (pm.info.iteration !== 0) { \r",
-									"//       pm.execution.skipRequest();\r",
-									"// }"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"id": "60bf1bf0-7a9e-48ae-b06e-71b18465a256",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"password\": \"{{dieticianPsw}}\",\r\n    \"userLoginEmail\": \"{{dieticianEmail}}\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{base_URL}}/login"
-					},
-					"response": []
 				}
 			],
 			"id": "6b9bd3d0-9211-44e3-9d98-4927016f0963"
@@ -475,7 +426,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"ContactNumber\": \"{{contactnumber}}\",\r\n  \"DateOfBirth\": \"{{Dateofbirth}}\",\r\n  \"Education\": \"{{education}}\",\r\n  \"Email\": \"{{email}}\",\r\n  \"Firstname\": \"{{firstname}}\",\r\n  \"HospitalCity\":\" {{hospitalcity}}\",\r\n  \"HospitalName\": \"{{hospitalname}}\",\r\n  \"HospitalPincode\": \"{{hospitalpincode}}\",\r\n  \"HospitalStreet\":\"{{hospitalstreet}}\",\r\n  \"Lastname\": \"{{lastname}}\"\r\n\r\n}\r\n\r\n// {\r\n//   \"ContactNumber\": \"7678687675\",\r\n//   \"DateOfBirth\": \"1985-06-21T00:00:00.000+00:00\",\r\n//   \"Education\": \"edu1\",\r\n//   \"Email\": \"vidhya@gmail.com\",\r\n//   \"Firstname\": \"Sri\",\r\n//   \"HospitalCity\": \"hoscit\",\r\n//   \"HospitalName\": \"hosnam\",\r\n//   \"HospitalPincode\": \"896879\",\r\n//   \"HospitalStreet\": \"hosstr\",\r\n//   \"Lastname\": \"vidhya\"\r\n\r\n// }\r\n",
+							"raw": "{\r\n  \"ContactNumber\": \"1342300000\",\r\n  \"DateOfBirth\": \"1985-11-03\",\r\n  \"Education\": \"string\",\r\n  \"Email\": \"before_3@abc.com\",\r\n  \"Firstname\": \"TeamFour\",\r\n  \"HospitalCity\": \"Dallas\",\r\n  \"HospitalName\": \"AMC\",\r\n  \"HospitalPincode\": \"345123\",\r\n  \"HospitalStreet\": \"lane end\",\r\n  \"Lastname\": \"hackathon\"\r\n \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -788,6 +739,61 @@
 		{
 			"name": "Patient",
 			"item": [
+				{
+					"name": "Dietician_login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d0f80eff-ad62-4f09-b844-d07c880a9f8b",
+								"exec": [
+									"let resp = pm.response.json();\r",
+									"pm.collectionVariables.set(\"Dietician_Token\", resp.token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "6237db0f-0e85-4bd1-b186-f4b323ed46cf",
+								"exec": [
+									"// if (pm.info.iteration !== 0) { \r",
+									"//       pm.execution.skipRequest();\r",
+									"// }"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "60bf1bf0-7a9e-48ae-b06e-71b18465a256",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"{{dieticianPsw}}\",\r\n    \"userLoginEmail\": \"{{dieticianEmail}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_URL}}/login"
+					},
+					"response": []
+				},
 				{
 					"name": "N_GetAllPatients_Invalid_endpoint",
 					"event": [
