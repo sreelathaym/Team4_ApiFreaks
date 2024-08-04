@@ -216,6 +216,69 @@
 			"name": "Dietician",
 			"item": [
 				{
+					"name": "N_CreateDieticianInvalidEndpoint",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "07498148-ce77-40ca-8cef-60d284aebc04",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									" const schema = {\r",
+									" \r",
+									"  \"type\": \"object\",\r",
+									"  \"properties\": {\r",
+									"    \"timestamp\": {\r",
+									"      \"type\": \"string\"\r",
+									"    },\r",
+									"    \"status\": {\r",
+									"      \"type\": \"integer\"\r",
+									"    },\r",
+									"    \"error\": {\r",
+									"      \"type\": \"string\"\r",
+									"    },\r",
+									"    \"path\": {\r",
+									"      \"type\": \"string\"\r",
+									"    }\r",
+									"  },\r",
+									"  \"required\": [\r",
+									"    \"timestamp\",\r",
+									"    \"status\",\r",
+									"    \"error\",\r",
+									"    \"path\"\r",
+									"  ]\r",
+									"}\r",
+									"pm.test(\"Response contsins valid schema data\", function () {\r",
+									"    pm.response.to.have.jsonSchema(schema);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "09671351-4305-471b-b708-d59abfbbde77",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "{{base_URL}}/dietician"
+					},
+					"response": []
+				},
+				{
 					"name": "Create Dietician",
 					"event": [
 						{
