@@ -426,7 +426,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"ContactNumber\": \"1342300000\",\r\n  \"DateOfBirth\": \"1985-11-03\",\r\n  \"Education\": \"string\",\r\n  \"Email\": \"before_3@abc.com\",\r\n  \"Firstname\": \"TeamFour\",\r\n  \"HospitalCity\": \"Dallas\",\r\n  \"HospitalName\": \"AMC\",\r\n  \"HospitalPincode\": \"345123\",\r\n  \"HospitalStreet\": \"lane end\",\r\n  \"Lastname\": \"hackathon\"\r\n \r\n}",
+							"raw": "{\r\n  \"ContactNumber\": \"1342400000\",\r\n  \"DateOfBirth\": \"1985-11-04\",\r\n  \"Education\": \"string\",\r\n  \"Email\": \"before_3@abc.com\",\r\n  \"Firstname\": \"TeamFour\",\r\n  \"HospitalCity\": \"Dallas\",\r\n  \"HospitalName\": \"AMC\",\r\n  \"HospitalPincode\": \"345123\",\r\n  \"HospitalStreet\": \"lane end\",\r\n  \"Lastname\": \"hackathon\"\r\n \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -776,7 +776,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{"
+								"token": "{{Admin_Token}}"
 							}
 						},
 						"method": "POST",
