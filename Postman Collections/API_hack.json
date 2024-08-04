@@ -2974,13 +2974,12 @@
 								"id": "d0f80eff-ad62-4f09-b844-d07c880a9f8b",
 								"exec": [
 									"let resp = pm.response.json();\r",
-									"pm.collectionVariables.set(\"Patient_Token\", resp.token);var jsonData = pm.response.json();\r",
-									"// var jsonData = pm.response.json();\r",
-									"// pm.collectionVariables.set(\"patientId\",jsonData.id);\r",
-									"// var jsonData = pm.response.json();\r",
-									"// pm.collectionVariables.set(\"patientPsw\",jsonData.loginPassword);\r",
-									"// pm.collectionVariables.set(\"Patient_Email\",jsonData.Email);\r",
-									"// patientPsw"
+									"pm.collectionVariables.set(\"Patient_Token\", resp.token);\r",
+									"\r",
+									"// var patientId=pm.collectionVariables.set(\"patientId\",resp.id);\r",
+									"//var patientPsw= pm.collectionVariables.set(\"patientPsw\",resp.loginPassword);\r",
+									"// varpatientEmail=pm.collectionVariables.set(\"Patient_Email\",resp.Email);\r",
+									""
 								],
 								"type": "text/javascript",
 								"packages": {}
