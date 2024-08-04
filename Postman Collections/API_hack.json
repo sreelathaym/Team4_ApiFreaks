@@ -662,6 +662,12 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_global_Token}}"
+							}
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
