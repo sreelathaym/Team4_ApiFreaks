@@ -2028,7 +2028,7 @@
 									"// // Extract the program name and program status",
 									" const patientId = response.patientId;",
 									"",
-									" if (pm.response.code === 201) {",
+									" if (pm.response.code === 201 ) {",
 									"   // Set collection variables for later use",
 									"pm.collectionVariables.set(\"patientId\", patientId);",
 									" }",
