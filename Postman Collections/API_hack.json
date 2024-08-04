@@ -2038,6 +2038,8 @@
 									"pm.test(\"Token is stored as a collection variable\", function () {",
 									"    pm.expect(pm.collectionVariables.get(\"patientId\")).to.eql(patientId);",
 									"});",
+									"",
+									"",
 									"pm.test(\"First name is not empty\", function () {",
 									"    pm.expect(jsonData.FirstName).to.not.be.empty;",
 									"});",
@@ -2969,12 +2971,12 @@
 								"exec": [
 									"let resp = pm.response.json();\r",
 									"pm.collectionVariables.set(\"Patient_Token\", resp.token);var jsonData = pm.response.json();\r",
-									"var jsonData = pm.response.json();\r",
-									"pm.collectionVariables.set(\"patientId\",jsonData.id);\r",
-									"var jsonData = pm.response.json();\r",
-									"pm.collectionVariables.set(\"patientPsw\",jsonData.loginPassword);\r",
-									"pm.collectionVariables.set(\"Patient_Email\",jsonData.Email);\r",
-									"patientPsw"
+									"// var jsonData = pm.response.json();\r",
+									"// pm.collectionVariables.set(\"patientId\",jsonData.id);\r",
+									"// var jsonData = pm.response.json();\r",
+									"// pm.collectionVariables.set(\"patientPsw\",jsonData.loginPassword);\r",
+									"// pm.collectionVariables.set(\"Patient_Email\",jsonData.Email);\r",
+									"// patientPsw"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -4036,6 +4038,10 @@
 		},
 		{
 			"key": "statuscode",
+			"value": ""
+		},
+		{
+			"key": "Patient_Token",
 			"value": ""
 		}
 	]
