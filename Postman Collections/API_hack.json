@@ -540,7 +540,7 @@
 					"response": []
 				},
 				{
-					"name": "Create Dietician",
+					"name": "CreateDietician",
 					"event": [
 						{
 							"listen": "test",
@@ -812,7 +812,7 @@
 					"response": []
 				},
 				{
-					"name": "Update Dietician",
+					"name": "UpdateDietician",
 					"event": [
 						{
 							"listen": "prerequest",
@@ -857,6 +857,65 @@
 							"bearer": {
 								"token": "{{Admin_Token}}"
 							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"id\": \"{{dieticianid}}\",\r\n  \"ContactNumber\": \"{{contactnumber}}\",\r\n  \"DateOfBirth\": \"{{Dateofbirth}}\",\r\n  \"Education\": \"{{education}}\",\r\n  \"Email\": \"{{email}}\",\r\n  \"Firstname\": \"{{firstname}}\",\r\n  \"HospitalCity\":\" {{hospitalcity}}\",\r\n  \"HospitalName\": \"{{hospitalname}}\",\r\n  \"HospitalPincode\": \"{{hospitalpincode}}\",\r\n  \"HospitalStreet\":\"{{hospitalstreet}}\",\r\n  \"Lastname\": \"{{lastname}}\"\r\n \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_URL}}/dietician/{{dieticianid}}"
+					},
+					"response": []
+				},
+				{
+					"name": "N-UpdateDieticianNoAuth",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "0bc97771-a44d-41e6-8223-3230175e1671",
+								"exec": [
+									"pm.collectionVariables.set(\"statuscode\", pm.iterationData.get('statuscode'));\r",
+									"let statuscode1 = pm.collectionVariables.get(\"statuscode\");\r",
+									"console.log(statuscode1);\r",
+									"\r",
+									"if (pm.iterationData.get(\"Request\") !== 'UpdateRequest') {\r",
+									"    pm.execution.skipRequest();\r",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "9930ae85-9889-442f-8edf-db5e33873f0f",
+								"exec": [
+									"\r",
+									"\r",
+									"pm.test(\"Status code\", function () {\r",
+									"    pm.response.to.have.status(pm.collectionVariables.get(\"statuscode\"));\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "38064c8e-25e3-4589-8cea-8462b63c026c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
 						},
 						"method": "PUT",
 						"header": [],
@@ -931,7 +990,7 @@
 								}
 							}
 						},
-						"url": "{{dieticianid}}"
+						"url": "https://dietician-20-api-hackathon-80f2590665cc.herokuapp.com/dietician2/dietician/{{dieticianid}}"
 					},
 					"response": []
 				},
