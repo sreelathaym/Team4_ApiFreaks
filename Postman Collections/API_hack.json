@@ -3462,7 +3462,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJUZWFtNEBnbWFpbC5jb20iLCJpYXQiOjE3MjI2MjE4ODIsImV4cCI6MTcyMjY1MDY4Mn0.tntmQ9i9uPNGEesMN_M7_FEz2Keub5IcadCzj5hSbBk0F4SGB80Sh4PJDcBbKKAvXB-7Z0cmalCQ6dnlENGNOg"
+								"token": "{{Dietician_Token}}"
 							}
 						},
 						"method": "GET",
