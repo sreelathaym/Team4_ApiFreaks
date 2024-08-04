@@ -2030,6 +2030,8 @@
 									" if (pm.response.code === 201) {",
 									"   // Set collection variables for later use",
 									"pm.collectionVariables.set(\"patientId\", patientId);",
+									"//added by for patient Login",
+									"var patientEmail=pm.collectionVariables.set(\"Patient_Email\",resp.Email);",
 									"",
 									" }",
 									" console.log(\"patientId\", patientId);",
@@ -2114,7 +2116,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"hjjgggd\",\n\"LastName\": \"dhtfd\",\n\"ContactNumber\": \"1127770002\",\n\"Email\": \"Ss12841@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1979-08-05\"}"
+									"value": "{ \"FirstName\": \"hjjgggd\",\n\"LastName\": \"dhtfd\",\n\"ContactNumber\": \"1137770002\",\n\"Email\": \"Ss1291@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1979-08-05\"}"
 								},
 								{
 									"key": "file",
