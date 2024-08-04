@@ -1116,7 +1116,9 @@
 							"script": {
 								"id": "27cd307c-b49b-4959-8cf1-5539bdd1082d",
 								"exec": [
-									""
+									"if (pm.iterationData.get(\"Request\") !== 'CreatePatient') {\r",
+									"    pm.execution.skipRequest();\r",
+									"}"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -1724,7 +1726,7 @@
 					]
 				},
 				{
-					"name": "create_Patient",
+					"name": "update_Patient",
 					"event": [
 						{
 							"listen": "test",
@@ -1790,7 +1792,9 @@
 							"script": {
 								"id": "27cd307c-b49b-4959-8cf1-5539bdd1082d",
 								"exec": [
-									""
+									"if (pm.iterationData.get(\"Request\") !== 'UpdatePatient') {\r",
+									"    pm.execution.skipRequest();\r",
+									"}"
 								],
 								"type": "text/javascript",
 								"packages": {}
