@@ -3010,7 +3010,7 @@
 					"response": []
 				},
 				{
-					"name": "RetrieveMorbidityConditionbyTestName(Fasting Glucose)_byDietecian",
+					"name": "Retrieve_Morbidity_Condition_by_Testname(Fasting Glucose)_byDietecian",
 					"event": [
 						{
 							"listen": "test",
@@ -3880,7 +3880,7 @@
 					"response": []
 				},
 				{
-					"name": "N-Morbidities with invalid dietician bearer token and valid End point",
+					"name": "N-Morbidities_with_invalid_dietician_bearer_token_and_valid_End_point",
 					"event": [
 						{
 							"listen": "test",
@@ -3914,7 +3914,7 @@
 					"response": []
 				},
 				{
-					"name": "N-Morbidities with invalid dietician bearer token and invalid End point",
+					"name": "N-Morbidities_with_invalid_dietician_bearer_token_and_invalid_End_point",
 					"event": [
 						{
 							"listen": "test",
@@ -3948,7 +3948,7 @@
 					"response": []
 				},
 				{
-					"name": "N-Morbidities without Dietician bearer token and valid End point",
+					"name": "N-Morbidities_without_Dietician_bearer_token_and_valid_End_point",
 					"event": [
 						{
 							"listen": "test",
