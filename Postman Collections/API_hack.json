@@ -8988,6 +8988,19 @@
 								"type": "text/javascript",
 								"packages": {}
 							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "f69b24d9-269d-4fac-a4d7-702e2f5ce64d",
+								"exec": [
+									"if (pm.info.iteration !== 0) { \r",
+									"      pm.execution.skipRequest();\r",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
 						}
 					],
 					"id": "81e51b0e-0d9a-4f76-b2e7-49e00d5021fb",
@@ -9086,9 +9099,9 @@
 									"// let statuscode1 = pm.collectionVariables.get(\"statuscode\");\r",
 									"// console.log(statuscode1);\r",
 									"\r",
-									"// if (pm.iterationData.get(\"Request\") !== 'CreateRequest') {\r",
-									"//     pm.execution.skipRequest();\r",
-									"// }"
+									"if (pm.iterationData.get(\"Request\") !== 'CreateRequest') {\r",
+									"    pm.execution.skipRequest();\r",
+									"}"
 								],
 								"type": "text/javascript",
 								"packages": {}
