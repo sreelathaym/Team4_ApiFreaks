@@ -9243,6 +9243,21 @@
 								"type": "text/javascript",
 								"packages": {}
 							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "d81bffd2-6805-4e28-936d-0e29a1d3fda5",
+								"exec": [
+									"if (!(pm.collectionVariables.get(\"roleId\")==\"{{}}\" && (pm.iterationData.get(\"Request\") == \"CreateUser\")))\r",
+									"    {\r",
+									"    pm.execution.skipRequest();\r",
+									"    }\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
 						}
 					],
 					"id": "ae67c3d4-d7f9-4185-ac68-bbff49d3b2b2",
