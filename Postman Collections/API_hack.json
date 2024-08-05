@@ -2421,8 +2421,6 @@
 									"",
 									"var schema = ",
 									"{",
-									"  \"$schema\": \"http://json-schema.org/draft-06/schema#\",",
-									"  \"title\": \"Generated schema for Root\",",
 									"  \"type\": \"object\",",
 									"  \"properties\": {",
 									"    \"patientId\": {",
