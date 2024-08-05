@@ -2469,7 +2469,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"fname\",\n\"LastName\": \"lname\",\n\"ContactNumber\": \"contactno\",\n\"Email\": \"email\",\n\"Allergy\": \"allergy\",\n\"FoodPreference\": \"foodpref\",\n\"CuisineCategory\":\"cusiene\",\n\"DateOfBirth\": \"dob\"}"
+									"value": "{ \"FirstName\": \"{{fname}}\",\n\"LastName\": \"lname\",\n\"ContactNumber\": \"contactno\",\n\"Email\": \"email\",\n\"Allergy\": \"allergy\",\n\"FoodPreference\": \"foodpref\",\n\"CuisineCategory\":\"cuisine\",\n\"DateOfBirth\": \"dob\"}"
 								},
 								{
 									"key": "file",
@@ -3396,13 +3396,13 @@
 									"    responseData.forEach((item) => {",
 									"        pm.expect(item.morbidityId).to.be.a('number').and.to.be.at.least(0, \"morbidityId should be a non-negative integer\");",
 									"        pm.expect(item.morbidityTestId).to.be.a('string').and.to.have.lengthOf.at.least(1, \"morbidityTestId should be a non-empty string\");",
-									"      //  pm.expect(item.morbidityNameRegex).to.match(/^\\/(.+)\\/([gimuy]*)$/, \"morbidityNameRegex should be a valid regex pattern\");",
 									"        pm.expect(item.morbidityTestName).to.be.a('string').and.to.have.lengthOf.at.least(1, \"morbidityTestName should be a non-empty string\");",
 									"        pm.expect(item.morbidityTestUnit).to.be.a('string').and.to.have.lengthOf.at.least(1, \"morbidityTestUnit should be a non-empty string\");",
 									"        pm.expect(item.morbidityMarkerMinVal).to.be.a('number').and.to.be.at.least(0, \"morbidityMarkerMinVal should be a non-negative integer\");",
 									"        pm.expect(item.morbidityMarkerMaxVal).to.be.a('number').and.to.be.at.least(0, \"morbidityMarkerMaxVal should be a non-negative integer\");",
 									"    });",
 									"});",
+									"",
 									"",
 									"",
 									"",
