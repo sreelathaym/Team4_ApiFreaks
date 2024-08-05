@@ -2132,7 +2132,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"head\",\n\"LastName\": \"dyed\",\n\"ContactNumber\": \"1111110002\",\n\"Email\": \"Sde1111@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1979-08-05\"}"
+									"value": "{ \"FirstName\": \"heads\",\n\"LastName\": \"dyed\",\n\"ContactNumber\": \"1111111002\",\n\"Email\": \"Sde11112@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1979-08-05\"}"
 								},
 								{
 									"key": "file",
@@ -3619,7 +3619,7 @@
 								"id": "5365ac73-865b-4227-b808-6d3276d8e827",
 								"exec": [
 									"pm.test(\"Response status code is 401\", function () {",
-									"  pm.response.to.have.status(404);",
+									"  pm.response.to.have.status(401);",
 									"});"
 								],
 								"type": "text/javascript",
@@ -3646,6 +3646,21 @@
 				},
 				{
 					"name": "N-Morbidities with invalid dietician bearer token and valid End point",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e3678e32-5dc7-42d8-a935-0951fc2fcfad",
+								"exec": [
+									"pm.test(\"Response status code is 401\", function () {",
+									"  pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "064b33a1-595b-46fe-8a9b-5fc11ea759f5",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -3665,6 +3680,21 @@
 				},
 				{
 					"name": "N-Morbidities with invalid dietician bearer token and invalid End point",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c564f79a-4368-4c41-b673-101c5fb2f213",
+								"exec": [
+									"pm.test(\"Response status code is 401\", function () {",
+									"  pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "8b0517bc-4d15-4a88-8e44-bebea1a63f75",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -3684,6 +3714,21 @@
 				},
 				{
 					"name": "N-Morbidities without Dietician bearer token and valid End point",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d0d5154a-6f5f-4896-bd6a-aedf18dc56a9",
+								"exec": [
+									"pm.test(\"Response status code is 401\", function () {",
+									"  pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "bbb804c7-cee3-47c6-84c7-140b3fa0c108",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -4059,6 +4104,10 @@
 		},
 		{
 			"key": "Patient_Token",
+			"value": ""
+		},
+		{
+			"key": "email",
 			"value": ""
 		}
 	]
