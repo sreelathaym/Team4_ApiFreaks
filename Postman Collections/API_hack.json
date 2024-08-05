@@ -12,13 +12,32 @@
 					"name": "N-Admin_login-With_invalid_Endpoint",
 					"event": [
 						{
+							"listen": "prerequest",
+							"script": {
+								"id": "2c256c48-b616-477b-8963-e781ebbfc6ac",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
 							"listen": "test",
 							"script": {
-								"id": "fb7efa7f-68e3-4c9a-bcbf-859de8e14e22",
+								"id": "2b7df9a3-e7e9-4f19-bf3d-e5b4dc8ba100",
 								"exec": [
 									"pm.test(\"Status code is 401\", function () {\r",
 									"    pm.response.to.have.status(401);\r",
 									"});\r",
+									" \r",
+									"pm.test(\"Error is Unauthrozied\", function () {\r",
+									"     const jsonData = pm.response.json();\r",
+									"     console.log(jsonData.error);\r",
+									"     pm.expect(jsonData.error).to.eql(\"Unauthorized\");\r",
+									"     \r",
+									"     });\r",
+									" \r",
 									"\r",
 									"const schema =\r",
 									"    {\r",
@@ -72,21 +91,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "{{base_URL}}/:InvEndPoint",
-							"host": [
-								"{{base_URL}}"
-							],
-							"path": [
-								":InvEndPoint"
-							],
-							"variable": [
-								{
-									"key": "InvEndPoint",
-									"value": ""
-								}
-							]
-						}
+						"url": "{{base_URL}}/olg"
 					},
 					"response": []
 				},
@@ -4808,7 +4813,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "e49d0bcf-bf6d-49a9-942a-921c33246ba2",
+				"id": "b76b7bfc-3af7-4b4e-bddf-23f4438c6303",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -4819,7 +4824,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "173f745c-b40f-425c-afb2-4e8937cc74cb",
+				"id": "106edabc-15da-495a-9aac-de521b553069",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -4850,7 +4855,7 @@
 		},
 		{
 			"key": "patientPsw",
-			"value": ""
+			"value": "test"
 		},
 		{
 			"key": "dieticianId",
