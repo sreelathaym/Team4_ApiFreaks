@@ -2469,7 +2469,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"{{fname}}\",\n\"LastName\": \"lname\",\n\"ContactNumber\": \"contactno\",\n\"Email\": \"email\",\n\"Allergy\": \"allergy\",\n\"FoodPreference\": \"foodpref\",\n\"CuisineCategory\":\"cuisine\",\n\"DateOfBirth\": \"dob\"}"
+									"value": "{ \"FirstName\": \"{{fname}}\",\n\"LastName\": \"{{lname}}\",\n\"ContactNumber\": \"{{contactno}}\",\n\"Email\": \"{{pemail}}\",\n\"Allergy\": \"{{allergy}}\",\n\"FoodPreference\": \"{{foodpref}}\",\n\"CuisineCategory\":\"{{cuisine}}\",\n\"DateOfBirth\": \"{{dob}}\"\n}"
 								},
 								{
 									"key": "file",
@@ -3389,7 +3389,10 @@
 									"pm.test(\"Validate JSON value in response\", function () {",
 									"    const response = pm.response.json();",
 									"    pm.expect(response[0].morbidityTestName).to.eql(\"Fasting Glucose\");",
+									"    pm.expect(response[0].morbidityMarkerMinVal).to.eql(125);",
 									"});",
+									"",
+									"",
 									""
 								],
 								"type": "text/javascript",
