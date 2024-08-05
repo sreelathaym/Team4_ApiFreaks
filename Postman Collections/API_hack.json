@@ -891,7 +891,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"ContactNumber\": \"0983454391\",\r\n  \"DateOfBirth\": \"2001-09-27T18:14:08.570Z\",\r\n  \"Education\": \"gdrd\",\r\n  \"Email\": \"jklm128910@gmail.com\",\r\n  \"Firstname\": \"hj\",\r\n  \"HospitalCity\": \"lk\",\r\n  \"HospitalName\": \"kj\",\r\n  \"HospitalPincode\": \"334567\",\r\n  \"HospitalStreet\": \"kk\",\r\n  \"Lastname\": \"jj\"\r\n \r\n}\r\n\r\n\r\n\r\n// {\r\n//   \"ContactNumber\": \"7678687675\",\r\n//   \"DateOfBirth\": \"1985-06-21T00:00:00.000+00:00\",\r\n//   \"Education\": \"edu1\",\r\n//   \"Email\": \"vidhya@gmail.com\",\r\n//   \"Firstname\": \"Sri\",\r\n//   \"HospitalCity\": \"hoscit\",\r\n//   \"HospitalName\": \"hosnam\",\r\n//   \"HospitalPincode\": \"896879\",\r\n//   \"HospitalStreet\": \"hosstr\",\r\n//   \"Lastname\": \"vidhya\"\r\n\r\n// }\r\n",
+							"raw": "{\r\n  \"ContactNumber\": \"0983454391\",\r\n  \"DateOfBirth\": \"2001-09-27T18:14:08.570Z\",\r\n  \"Education\": \"gdrd67567\",\r\n  \"Email\": \"jklm128910@gmail.com\",\r\n  \"Firstname\": \" \",\r\n  \"HospitalCity\": \"lk67\",\r\n  \"HospitalName\": \"kj767\",\r\n  \"HospitalPincode\": \"334567\",\r\n  \"HospitalStreet\": \"kk67\",\r\n  \"Lastname\": \"jj\"\r\n \r\n}\r\n\r\n\r\n\r\n// {\r\n//   \"ContactNumber\": \"7678687675\",\r\n//   \"DateOfBirth\": \"1985-06-21T00:00:00.000+00:00\",\r\n//   \"Education\": \"edu1\",\r\n//   \"Email\": \"vidhya@gmail.com\",\r\n//   \"Firstname\": \"Sri\",\r\n//   \"HospitalCity\": \"hoscit\",\r\n//   \"HospitalName\": \"hosnam\",\r\n//   \"HospitalPincode\": \"896879\",\r\n//   \"HospitalStreet\": \"hosstr\",\r\n//   \"Lastname\": \"vidhya\"\r\n\r\n// }\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -6431,9 +6431,9 @@
 									"",
 									"pm.test(\"Validate Min&Max value and datatype in response\", function () {",
 									"    const response = pm.response.json();",
-									"    pm.expect(response[0].morbidityMarkerMinVal).to.eql(125);",
+									"    pm.expect(response[0].morbidityMarkerMinVal).to.eql(100);",
 									"    pm.expect(response[0].morbidityMarkerMinVal).to.be.a(\"number\");",
-									"    pm.expect(response[0].morbidityMarkerMaxVal).to.eql(100);",
+									"    pm.expect(response[0].morbidityMarkerMaxVal).to.eql(125);",
 									"    pm.expect(response[0].morbidityMarkerMaxVal).to.be.a(\"number\");",
 									"});",
 									"",
