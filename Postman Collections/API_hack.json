@@ -3042,6 +3042,74 @@
 						"url": "{{base_URL}}/morbidity/Fasting Glucose"
 					},
 					"response": []
+				},
+				{
+					"name": "RetrieveMorbidityConditionbyTestName_byDietecian",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d55202cd-58c9-497b-a08d-cfc188b2d208",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "430e18db-5108-4879-a008-dccde0ef8fc6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Dietician_Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/morbidity/Plasma Glucose"
+					},
+					"response": []
+				},
+				{
+					"name": "RetrieveMorbidityConditionbyTestName_byDietecian",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d55202cd-58c9-497b-a08d-cfc188b2d208",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "2cc6a49e-aa14-467a-abdc-add391ab178a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Dietician_Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/morbidity/Average Glucose"
+					},
+					"response": []
 				}
 			],
 			"id": "76a595f1-6075-403b-9569-eb87b5cda9ce"
@@ -3088,17 +3156,11 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{Dietician_Token}}"
-							}
-						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"password\": \"{{patientPsw}}\",\r\n    //\"userLoginEmail\": \"{{patientEmail}}\"\r\n    \"userLoginEmail\":\"Sde1111@acbd.com\"\r\n}",
+							"raw": "{\r\n    \"password\": \"{{patientPsw}}\",\r\n    \"userLoginEmail\": \"{{email}}\"\r\n   \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4097,7 +4159,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "ab07b774-c2e2-4a00-a5d3-25ae8fd44cf4",
+				"id": "e49d0bcf-bf6d-49a9-942a-921c33246ba2",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -4108,7 +4170,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "1dfb1812-f0c8-4006-aecd-15c607d47fa3",
+				"id": "173f745c-b40f-425c-afb2-4e8937cc74cb",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -4139,7 +4201,7 @@
 		},
 		{
 			"key": "patientPsw",
-			"value": "test"
+			"value": ""
 		},
 		{
 			"key": "dieticianId",
