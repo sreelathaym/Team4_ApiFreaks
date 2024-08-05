@@ -3180,7 +3180,7 @@
 					"response": []
 				},
 				{
-					"name": "RetrieveMorbidityConditionbyTestName(Thyroid/T4)_byDietecian",
+					"name": "Retrieve_Morbidity_Condition_by_Testname(Thyroid/T4)_byDietecian",
 					"event": [
 						{
 							"listen": "test",
