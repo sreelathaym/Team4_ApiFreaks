@@ -2055,7 +2055,7 @@
 									"//Before storing collection variable validating",
 									"pm.test(\"patientId is stored as a collection variable\", function () {",
 									"    pm.expect(pm.collectionVariables.get(\"patientId\")).to.eql(patientId);",
-									"    pm.expect(pm.collectionVariables.get(\"PatientEmail\")).to.be(PatientEmail);",
+									"    pm.expect(pm.collectionVariables.get(\"PatientEmail\")).to.be.contain(PatientEmail);",
 									"    ",
 									"});",
 									"",
@@ -2133,7 +2133,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"heear\",\n\"LastName\": \"dyed\",\n\"ContactNumber\": \"1111120002\",\n\"Email\": \"Sde152@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1979-08-05\"}"
+									"value": "{ \"FirstName\": \"hee\",\n\"LastName\": \"dyed\",\n\"ContactNumber\": \"1111110001\",\n\"Email\": \"Sde1523@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1979-08-05\"}"
 								},
 								{
 									"key": "file",
@@ -2975,14 +2975,21 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "GetAllMorbidities_byDietecian",
 					"id": "56b80b92-1f10-43cb-a382-77dd97c08f05",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Dietician_Token}}"
+							}
+						},
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "{{base_URL}}/morbidity"
 					},
 					"response": []
 				}
