@@ -83,8 +83,7 @@
 							"variable": [
 								{
 									"key": "InvEndPoint",
-									"value": "lgo",
-									"description": "Admin trying to generate token with invalid endponit."
+									"value": ""
 								}
 							]
 						}
