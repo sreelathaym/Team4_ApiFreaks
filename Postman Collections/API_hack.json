@@ -765,7 +765,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"ContactNumber\": \"0989654991\",\r\n  \"DateOfBirth\": \"2010-07-26T18:14:08.570Z\",\r\n  \"Education\": \"gdhd\",\r\n  \"Email\": \"jklm123@gmail.com\",\r\n  \"Firstname\": \"hj\",\r\n  \"HospitalCity\": \"lk\",\r\n  \"HospitalName\": \"kj\",\r\n  \"HospitalPincode\": \"334567\",\r\n  \"HospitalStreet\": \"kk\",\r\n  \"Lastname\": \"jj\"\r\n \r\n}\r\n\r\n\r\n\r\n// {\r\n//   \"ContactNumber\": \"7678687675\",\r\n//   \"DateOfBirth\": \"1985-06-21T00:00:00.000+00:00\",\r\n//   \"Education\": \"edu1\",\r\n//   \"Email\": \"vidhya@gmail.com\",\r\n//   \"Firstname\": \"Sri\",\r\n//   \"HospitalCity\": \"hoscit\",\r\n//   \"HospitalName\": \"hosnam\",\r\n//   \"HospitalPincode\": \"896879\",\r\n//   \"HospitalStreet\": \"hosstr\",\r\n//   \"Lastname\": \"vidhya\"\r\n\r\n// }\r\n",
+							"raw": "{\r\n  \"ContactNumber\": \"0989654981\",\r\n  \"DateOfBirth\": \"2010-07-27T18:14:08.570Z\",\r\n  \"Education\": \"gdhd\",\r\n  \"Email\": \"jklm128@gmail.com\",\r\n  \"Firstname\": \"hj\",\r\n  \"HospitalCity\": \"lk\",\r\n  \"HospitalName\": \"kj\",\r\n  \"HospitalPincode\": \"334567\",\r\n  \"HospitalStreet\": \"kk\",\r\n  \"Lastname\": \"jj\"\r\n \r\n}\r\n\r\n\r\n\r\n// {\r\n//   \"ContactNumber\": \"7678687675\",\r\n//   \"DateOfBirth\": \"1985-06-21T00:00:00.000+00:00\",\r\n//   \"Education\": \"edu1\",\r\n//   \"Email\": \"vidhya@gmail.com\",\r\n//   \"Firstname\": \"Sri\",\r\n//   \"HospitalCity\": \"hoscit\",\r\n//   \"HospitalName\": \"hosnam\",\r\n//   \"HospitalPincode\": \"896879\",\r\n//   \"HospitalStreet\": \"hosstr\",\r\n//   \"Lastname\": \"vidhya\"\r\n\r\n// }\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2365,6 +2365,341 @@
 					]
 				},
 				{
+					"name": "create_Patient Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9278e75e-9340-4fff-b6c3-27740f54607e",
+								"exec": [
+									"",
+									"const response = pm.response.json();",
+									"",
+									"// // Extract the program name and program status",
+									" const patientId = response.patientId;",
+									" const PatientEmail=response.Email",
+									"",
+									" if (pm.response.code === 201 ) {",
+									"   // Set collection variables for later use",
+									"pm.collectionVariables.set(\"patientId\", patientId);",
+									"pm.collectionVariables.set(\"PEmail\", PatientEmail);",
+									" }",
+									" console.log(\"patientId\", patientId);",
+									" console.log(\"PatientEmail\",PatientEmail);",
+									"",
+									"//Before storing collection variable validating",
+									"pm.test(\"patientId is stored as a collection variable\", function () {",
+									"    pm.expect(pm.collectionVariables.get(\"patientId\")).to.eql(patientId);",
+									"    ",
+									"});",
+									"pm.test(\"Email is correct\", function () {",
+									"    pm.expect(response.Email).to.eql(expectedEmail);",
+									"",
+									"pm.test(\"First name is not empty\", function () {",
+									"    pm.expect(response.FirstName).to.not.be.empty;",
+									"});",
+									"pm.test(\"Last name is not empty\", function () {",
+									"    pm.expect(response.LastName).to.not.be.empty;",
+									"});",
+									"pm.test(\"Email is not empty\", function () {",
+									"    pm.expect(response.Email).to.not.be.empty;",
+									"});",
+									"pm.test(\"ContactNumber is not empty\", function () {",
+									"    pm.expect(response.ContactNumber).to.not.be.empty;",
+									"});",
+									"pm.test(\"DateOfBirth is not empty\", function () {",
+									"    pm.expect(response.DateOfBirth).to.not.be.empty;",
+									"});",
+									"pm.test(\"Allergies is not empty\", function () {",
+									"    pm.expect(response.Allergy).to.not.be.empty;",
+									"});",
+									"pm.test(\"CuisineCategory is not empty\", function () {",
+									"    pm.expect(response.CuisineCategory).to.not.be.empty;",
+									"});",
+									"// Parse the response JSON",
+									"let res = pm.response.json();",
+									"",
+									"// Extract the fileId",
+									"let fileId = Object.keys(res.FileMorbidity)[0];",
+									"",
+									"// Save the fileId to a collection variable",
+									"pm.collectionVariables.set(\"fileId\", fileId);",
+									"",
+									"// Optionally, log the fileId to verify",
+									"console.log(\"fileId saved to collection variable: \", fileId);",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "27cd307c-b49b-4959-8cf1-5539bdd1082d",
+								"exec": [
+									"// if (pm.iterationData.get(\"Request\") !== 'CreatePatient') {\r",
+									"//     pm.execution.skipRequest();\r",
+									"// }\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "e6e03261-0f13-4037-90bd-6f45b831deaa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Dietician_Token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "patientInfo",
+									"type": "text",
+									"value": "{ \"FirstName\": \"\",\n\"LastName\": \"dyed\",\n\"ContactNumber\": \"1111140001\",\n\"Email\": \"Sde15234@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1979-08-05\"}"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "3Cryk6-G6/Diabetic and Hemogram Test_Thyrocare lab.pdf (1).pdf"
+								}
+							]
+						},
+						"url": "{{base_URL}}/patient"
+					},
+					"response": [
+						{
+							"id": "9703e9ad-4932-478c-94ac-806f1069271a",
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "patientInfo",
+											"type": "text",
+											"value": "{ \"FirstName\": \"h\",\n\"LastName\": \"d\",\n\"ContactNumber\": \"1110000000\",\n\"Email\": \"S124@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1988-07-05\"}"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "9Xsx4k7uG/Diabetic and Hemogram Test_Thyrocare lab.pdf (1).pdf"
+										}
+									]
+								},
+								"url": "{{base_URL}}/patient"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Report-To",
+									"value": "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1722658463&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=cy3qZMLxNz0Ecl%2BSb22A1a7HlV82viMWuUu5xAmRVm0%3D\"}]}"
+								},
+								{
+									"key": "Reporting-Endpoints",
+									"value": "heroku-nel=https://nel.heroku.com/reports?ts=1722658463&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=cy3qZMLxNz0Ecl%2BSb22A1a7HlV82viMWuUu5xAmRVm0%3D"
+								},
+								{
+									"key": "Nel",
+									"value": "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000 ; includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 03 Aug 2024 04:14:23 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"patientId\": 472,\n    \"FirstName\": \"h\",\n    \"LastName\": \"d\",\n    \"ContactNumber\": \"1110000000\",\n    \"Email\": \"S124@acbd.com\",\n    \"Allergy\": \"Soy\",\n    \"FoodPreference\": \"jain\",\n    \"CuisineCategory\": \"Indian\",\n    \"FileMorbidity\": {\n        \"66adae9f4717cf471aaad21d\": {\n            \"HbA1c\": \"6.5 %\",\n            \"Average Glucose\": \"131.0 mg/dl\"\n        }\n    },\n    \"FileMorbidityCondition\": {\n        \"66adae9f4717cf471aaad21d\": \"Prediabetic \\nBlood Pressure: Hypotension \\n\"\n    },\n    \"DateOfBirth\": \"1988-07-05\",\n    \"DieticianId\": 871,\n    \"Vitals\": {\n        \"66adae9f4717cf471aaad21d\": {\n            \"Weight\": 0,\n            \"Height\": 0,\n            \"Temperature\": 0,\n            \"SP\": 0,\n            \"DP\": 0\n        }\n    },\n    \"LastVisitDate\": \"2024-08-03T04:14:23.627+00:00\"\n}"
+						},
+						{
+							"id": "b3bad91e-3ff2-4177-8ccc-95d1431ca10c",
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "patientInfo",
+											"type": "text",
+											"value": "{ \"FirstName\": \"h\",\n\"LastName\": \"d\",\n\"ContactNumber\": \"1110000000\",\n\"Email\": \"S124@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1988-07-05\"}"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "9Xsx4k7uG/Diabetic and Hemogram Test_Thyrocare lab.pdf (1).pdf"
+										}
+									]
+								},
+								"url": "{{base_URL}}/patient"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Report-To",
+									"value": "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1722658463&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=cy3qZMLxNz0Ecl%2BSb22A1a7HlV82viMWuUu5xAmRVm0%3D\"}]}"
+								},
+								{
+									"key": "Reporting-Endpoints",
+									"value": "heroku-nel=https://nel.heroku.com/reports?ts=1722658463&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=cy3qZMLxNz0Ecl%2BSb22A1a7HlV82viMWuUu5xAmRVm0%3D"
+								},
+								{
+									"key": "Nel",
+									"value": "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000 ; includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 03 Aug 2024 04:14:23 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"patientId\": 472,\n    \"FirstName\": \"h\",\n    \"LastName\": \"d\",\n    \"ContactNumber\": \"1110000000\",\n    \"Email\": \"S124@acbd.com\",\n    \"Allergy\": \"Soy\",\n    \"FoodPreference\": \"jain\",\n    \"CuisineCategory\": \"Indian\",\n    \"FileMorbidity\": {\n        \"66adae9f4717cf471aaad21d\": {\n            \"HbA1c\": \"6.5 %\",\n            \"Average Glucose\": \"131.0 mg/dl\"\n        }\n    },\n    \"FileMorbidityCondition\": {\n        \"66adae9f4717cf471aaad21d\": \"Prediabetic \\nBlood Pressure: Hypotension \\n\"\n    },\n    \"DateOfBirth\": \"1988-07-05\",\n    \"DieticianId\": 871,\n    \"Vitals\": {\n        \"66adae9f4717cf471aaad21d\": {\n            \"Weight\": 0,\n            \"Height\": 0,\n            \"Temperature\": 0,\n            \"SP\": 0,\n            \"DP\": 0\n        }\n    },\n    \"LastVisitDate\": \"2024-08-03T04:14:23.627+00:00\"\n}"
+						}
+					]
+				},
+				{
 					"name": "GetPatientsMorbidityDetails",
 					"event": [
 						{
@@ -2985,6 +3320,17 @@
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Each morbidity object has the required properties\", function () {",
+									"    pm.response.json().forEach(function(morbidity) {",
+									"        pm.expect(morbidity).to.have.property('morbidityId');",
+									"        pm.expect(morbidity).to.have.property('morbidityTestId');",
+									"        pm.expect(morbidity).to.have.property('morbidityNameRegex');",
+									"        pm.expect(morbidity).to.have.property('morbidityTestName');",
+									"        pm.expect(morbidity).to.have.property('morbidityTestUnit');",
+									"        pm.expect(morbidity).to.have.property('morbidityMarkerMinVal');",
+									"        pm.expect(morbidity).to.have.property('morbidityMarkerMaxVal');",
+									"    });",
 									"});"
 								],
 								"type": "text/javascript",
@@ -3596,6 +3942,18 @@
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Each morbidity object has the required properties\", function () {",
+									"    pm.response.json().forEach(function(morbidity) {",
+									"        pm.expect(morbidity).to.have.property('morbidityId');",
+									"        pm.expect(morbidity).to.have.property('morbidityTestId');",
+									"        pm.expect(morbidity).to.have.property('morbidityNameRegex');",
+									"        pm.expect(morbidity).to.have.property('morbidityTestName');",
+									"        pm.expect(morbidity).to.have.property('morbidityTestUnit');",
+									"        pm.expect(morbidity).to.have.property('morbidityMarkerMinVal');",
+									"        pm.expect(morbidity).to.have.property('morbidityMarkerMaxVal');",
+									"    });",
 									"});"
 								],
 								"type": "text/javascript",
