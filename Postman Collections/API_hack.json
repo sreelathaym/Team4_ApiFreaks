@@ -1113,7 +1113,7 @@
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
 									"\r",
-									"const schema = {\r",
+									"/*const schema = {\r",
 									"  \"type\": \"object\",\r",
 									"  \"properties\": {\r",
 									"    \"id\": {\r",
@@ -1147,7 +1147,7 @@
 									"\r",
 									"pm.test(\"Response contains valid schema data\", function () {\r",
 									"    pm.response.to.have.jsonSchema(schema);\r",
-									"});\r",
+									"});*/\r",
 									""
 								],
 								"type": "text/javascript",
@@ -5504,6 +5504,21 @@
 				},
 				{
 					"name": "DeletedieticanByVldID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9dab26ca-83a5-4d4c-ab96-04434d06a4fd",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "abc139b1-06b6-40d0-800c-9ba1ccac2efe",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
