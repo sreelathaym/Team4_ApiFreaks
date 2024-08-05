@@ -765,7 +765,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"ContactNumber\": \"0989654921\",\r\n  \"DateOfBirth\": \"2009-07-26T18:14:08.570Z\",\r\n  \"Education\": \"gdhd\",\r\n  \"Email\": \"jklm@gmail.com\",\r\n  \"Firstname\": \"hj\",\r\n  \"HospitalCity\": \"lk\",\r\n  \"HospitalName\": \"kj\",\r\n  \"HospitalPincode\": \"334567\",\r\n  \"HospitalStreet\": \"kk\",\r\n  \"Lastname\": \"jj\"\r\n \r\n}\r\n\r\n\r\n\r\n// {\r\n//   \"ContactNumber\": \"7678687675\",\r\n//   \"DateOfBirth\": \"1985-06-21T00:00:00.000+00:00\",\r\n//   \"Education\": \"edu1\",\r\n//   \"Email\": \"vidhya@gmail.com\",\r\n//   \"Firstname\": \"Sri\",\r\n//   \"HospitalCity\": \"hoscit\",\r\n//   \"HospitalName\": \"hosnam\",\r\n//   \"HospitalPincode\": \"896879\",\r\n//   \"HospitalStreet\": \"hosstr\",\r\n//   \"Lastname\": \"vidhya\"\r\n\r\n// }\r\n",
+							"raw": "{\r\n  \"ContactNumber\": \"0989654991\",\r\n  \"DateOfBirth\": \"2010-07-26T18:14:08.570Z\",\r\n  \"Education\": \"gdhd\",\r\n  \"Email\": \"jklm123@gmail.com\",\r\n  \"Firstname\": \"hj\",\r\n  \"HospitalCity\": \"lk\",\r\n  \"HospitalName\": \"kj\",\r\n  \"HospitalPincode\": \"334567\",\r\n  \"HospitalStreet\": \"kk\",\r\n  \"Lastname\": \"jj\"\r\n \r\n}\r\n\r\n\r\n\r\n// {\r\n//   \"ContactNumber\": \"7678687675\",\r\n//   \"DateOfBirth\": \"1985-06-21T00:00:00.000+00:00\",\r\n//   \"Education\": \"edu1\",\r\n//   \"Email\": \"vidhya@gmail.com\",\r\n//   \"Firstname\": \"Sri\",\r\n//   \"HospitalCity\": \"hoscit\",\r\n//   \"HospitalName\": \"hosnam\",\r\n//   \"HospitalPincode\": \"896879\",\r\n//   \"HospitalStreet\": \"hosstr\",\r\n//   \"Lastname\": \"vidhya\"\r\n\r\n// }\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2042,13 +2042,15 @@
 									"",
 									"// // Extract the program name and program status",
 									" const patientId = response.patientId;",
+									" const PEmail=response.Email",
 									"",
 									" if (pm.response.code === 201 ) {",
 									"   // Set collection variables for later use",
 									"pm.collectionVariables.set(\"patientId\", patientId);",
-									"",
+									"pm.collectionVariables.set(\"email\", PEmail);",
 									" }",
 									" console.log(\"patientId\", patientId);",
+									" console.log(\"PatientEmail\",PEmail);",
 									"",
 									"//Before storing collection variable validating",
 									"pm.test(\"patientId is stored as a collection variable\", function () {",
@@ -3616,7 +3618,7 @@
 							"script": {
 								"id": "5365ac73-865b-4227-b808-6d3276d8e827",
 								"exec": [
-									"pm.test(\"Response status code is 200\", function () {",
+									"pm.test(\"Response status code is 401\", function () {",
 									"  pm.response.to.have.status(404);",
 									"});"
 								],
