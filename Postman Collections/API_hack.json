@@ -2047,7 +2047,7 @@
 									" if (pm.response.code === 201 ) {",
 									"   // Set collection variables for later use",
 									"pm.collectionVariables.set(\"patientId\", patientId);",
-									"pm.collectionVariables.set(\"email\", PatientEmail);",
+									"pm.collectionVariables.set(\"PEmail\", PatientEmail);",
 									" }",
 									" console.log(\"patientId\", patientId);",
 									" console.log(\"PatientEmail\",PatientEmail);",
