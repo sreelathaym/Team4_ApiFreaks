@@ -3933,7 +3933,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"setabcr\",\n\"LastName\": \"sdetyze\",\n\"ContactNumber\": \"9123656789\",\n\"Email\": \"asddetb@gmail.com\",\n\"Allergy\": \"PECAN\",\n\"FoodPreference\": \"Vegan\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1985-12-14\"\n}\n"
+									"value": "{ \"FirstName\": \"setawcr\",\n\"LastName\": \"sdetyze\",\n\"ContactNumber\": \"9123655489\",\n\"Email\": \"asddetabc@gmail.com\",\n\"Allergy\": \"PECAN\",\n\"FoodPreference\": \"Vegan\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1997-12-14\"\n}\n"
 								},
 								{
 									"key": "Reports",
@@ -3946,7 +3946,7 @@
 								},
 								{
 									"key": "vitals",
-									"value": "{\n       “Weight“ : 45.0,\n       “Height” : 5.5,\n        “Temperature” : 99.0,\n        “SP” : 4,\n        “DP” : 5\n \n             \t}\n",
+									"value": "{\n       “Weight“ : \"{{weight}}\",\n       “Height” : \"{{height}}\",\n        “Temperature” : \"{{temperature}}\",\n        “SP” : \"{{sp}}\",\n        “DP” : \"{{dp}}\" \n             \t}\n",
 									"type": "text"
 								}
 							]
