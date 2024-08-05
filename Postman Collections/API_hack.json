@@ -6894,6 +6894,12 @@
 									"  ]",
 									"}",
 									"const validationResult = tv4.validateMultiple(jsonData, schema);",
+									"if (!validationResult.valid) {",
+									"    console.log(validationResult.errors);",
+									"}",
+									"pm.test('schema is valid', function () {",
+									"    pm.expect(validationResult.valid).to.be.true;",
+									"});",
 									""
 								],
 								"type": "text/javascript",
