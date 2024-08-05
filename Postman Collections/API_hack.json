@@ -2103,12 +2103,7 @@
 									"//     pm.execution.skipRequest();\r",
 									"// }\r",
 									"\r",
-									"let requestBody = JSON.parse(pm.request.body.raw);\r",
-									"let email = requestBody.email;\r",
-									"pm.collectionVariables.set(\"email\", email);\r",
-									"console.log(\"email:\", email);\r",
-									"let email = pm.collectionVariables.get(\"email\");\r",
-									"console.log(\"Retrieved email:\", email);\r",
+									"\r",
 									""
 								],
 								"type": "text/javascript",
@@ -2135,7 +2130,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"haghd\",\n\"LastName\": \"dyed\",\n\"ContactNumber\": \"1111100002\",\n\"Email\": \"Sde1112@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1979-08-05\"}"
+									"value": "{ \"FirstName\": \"head\",\n\"LastName\": \"dyed\",\n\"ContactNumber\": \"1111110002\",\n\"Email\": \"Sde1111@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1979-08-05\"}"
 								},
 								{
 									"key": "file",
