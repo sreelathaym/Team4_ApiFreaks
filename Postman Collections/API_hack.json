@@ -3146,7 +3146,7 @@
 					"response": []
 				},
 				{
-					"name": "RetrieveMorbidityConditionbyTestName(Thyroid/TSH)_byDietecian Copy",
+					"name": "RetrieveMorbidityConditionbyTestName(Thyroid/T3)_byDietecian",
 					"event": [
 						{
 							"listen": "test",
@@ -3175,7 +3175,41 @@
 						},
 						"method": "GET",
 						"header": [],
-						"url": "{{base_URL}}/morbidity/TSH"
+						"url": "{{base_URL}}/morbidity/T3"
+					},
+					"response": []
+				},
+				{
+					"name": "RetrieveMorbidityConditionbyTestName(Thyroid/T4)_byDietecian",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d55202cd-58c9-497b-a08d-cfc188b2d208",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "6ba07abd-cffb-4183-bb69-44479aaf60d7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Dietician_Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/morbidity/T4"
 					},
 					"response": []
 				}
@@ -3194,11 +3228,16 @@
 								"id": "d0f80eff-ad62-4f09-b844-d07c880a9f8b",
 								"exec": [
 									"let resp = pm.response.json();\r",
-									"pm.collectionVariables.set(\"Patient_Token\", resp.token);\r",
-									"\r",
-									"// var patientId=pm.collectionVariables.set(\"patientId\",resp.id);\r",
-									"//var patientPsw= pm.collectionVariables.set(\"patientPsw\",resp.loginPassword);\r",
-									"// var patientEmail=pm.collectionVariables.set(\"Patient_Email\",resp.Email);\r",
+									"let Patient_token=resp.token;\r",
+									"if (pm.response.code === 200 ) {\r",
+									"   // Set collection variables for later use\r",
+									"pm.collectionVariables.set(\"Patient_Token\", Patient_token);\r",
+									" }\r",
+									"//pm.collectionVariables.set(\"Patient_Token\", resp.token);\r",
+									"pm.test(\"patientId is stored as a collection variable\", function () {\r",
+									"    pm.expect(pm.collectionVariables.get(\"Patient_token\")).to.eql(Patient_token);\r",
+									"    \r",
+									"});\r",
 									""
 								],
 								"type": "text/javascript",
@@ -3536,7 +3575,7 @@
 			"name": "Morbidity",
 			"item": [
 				{
-					"name": "Get all Morbidities",
+					"name": "GetAllMorbidities",
 					"event": [
 						{
 							"listen": "test",
@@ -3570,7 +3609,7 @@
 					"response": []
 				},
 				{
-					"name": "Retrieve Morbidity condition by Test name(Fasting Glucose)",
+					"name": "Retrieve_Morbidity_Condition_by_Testname(Fasting Glucose)",
 					"event": [
 						{
 							"listen": "test",
