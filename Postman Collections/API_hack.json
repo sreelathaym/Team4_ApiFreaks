@@ -9249,7 +9249,7 @@
 							"script": {
 								"id": "d81bffd2-6805-4e28-936d-0e29a1d3fda5",
 								"exec": [
-									"if (!(pm.collectionVariables.get(\"roleId\")==\"{{}}\" && (pm.iterationData.get(\"Request\") == \"CreateUser\")))\r",
+									"if (!(pm.collectionVariables.get(\"dieticianId\")==\"{{dieticianId}}\" && (pm.iterationData.get(\"Request\") == \"CreateUser\")))\r",
 									"    {\r",
 									"    pm.execution.skipRequest();\r",
 									"    }\r",
