@@ -273,110 +273,7 @@
 						},
 						"url": "{{base_URL}}/login"
 					},
-					"response": [
-						{
-							"id": "6f2821f3-dfa9-46ba-aeda-591bdfbe9789",
-							"name": "Admin_login_With_valid_Endpoint",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"password\": \"{{AdminPsw}}\",\r\n    \"userLoginEmail\": \"{{AdminEmail}}\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{base_URL}}/login"
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Server",
-									"value": "Cowboy"
-								},
-								{
-									"key": "Report-To",
-									"value": "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1722839625&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=75%2Ff4rgDHMsu4Z%2BTQZOc4B6uY6EiB9dWW7jSj79rlKk%3D\"}]}"
-								},
-								{
-									"key": "Reporting-Endpoints",
-									"value": "heroku-nel=https://nel.heroku.com/reports?ts=1722839625&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=75%2Ff4rgDHMsu4Z%2BTQZOc4B6uY6EiB9dWW7jSj79rlKk%3D"
-								},
-								{
-									"key": "Nel",
-									"value": "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Vary",
-									"value": "Origin"
-								},
-								{
-									"key": "Vary",
-									"value": "Access-Control-Request-Method"
-								},
-								{
-									"key": "Vary",
-									"value": "Access-Control-Request-Headers"
-								},
-								{
-									"key": "X-Content-Type-Options",
-									"value": "nosniff"
-								},
-								{
-									"key": "X-Xss-Protection",
-									"value": "1; mode=block"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, no-store, max-age=0, must-revalidate"
-								},
-								{
-									"key": "Pragma",
-									"value": "no-cache"
-								},
-								{
-									"key": "Expires",
-									"value": "0"
-								},
-								{
-									"key": "Strict-Transport-Security",
-									"value": "max-age=31536000 ; includeSubDomains"
-								},
-								{
-									"key": "X-Frame-Options",
-									"value": "DENY"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								},
-								{
-									"key": "Date",
-									"value": "Mon, 05 Aug 2024 06:33:45 GMT"
-								},
-								{
-									"key": "Via",
-									"value": "1.1 vegur"
-								}
-							],
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\n    \"token\": \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJUZWFtNEBnbWFpbC5jb20iLCJpYXQiOjE3MjI4Mzk2MjUsImV4cCI6MTcyMjg2ODQyNX0.Ca7FtwT85Xw18X0GaHl2aDVO46n3tIanbWf8ZBhxODzmCtK8MOBk0LCsSSJs0_JqBCXqHVZynMNAGrrPFJZlWQ\",\n    \"type\": \"Bearer \",\n    \"userId\": 7046,\n    \"loginUserEmail\": \"Team4@gmail.com\",\n    \"roles\": [\n        \"ROLE_ADMIN\"\n    ]\n}"
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "N-CreateDieticianInvalidendpoint",
@@ -1588,8 +1485,8 @@
 					},
 					"response": [
 						{
-							"id": "e9e03ef1-8fcf-4aa5-a30a-c5bbfddb1ff1",
-							"name": "GetDieticianByInvalidEndpoint",
+							"id": "e7e0fd8a-d705-49e1-84f6-1e5e2c55b207",
+							"name": "N-Get_Dietician_By_Invalid_Endpoint",
 							"originalRequest": {
 								"method": "GET",
 								"header": [],
@@ -1605,11 +1502,11 @@
 								},
 								{
 									"key": "Report-To",
-									"value": "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1722840341&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=BT3ZyuS9NlKDJOBwJOnlH%2FkyGu5YLG3xGFPqYBCzfoc%3D\"}]}"
+									"value": "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1722841041&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=8rHCD6eom8hF30AhAWIRbyZ0znZrSLtDCB%2FlB6BRenc%3D\"}]}"
 								},
 								{
 									"key": "Reporting-Endpoints",
-									"value": "heroku-nel=https://nel.heroku.com/reports?ts=1722840341&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=BT3ZyuS9NlKDJOBwJOnlH%2FkyGu5YLG3xGFPqYBCzfoc%3D"
+									"value": "heroku-nel=https://nel.heroku.com/reports?ts=1722841041&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=8rHCD6eom8hF30AhAWIRbyZ0znZrSLtDCB%2FlB6BRenc%3D"
 								},
 								{
 									"key": "Nel",
@@ -1669,7 +1566,7 @@
 								},
 								{
 									"key": "Date",
-									"value": "Mon, 05 Aug 2024 06:45:41 GMT"
+									"value": "Mon, 05 Aug 2024 06:57:21 GMT"
 								},
 								{
 									"key": "Via",
@@ -1678,7 +1575,7 @@
 							],
 							"cookie": [],
 							"responseTime": null,
-							"body": "{\n    \"timestamp\": \"2024-08-05T06:45:41.844+00:00\",\n    \"status\": 404,\n    \"error\": \"Not Found\",\n    \"path\": \"/dietician/null\"\n}"
+							"body": "{\n    \"timestamp\": \"2024-08-05T06:57:21.325+00:00\",\n    \"status\": 404,\n    \"error\": \"Not Found\",\n    \"path\": \"/dietician/750\"\n}"
 						}
 					]
 				},
