@@ -9788,12 +9788,12 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"{{fname}}\",\n\"LastName\": \"{{lname}}\",\n\"ContactNumber\": \"{{contactno}}\",\n\"Email\": \"{{pemail}}\",\n\"Allergy\": \"{{allergy}}\",\n\"FoodPreference\": \"{{foodpref}}\",\n\"CuisineCategory\":\"{{cuisine}}\",\n\"DateOfBirth\": \"{{dob}}\"\n}"
+									"value": "{ \"FirstName\": \"{{Patient_Fname}}\",\n\"LastName\": \"{{Patient_Lname}}\",\n\"ContactNumber\": \"{{Patient_ContactNo}}\",\n\"Email\": \"{{Patient_emailId}}\",\n\"Allergy\": \"{{allergy}}\",\n\"FoodPreference\": \"{{FoodPref}}\",\n\"CuisineCategory\":\"{{Cuisine}}\",\n\"DateOfBirth\": \"{{Patient_DOB}}\"\n}"
 								},
 								{
 									"key": "file",
 									"type": "file",
-									"src": "OSyo6NPMk/Diabetic and Hemogram Test_Thyrocare lab.pdf (1).pdf"
+									"src": "5KoNrTaU6/HyperThyroid_Report_final.pdf"
 								}
 							]
 						},
@@ -10315,15 +10315,11 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"Hello\",\n\"LastName\": \"Ninjas\",\n\"ContactNumber\": \"1112000000\",\n\"Email\": \"S124@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1999-07-05\"}"
+									"value": "{ \"FirstName\": \"{{Patient_Fname}}\",\n\"LastName\": \"{{Patient_Lname}}\",\n\"ContactNumber\": \"{{Patient_ContactNo}}\",\n\"Email\": \"{{Patient_emailId}}\",\n\"Allergy\": \"{{allergy}}\",\n\"FoodPreference\": \"{{FoodPref}}\",\n\"CuisineCategory\":\"{{Cuisine}}\",\n\"DateOfBirth\": \"{{Patient_DOB}}\"\n}"
 								},
 								{
 									"key": "file",
 									"type": "file",
-									"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
-									"filesNotInWorkingDirectory": [
-										"9Xsx4k7uG/Diabetic and Hemogram Test_Thyrocare lab.pdf (1).pdf"
-									],
 									"src": "9Xsx4k7uG/Diabetic and Hemogram Test_Thyrocare lab.pdf (1).pdf"
 								}
 							]
