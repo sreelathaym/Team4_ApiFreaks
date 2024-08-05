@@ -83,8 +83,7 @@
 							"variable": [
 								{
 									"key": "Invalid_Endpoint",
-									"value": "/lgo",
-									"description": "Trying to generate admin token with invalid end point."
+									"value": ""
 								}
 							]
 						}
@@ -2125,15 +2124,11 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"hjjegd\",\n\"LastName\": \"dhed\",\n\"ContactNumber\": \"1157770002\",\n\"Email\": \"Ss1191@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1979-08-05\"}"
+									"value": "{ \"FirstName\": \"hjkgd\",\n\"LastName\": \"dyed\",\n\"ContactNumber\": \"1157780002\",\n\"Email\": \"Sd1191@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1979-08-05\"}"
 								},
 								{
 									"key": "file",
 									"type": "file",
-									"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
-									"filesNotInWorkingDirectory": [
-										"FoNGxVhz-/Diabetic and Hemogram Test_Thyrocare lab.pdf (1).pdf"
-									],
 									"src": "3Cryk6-G6/Diabetic and Hemogram Test_Thyrocare lab.pdf (1).pdf"
 								}
 							]
