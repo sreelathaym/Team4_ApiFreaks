@@ -626,7 +626,7 @@
 									"// });\r",
 									"\r",
 									"pm.test(\"Status code\", function () {\r",
-									"    pm.response.to.have.status(pm.collectionVariables.get(\"statuscode\"));\r",
+									"    pm.response.to.have.status(pm.collectionVariables.get(\"Dieiticanstatuscode\"));\r",
 									"});\r",
 									"var jsonData = pm.response.json();\r",
 									"pm.collectionVariables.set(\"dieticianId\",jsonData.id);\r",
@@ -1329,7 +1329,7 @@
 									"\r",
 									"\r",
 									"pm.test(\"Status code\", function () {\r",
-									"    pm.response.to.have.status(pm.collectionVariables.get(\"statuscode\"));\r",
+									"    pm.response.to.have.status(pm.collectionVariables.get(\"Dieiticanstatuscode\"));\r",
 									"});"
 								],
 								"type": "text/javascript",
@@ -9237,7 +9237,7 @@
 									"// });\r",
 									"\r",
 									"pm.test(\"Status code\", function () {\r",
-									"    pm.response.to.have.status(pm.collectionVariables.get(\"statuscode\"));\r",
+									"    pm.response.to.have.status(pm.collectionVariables.get(\"Dieiticanstatuscode\"));\r",
 									"});\r",
 									"var jsonData = pm.response.json();\r",
 									"pm.collectionVariables.set(\"dieticianId\",jsonData.id);\r",
@@ -9483,7 +9483,7 @@
 									"\r",
 									"\r",
 									"pm.test(\"Status code\", function () {\r",
-									"    pm.response.to.have.status(pm.collectionVariables.get(\"statuscode\"));\r",
+									"    pm.response.to.have.status(pm.collectionVariables.get(\"Dieiticanstatuscode\"));\r",
 									"});"
 								],
 								"type": "text/javascript",
@@ -11389,6 +11389,119 @@
 						"url": "{{base_URL}}/patient/testReports/{{patientId}}"
 					},
 					"response": []
+				},
+				{
+					"name": "Delete_PatientById Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "87dd2496-6e81-4716-ba83-e7dba4ee700d",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "6aef159b-84e6-42f2-87cc-66ff0de7d380",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "a5ebebd6-2afa-4015-86d4-88cfb986633c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{patientId}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_URL}}/patient/{{patientId}}"
+					},
+					"response": []
+				},
+				{
+					"name": "DeletedieticanByVldID Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9dab26ca-83a5-4d4c-ab96-04434d06a4fd",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "41b84fef-6d5b-4cce-9afd-582cc0de9ad9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_URL}}/dietician/{{dieticianId}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Logoutwithvalidendpoint Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "51d59360-0f02-4ba7-bd34-423ac0bd4457",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "9c4b927e-0369-471d-a53d-c4bc03a78b75",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Admin_Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/logoutdietician"
+					},
+					"response": []
 				}
 			],
 			"id": "4107a1e1-80d4-4249-8dec-1cf1fc6a9bfc"
@@ -11398,7 +11511,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "c0f6e8ab-dd9b-465e-b28a-ab151d416744",
+				"id": "b96db458-1d61-4309-804f-b5faf5cc26a5",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -11409,7 +11522,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "af7d0042-7bde-4e9b-bf23-6a517b2ca754",
+				"id": "ef38b903-526a-4754-ad31-3dbd8c0aa983",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -11467,6 +11580,7 @@
 			"value": ""
 		},
 		{
+			"key": "Dieiticanstatuscode",
 			"value": ""
 		},
 		{
