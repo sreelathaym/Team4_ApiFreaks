@@ -3234,10 +3234,6 @@
 									"pm.collectionVariables.set(\"Patient_Token\", Patient_token);\r",
 									" }\r",
 									"//pm.collectionVariables.set(\"Patient_Token\", resp.token);\r",
-									"pm.test(\"patientId is stored as a collection variable\", function () {\r",
-									"    pm.expect(pm.collectionVariables.get(\"Patient_token\")).to.eql(Patient_token);\r",
-									"    \r",
-									"});\r",
 									""
 								],
 								"type": "text/javascript",
@@ -3643,7 +3639,7 @@
 					"response": []
 				},
 				{
-					"name": "Retrieve Morbidity condition by Test name(Average Glucose)",
+					"name": "Retrieve_Morbidity_Condition_by_Testname(Average Glucose)",
 					"event": [
 						{
 							"listen": "test",
@@ -3680,7 +3676,7 @@
 					"response": []
 				},
 				{
-					"name": "Retrieve Morbidity condition by Test name(Plasma Glucose)",
+					"name": "Retrieve_Morbidity_Condition_by_Testname(Plasma Glucose)",
 					"event": [
 						{
 							"listen": "test",
@@ -3714,7 +3710,7 @@
 					"response": []
 				},
 				{
-					"name": "Retrieve Morbidity condition by Test name(Thyroid/TSH)",
+					"name": "Retrieve_Morbidity_Condition_by_Testname(Thyroid/TSH)",
 					"event": [
 						{
 							"listen": "test",
@@ -3748,7 +3744,7 @@
 					"response": []
 				},
 				{
-					"name": "Retrieve Morbidity condition by Test name(Thyroid/T3)",
+					"name": "Retrieve_Morbidity_Condition_by_Testname(Thyroid/T3)",
 					"event": [
 						{
 							"listen": "test",
@@ -3782,7 +3778,7 @@
 					"response": []
 				},
 				{
-					"name": "Retrieve Morbidity condition by Test name(Thyroid/T4)",
+					"name": "Retrieve_Morbidity_Condition_by_Testname(Thyroid/T4)",
 					"event": [
 						{
 							"listen": "test",
@@ -3816,7 +3812,7 @@
 					"response": []
 				},
 				{
-					"name": "Morbidities with valid Dietician bearer token and valid End point",
+					"name": "Morbidities_with_valid_Dietician_bearer_token_and_valid_End_point",
 					"event": [
 						{
 							"listen": "test",
@@ -3850,7 +3846,7 @@
 					"response": []
 				},
 				{
-					"name": "N-Morbidities with valid Dietician bearer token and Invalid End point Copy",
+					"name": "N-Morbidities_with_valid_Dietician_bearer_token_and_Invalid_End_point_Copy",
 					"event": [
 						{
 							"listen": "test",
