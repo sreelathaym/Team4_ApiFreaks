@@ -1248,7 +1248,7 @@
 									"  ]\r",
 									"}\r",
 									"\r",
-									"pm.test(\"Response contsins valid schema data\", function () {\r",
+									"pm.test(\"Response contains valid schema data\", function () {\r",
 									"    pm.response.to.have.jsonSchema(schema);\r",
 									"});\r",
 									""
@@ -1522,6 +1522,21 @@
 				},
 				{
 					"name": "GetDieticianByInvalidID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "83c8206e-f250-4a95-a356-9ce10c6c7e4a",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "aa736f16-7931-45df-8ae6-972c68420573",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -1535,7 +1550,7 @@
 						},
 						"method": "GET",
 						"header": [],
-						"url": "{{base_URL}}/dietician/{25665567}"
+						"url": "{{base_URL}}/dietician/{25665}"
 					},
 					"response": []
 				},
