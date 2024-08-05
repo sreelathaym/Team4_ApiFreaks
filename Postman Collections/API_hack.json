@@ -9120,6 +9120,15 @@
 								"exec": [
 									"pm.test(\"Response status code is 401\", function () {",
 									"  pm.response.to.have.status(401);",
+									"});",
+									"pm.test(\"Validate Error and Path\", function () {",
+									"    const response = pm.response.json();",
+									"    ",
+									"    // Validate error field",
+									"    pm.expect(response.error).to.eql(\"Unauthorized\");",
+									"    ",
+									"    // Validate path field",
+									"    pm.expect(response.path).to.eql(\"/dietician/morbidity\");",
 									"});"
 								],
 								"type": "text/javascript",
