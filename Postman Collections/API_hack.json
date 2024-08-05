@@ -73,17 +73,18 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_URL}}/:Invalid_Endpoint",
+							"raw": "{{base_URL}}/:InvEndPoint",
 							"host": [
 								"{{base_URL}}"
 							],
 							"path": [
-								":Invalid_Endpoint"
+								":InvEndPoint"
 							],
 							"variable": [
 								{
-									"key": "Invalid_Endpoint",
-									"value": ""
+									"key": "InvEndPoint",
+									"value": "lgo",
+									"description": "Admin trying to generate token with invalid endponit."
 								}
 							]
 						}
@@ -2045,14 +2046,14 @@
 									" if (pm.response.code === 201 ) {",
 									"   // Set collection variables for later use",
 									"pm.collectionVariables.set(\"patientId\", patientId);",
-									"pm.collectionVariables.set(\"patientEmail\", patientEmail);",
+									"",
 									" }",
 									" console.log(\"patientId\", patientId);",
-									" console.log(\"patientEmail\",patientEmail);",
+									"",
 									"//Before storing collection variable validating",
 									"pm.test(\"patientId is stored as a collection variable\", function () {",
 									"    pm.expect(pm.collectionVariables.get(\"patientId\")).to.eql(patientId);",
-									"    //pm.expect(pm.collectionVariables.get(\"patientEmail\")).to.eql(patientEmail);",
+									"    ",
 									"});",
 									"",
 									"pm.test(\"First name is not empty\", function () {",
@@ -2101,6 +2102,7 @@
 									"// if (pm.iterationData.get(\"Request\") !== 'CreatePatient') {\r",
 									"//     pm.execution.skipRequest();\r",
 									"// }\r",
+									"\r",
 									""
 								],
 								"type": "text/javascript",
@@ -2127,7 +2129,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"hdghd\",\n\"LastName\": \"dyed\",\n\"ContactNumber\": \"1177980002\",\n\"Email\": \"Sde11912@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1979-08-05\"}"
+									"value": "{ \"FirstName\": \"haghd\",\n\"LastName\": \"dyed\",\n\"ContactNumber\": \"1111100002\",\n\"Email\": \"Sde11912@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1979-08-05\"}"
 								},
 								{
 									"key": "file",
