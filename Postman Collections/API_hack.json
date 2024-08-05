@@ -3026,7 +3026,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"password\": \"{{patientPsw}}\",\r\n    \"userLoginEmail\": \"{{patientEmail}}\"\r\n}",
+							"raw": "{\r\n    \"password\": \"{{patientPsw}}\",\r\n    //\"userLoginEmail\": \"{{patientEmail}}\"\r\n    \"userLoginEmail\":\"Sde1111@acbd.com\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
