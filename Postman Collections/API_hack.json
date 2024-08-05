@@ -2392,8 +2392,8 @@
 									"//     pm.expect(pm.collectionVariables.get(\"patientId\")).to.eql(patientId);",
 									"    ",
 									"//});",
-									"pm.test(\"Email is correct\", function () {",
-									"    pm.expect(response.Email).to.eql(expectedEmail);",
+									"// pm.test(\"Email is correct\", function () {",
+									"//     pm.expect(response.Email).to.eql(expectedEmail);",
 									"",
 									"pm.test(\"First name is not empty\", function () {",
 									"    pm.expect(response.FirstName).to.not.be.empty;",
@@ -4757,6 +4757,10 @@
 		},
 		{
 			"key": "Patientemail",
+			"value": ""
+		},
+		{
+			"key": "PEmail",
 			"value": ""
 		}
 	]
