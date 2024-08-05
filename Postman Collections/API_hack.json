@@ -3010,7 +3010,7 @@
 					"response": []
 				},
 				{
-					"name": "RetrieveMorbidityConditionbyTestName_byDietecian",
+					"name": "RetrieveMorbidityConditionbyTestName(Fasting Glucose)_byDietecian",
 					"event": [
 						{
 							"listen": "test",
@@ -3044,7 +3044,7 @@
 					"response": []
 				},
 				{
-					"name": "RetrieveMorbidityConditionbyTestName_byDietecian",
+					"name": "RetrieveMorbidityConditionbyTestName(Plasma Glucose)_byDietecian",
 					"event": [
 						{
 							"listen": "test",
@@ -3078,7 +3078,7 @@
 					"response": []
 				},
 				{
-					"name": "RetrieveMorbidityConditionbyTestName_byDietecian",
+					"name": "RetrieveMorbidityConditionbyTestName(Average Glucose)_byDietecian",
 					"event": [
 						{
 							"listen": "test",
@@ -3108,6 +3108,74 @@
 						"method": "GET",
 						"header": [],
 						"url": "{{base_URL}}/morbidity/Average Glucose"
+					},
+					"response": []
+				},
+				{
+					"name": "RetrieveMorbidityConditionbyTestName(Thyroid/TSH)_byDietecian",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d55202cd-58c9-497b-a08d-cfc188b2d208",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "1fe7bef8-d510-495d-9d52-b96947f44291",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Dietician_Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/morbidity/TSH"
+					},
+					"response": []
+				},
+				{
+					"name": "RetrieveMorbidityConditionbyTestName(Thyroid/TSH)_byDietecian Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d55202cd-58c9-497b-a08d-cfc188b2d208",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "bb4546a7-2f5a-4c66-be2b-9572f88867d9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Dietician_Token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_URL}}/morbidity/TSH"
 					},
 					"response": []
 				}
