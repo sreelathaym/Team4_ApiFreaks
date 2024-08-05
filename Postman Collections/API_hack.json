@@ -2042,19 +2042,20 @@
 									"",
 									"// // Extract the program name and program status",
 									" const patientId = response.patientId;",
-									" const PEmail=response.Email",
+									" const PatientEmail=response.Email",
 									"",
 									" if (pm.response.code === 201 ) {",
 									"   // Set collection variables for later use",
 									"pm.collectionVariables.set(\"patientId\", patientId);",
-									"pm.collectionVariables.set(\"email\", PEmail);",
+									"pm.collectionVariables.set(\"email\", PatientEmail);",
 									" }",
 									" console.log(\"patientId\", patientId);",
-									" console.log(\"PatientEmail\",PEmail);",
+									" console.log(\"PatientEmail\",PatientEmail);",
 									"",
 									"//Before storing collection variable validating",
 									"pm.test(\"patientId is stored as a collection variable\", function () {",
 									"    pm.expect(pm.collectionVariables.get(\"patientId\")).to.eql(patientId);",
+									"    pm.expect(pm.collectionVariables.get(\"PatientEmail\")).to.be(PatientEmail);",
 									"    ",
 									"});",
 									"",
@@ -2132,7 +2133,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"heads\",\n\"LastName\": \"dyed\",\n\"ContactNumber\": \"1111111002\",\n\"Email\": \"Sde11112@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1979-08-05\"}"
+									"value": "{ \"FirstName\": \"heear\",\n\"LastName\": \"dyed\",\n\"ContactNumber\": \"1111120002\",\n\"Email\": \"Sde152@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1979-08-05\"}"
 								},
 								{
 									"key": "file",
@@ -2970,6 +2971,18 @@
 						"method": "GET",
 						"header": [],
 						"url": "{{base_URL}}/patient/testReports/viewFile/{{fileId}}"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "56b80b92-1f10-43cb-a382-77dd97c08f05",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				}
