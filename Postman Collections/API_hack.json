@@ -9,7 +9,7 @@
 			"name": "Admin",
 			"item": [
 				{
-					"name": "UserloginWithinvalidEndpoint",
+					"name": "N-AdminloginWithinvalidEndpoint",
 					"event": [
 						{
 							"listen": "test",
@@ -77,7 +77,7 @@
 					"response": []
 				},
 				{
-					"name": "UserloginWithInvalidCred",
+					"name": "N-AdminloginWithInvalidCred",
 					"event": [
 						{
 							"listen": "test",
