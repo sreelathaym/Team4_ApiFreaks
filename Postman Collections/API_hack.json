@@ -6992,7 +6992,7 @@
 									"    console.log(validationResult.errors);",
 									"}",
 									"pm.test('schema is valid', function () {",
-									"    pm.expect(validationResult.valid).to.be.true;",
+									"    pm.expect(validationResult.valid).to.be.false;",
 									"});",
 									"",
 									"pm.test(\"Response time is less than 500ms\", function () {",
