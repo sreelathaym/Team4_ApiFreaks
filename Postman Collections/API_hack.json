@@ -9328,14 +9328,29 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n   \"id\": \"{{dieticianid}}\",\r\n  \"ContactNumber\": \"{{contactnumber}}\",\r\n  \"DateOfBirth\": \"{{Dateofbirth}}\",\r\n  \"Education\": \"{{education}}\",\r\n  \"Email\": \"{{email}}\",\r\n  \"Firstname\": \"{{firstname}}\",\r\n  \"HospitalCity\":\" {{hospitalcity}}\",\r\n  \"HospitalName\": \"{{hospitalname}}\",\r\n  \"HospitalPincode\": \"{{hospitalpincode}}\",\r\n  \"HospitalStreet\":\"{{hospitalstreet}}\",\r\n  \"Lastname\": \"{{lastname}}\"\r\n \r\n}",
+							"raw": "{\r\n\r\n  \"ContactNumber\": \"{{contactnumber}}\",\r\n  \"DateOfBirth\": \"{{Dateofbirth}}\",\r\n  \"Education\": \"{{education}}\",\r\n  \"Email\": \"{{email}}\",\r\n  \"Firstname\": \"{{firstname}}\",\r\n  \"HospitalCity\":\" {{hospitalcity}}\",\r\n  \"HospitalName\": \"{{hospitalname}}\",\r\n  \"HospitalPincode\": \"{{hospitalpincode}}\",\r\n  \"HospitalStreet\":\"{{hospitalstreet}}\",\r\n  \"Lastname\": \"{{lastname}}\"\r\n \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{base_URL}}/dietician/{{dieticianid}}"
+						"url": {
+							"raw": "{{base_URL}}/dietician/:id",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"dietician",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{dieticianId}}"
+								}
+							]
+						}
 					},
 					"response": []
 				},
