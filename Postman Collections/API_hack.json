@@ -891,7 +891,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"ContactNumber\": \"0989654381\",\r\n  \"DateOfBirth\": \"2011-07-27T18:14:08.570Z\",\r\n  \"Education\": \"gdhd\",\r\n  \"Email\": \"jklm1289@gmail.com\",\r\n  \"Firstname\": \"hj\",\r\n  \"HospitalCity\": \"lk\",\r\n  \"HospitalName\": \"kj\",\r\n  \"HospitalPincode\": \"334567\",\r\n  \"HospitalStreet\": \"kk\",\r\n  \"Lastname\": \"jj\"\r\n \r\n}\r\n\r\n\r\n\r\n// {\r\n//   \"ContactNumber\": \"7678687675\",\r\n//   \"DateOfBirth\": \"1985-06-21T00:00:00.000+00:00\",\r\n//   \"Education\": \"edu1\",\r\n//   \"Email\": \"vidhya@gmail.com\",\r\n//   \"Firstname\": \"Sri\",\r\n//   \"HospitalCity\": \"hoscit\",\r\n//   \"HospitalName\": \"hosnam\",\r\n//   \"HospitalPincode\": \"896879\",\r\n//   \"HospitalStreet\": \"hosstr\",\r\n//   \"Lastname\": \"vidhya\"\r\n\r\n// }\r\n",
+							"raw": "{\r\n  \"ContactNumber\": \"0983454381\",\r\n  \"DateOfBirth\": \"2001-07-27T18:14:08.570Z\",\r\n  \"Education\": \"gdrd\",\r\n  \"Email\": \"jklm12891@gmail.com\",\r\n  \"Firstname\": \"hj\",\r\n  \"HospitalCity\": \"lk\",\r\n  \"HospitalName\": \"kj\",\r\n  \"HospitalPincode\": \"334567\",\r\n  \"HospitalStreet\": \"kk\",\r\n  \"Lastname\": \"jj\"\r\n \r\n}\r\n\r\n\r\n\r\n// {\r\n//   \"ContactNumber\": \"7678687675\",\r\n//   \"DateOfBirth\": \"1985-06-21T00:00:00.000+00:00\",\r\n//   \"Education\": \"edu1\",\r\n//   \"Email\": \"vidhya@gmail.com\",\r\n//   \"Firstname\": \"Sri\",\r\n//   \"HospitalCity\": \"hoscit\",\r\n//   \"HospitalName\": \"hosnam\",\r\n//   \"HospitalPincode\": \"896879\",\r\n//   \"HospitalStreet\": \"hosstr\",\r\n//   \"Lastname\": \"vidhya\"\r\n\r\n// }\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2836,7 +2836,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"heeel\",\n\"LastName\": \"dyed\",\n\"ContactNumber\": \"1111150001\",\n\"Email\": \"Sde152345@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1972-08-05\"}"
+									"value": "{ \"FirstName\": \"heeell\",\n\"LastName\": \"dyed\",\n\"ContactNumber\": \"1111340001\",\n\"Email\": \"Sde15235@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1972-08-05\"}"
 								},
 								{
 									"key": "file",
@@ -2845,7 +2845,7 @@
 									"filesNotInWorkingDirectory": [
 										"3Cryk6-G6/Diabetic and Hemogram Test_Thyrocare lab.pdf (1).pdf"
 									],
-									"src": "3Cryk6-G6/Diabetic and Hemogram Test_Thyrocare lab.pdf (1).pdf"
+									"src": "BOWIfND3z/Hypo Thyroid-Report.pdf.pdf"
 								}
 							]
 						},
@@ -6320,7 +6320,9 @@
 									"    \"items\",",
 									"    \"examples\"",
 									"  ]",
-									"}",
+									"};",
+									"",
+									"var actualJsonData = pm.response.json();",
 									"",
 									"pm.test('Schema is valid', function() {",
 									"  ",
