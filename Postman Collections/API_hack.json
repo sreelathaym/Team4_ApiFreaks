@@ -2990,7 +2990,7 @@
 									"\r",
 									"// var patientId=pm.collectionVariables.set(\"patientId\",resp.id);\r",
 									"//var patientPsw= pm.collectionVariables.set(\"patientPsw\",resp.loginPassword);\r",
-									"// varpatientEmail=pm.collectionVariables.set(\"Patient_Email\",resp.Email);\r",
+									"// var patientEmail=pm.collectionVariables.set(\"Patient_Email\",resp.Email);\r",
 									""
 								],
 								"type": "text/javascript",
@@ -3019,7 +3019,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{Admin_Token}}"
+								"token": "{{Dietician_Token}}"
 							}
 						},
 						"method": "POST",
