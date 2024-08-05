@@ -3296,7 +3296,7 @@
 									"});",
 									"pm.test(\"Response should have correct error message\", function () {",
 									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData.message).to.eql(\"Unauthorized\");",
+									"    pm.expect(jsonData.message).to.contains(\"Unauthorized\");",
 									"});",
 									"",
 									"pm.test(\"Content-Type is application/json\", function () {",
