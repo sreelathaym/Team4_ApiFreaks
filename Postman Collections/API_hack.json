@@ -1555,7 +1555,7 @@
 					"response": []
 				},
 				{
-					"name": "GetDieticianByInvalidEndpoint",
+					"name": "N-Get_Dietician_By_Invalid_Endpoint",
 					"event": [
 						{
 							"listen": "test",
@@ -1808,7 +1808,7 @@
 					]
 				},
 				{
-					"name": "GetDietcianinfoByValidID",
+					"name": "Get_Dietcian_infoBy_ValidID",
 					"id": "61a7ed2e-cae8-414d-9106-686a1269daa3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -3140,25 +3140,25 @@
 							"script": {
 								"id": "27cd307c-b49b-4959-8cf1-5539bdd1082d",
 								"exec": [
-									"// if (pm.iterationData.get(\"Request\") !== 'CreatePatient') {\r",
-									"//     pm.execution.skipRequest();\r",
+									"// // if (pm.iterationData.get(\"Request\") !== 'CreatePatient') {\r",
+									"// //     pm.execution.skipRequest();\r",
+									"// // }\r",
+									"\r",
+									"// // Generate a unique email using a timestamp\r",
+									"// const timestamp = new Date().getTime();\r",
+									"// pm.environment.set(\"pemail\", `user${timestamp}@example.com`);\r",
+									"\r",
+									"// // Generate a random date of birth (for example, between 1980-01-01 and 2000-12-31)\r",
+									"// function getRandomDate(start, end) {\r",
+									"//     const date = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));\r",
+									"//     return date.toISOString().split('T')[0];\r",
 									"// }\r",
+									"// const dob = getRandomDate(new Date(1980, 0, 1), new Date(2000, 11, 31));\r",
+									"// pm.environment.set(\"dob\", dob);\r",
 									"\r",
-									"// Generate a unique email using a timestamp\r",
-									"const timestamp = new Date().getTime();\r",
-									"pm.environment.set(\"pemail\", `user${timestamp}@example.com`);\r",
-									"\r",
-									"// Generate a random date of birth (for example, between 1980-01-01 and 2000-12-31)\r",
-									"function getRandomDate(start, end) {\r",
-									"    const date = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));\r",
-									"    return date.toISOString().split('T')[0];\r",
-									"}\r",
-									"const dob = getRandomDate(new Date(1980, 0, 1), new Date(2000, 11, 31));\r",
-									"pm.environment.set(\"dob\", dob);\r",
-									"\r",
-									"// You can also generate a random contact number if needed\r",
-									"const contactNo = `12345${Math.floor(Math.random() * 1000000)}`;\r",
-									"pm.environment.set(\"contactno\", contactNo);\r",
+									"// // You can also generate a random contact number if needed\r",
+									"// const contactNo = `12345${Math.floor(Math.random() * 1000000)}`;\r",
+									"// pm.environment.set(\"contactno\", contactNo);\r",
 									""
 								],
 								"type": "text/javascript",
