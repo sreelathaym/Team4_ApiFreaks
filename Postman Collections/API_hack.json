@@ -3764,7 +3764,7 @@
 								}
 							]
 						},
-						"url": "{{base_URL}}/patient/{{patientId}}"
+						"url": "{{base_URL}}/patient/newReports/{{patientId}}"
 					},
 					"response": []
 				},
