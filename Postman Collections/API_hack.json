@@ -2103,6 +2103,12 @@
 									"//     pm.execution.skipRequest();\r",
 									"// }\r",
 									"\r",
+									"let requestBody = JSON.parse(pm.request.body.raw);\r",
+									"let email = requestBody.email;\r",
+									"pm.collectionVariables.set(\"email\", email);\r",
+									"console.log(\"email:\", email);\r",
+									"let email = pm.collectionVariables.get(\"email\");\r",
+									"console.log(\"Retrieved email:\", email);\r",
 									""
 								],
 								"type": "text/javascript",
