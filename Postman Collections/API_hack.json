@@ -2418,7 +2418,7 @@
 									"",
 									"// Optionally, log the fileId to verify",
 									"console.log(\"fileId saved to collection variable: \", fileId);",
-									"",
+									"const schema = ",
 									"{",
 									"  \"$schema\": \"http://json-schema.org/draft-07/schema#\",",
 									"  \"title\": \"Generated schema for Root\",",
@@ -2544,6 +2544,10 @@
 									"    \"LastVisitDate\"",
 									"  ]",
 									"}",
+									"pm.test(\"Response body matches schema\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(tv4.validate(jsonData, schema)).to.be.true;",
+									"});",
 									""
 								],
 								"type": "text/javascript",
@@ -3438,6 +3442,7 @@
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
 									"});",
+									"",
 									"pm.test(\"Each morbidity object has the required properties\", function () {",
 									"    pm.response.json().forEach(function(morbidity) {",
 									"        pm.expect(morbidity).to.have.property('morbidityId');",
@@ -3448,7 +3453,9 @@
 									"        pm.expect(morbidity).to.have.property('morbidityMarkerMinVal');",
 									"        pm.expect(morbidity).to.have.property('morbidityMarkerMaxVal');",
 									"    });",
-									"});"
+									"});",
+									"",
+									""
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -3502,6 +3509,9 @@
 									"        pm.expect(item.morbidityMarkerMaxVal).to.be.a('number').and.to.be.at.least(0, \"morbidityMarkerMaxVal should be a non-negative integer\");",
 									"    });",
 									"});*/",
+									"",
+									"",
+									"",
 									"",
 									"pm.test(\"Validate TestName value and datatype in response\", function () {",
 									"    const response = pm.response.json();",
