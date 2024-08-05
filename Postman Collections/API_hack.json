@@ -3044,7 +3044,7 @@
 					"response": []
 				},
 				{
-					"name": "RetrieveMorbidityConditionbyTestName(Plasma Glucose)_byDietecian",
+					"name": "Retrieve_Morbidity_Condition_by_Testname(Plasma Glucose)_byDietecian",
 					"event": [
 						{
 							"listen": "test",
@@ -3078,7 +3078,7 @@
 					"response": []
 				},
 				{
-					"name": "RetrieveMorbidityConditionbyTestName(Average Glucose)_byDietecian",
+					"name": "Retrieve_Morbidity_Condition_by_Testname(Average Glucose)_byDietecian",
 					"event": [
 						{
 							"listen": "test",
@@ -3112,7 +3112,7 @@
 					"response": []
 				},
 				{
-					"name": "RetrieveMorbidityConditionbyTestName(Thyroid/TSH)_byDietecian",
+					"name": "Retrieve_Morbidity_Condition_by_Testname(Thyroid/TSH)_byDietecian",
 					"event": [
 						{
 							"listen": "test",
@@ -3146,7 +3146,7 @@
 					"response": []
 				},
 				{
-					"name": "RetrieveMorbidityConditionbyTestName(Thyroid/T3)_byDietecian",
+					"name": "Retrieve_Morbidity_Condition_by_Testname(Thyroid/T3)_byDietecian",
 					"event": [
 						{
 							"listen": "test",
@@ -3234,7 +3234,12 @@
 									"pm.collectionVariables.set(\"Patient_Token\", Patient_token);\r",
 									" }\r",
 									"//pm.collectionVariables.set(\"Patient_Token\", resp.token);\r",
-									""
+									"pm.test(\"Content-Type is application/json\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\", \"application/json\");\r",
+									"});\r",
+									"pm.test(\"Content-Length header is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Length\");\r",
+									"});"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -3259,6 +3264,12 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{Dietician_Token}}"
+							}
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
