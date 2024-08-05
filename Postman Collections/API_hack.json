@@ -65,7 +65,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"password\": \"test\",\r\n    \"userLoginEmail\": \"Team4@gmail.com\"\r\n}",
+							"raw": "{\r\n    \"password\": \"{{AdminPsw}}\",\r\n    \"userLoginEmail\": \"{{AdminEmail}}\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -3964,7 +3964,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "e4471055-12e6-4778-805f-1943018aa78a",
+				"id": "ab07b774-c2e2-4a00-a5d3-25ae8fd44cf4",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -3975,7 +3975,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "fe8a78e9-6e49-4686-932a-995b4819adb0",
+				"id": "1dfb1812-f0c8-4006-aecd-15c607d47fa3",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
