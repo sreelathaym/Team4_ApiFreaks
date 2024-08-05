@@ -72,7 +72,22 @@
 								}
 							}
 						},
-						"url": "{{base_URL}}/login123"
+						"url": {
+							"raw": "{{base_URL}}/:Invalid_Endpoint",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								":Invalid_Endpoint"
+							],
+							"variable": [
+								{
+									"key": "Invalid_Endpoint",
+									"value": "/lgo",
+									"description": "Trying to generate admin token with invalid end point."
+								}
+							]
+						}
 					},
 					"response": []
 				},
@@ -750,7 +765,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"ContactNumber\": \"0987654921\",\r\n  \"DateOfBirth\": \"2003-07-26T18:14:08.570Z\",\r\n  \"Education\": \"gdhd\",\r\n  \"Email\": \"jkl@gmail.com\",\r\n  \"Firstname\": \"hj\",\r\n  \"HospitalCity\": \"lk\",\r\n  \"HospitalName\": \"kj\",\r\n  \"HospitalPincode\": \"334567\",\r\n  \"HospitalStreet\": \"kk\",\r\n  \"Lastname\": \"jj\"\r\n \r\n}\r\n\r\n\r\n\r\n// {\r\n//   \"ContactNumber\": \"7678687675\",\r\n//   \"DateOfBirth\": \"1985-06-21T00:00:00.000+00:00\",\r\n//   \"Education\": \"edu1\",\r\n//   \"Email\": \"vidhya@gmail.com\",\r\n//   \"Firstname\": \"Sri\",\r\n//   \"HospitalCity\": \"hoscit\",\r\n//   \"HospitalName\": \"hosnam\",\r\n//   \"HospitalPincode\": \"896879\",\r\n//   \"HospitalStreet\": \"hosstr\",\r\n//   \"Lastname\": \"vidhya\"\r\n\r\n// }\r\n",
+							"raw": "{\r\n  \"ContactNumber\": \"0989654921\",\r\n  \"DateOfBirth\": \"2009-07-26T18:14:08.570Z\",\r\n  \"Education\": \"gdhd\",\r\n  \"Email\": \"jklm@gmail.com\",\r\n  \"Firstname\": \"hj\",\r\n  \"HospitalCity\": \"lk\",\r\n  \"HospitalName\": \"kj\",\r\n  \"HospitalPincode\": \"334567\",\r\n  \"HospitalStreet\": \"kk\",\r\n  \"Lastname\": \"jj\"\r\n \r\n}\r\n\r\n\r\n\r\n// {\r\n//   \"ContactNumber\": \"7678687675\",\r\n//   \"DateOfBirth\": \"1985-06-21T00:00:00.000+00:00\",\r\n//   \"Education\": \"edu1\",\r\n//   \"Email\": \"vidhya@gmail.com\",\r\n//   \"Firstname\": \"Sri\",\r\n//   \"HospitalCity\": \"hoscit\",\r\n//   \"HospitalName\": \"hosnam\",\r\n//   \"HospitalPincode\": \"896879\",\r\n//   \"HospitalStreet\": \"hosstr\",\r\n//   \"Lastname\": \"vidhya\"\r\n\r\n// }\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
