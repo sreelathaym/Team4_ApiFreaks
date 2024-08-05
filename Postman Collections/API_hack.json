@@ -5261,9 +5261,103 @@
 						},
 						"method": "DELETE",
 						"header": [],
-						"url": "{{base_URL}}/dietician/{{dietician_id}}"
+						"url": "{{base_URL}}/dietician/{{dieticianId}}"
 					},
-					"response": []
+					"response": [
+						{
+							"id": "fb2ff4e7-f333-43fd-9c5f-4f4a6d398993",
+							"name": "DeletedieticanByNoAuth",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "{{base_URL}}/dietician/{{dieticianId}}"
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Report-To",
+									"value": "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1722841465&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=A0OOuKG6B2D1ayDdjkKdMYrbMhwJxxWeMlbHaq7bkbA%3D\"}]}"
+								},
+								{
+									"key": "Reporting-Endpoints",
+									"value": "heroku-nel=https://nel.heroku.com/reports?ts=1722841465&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=A0OOuKG6B2D1ayDdjkKdMYrbMhwJxxWeMlbHaq7bkbA%3D"
+								},
+								{
+									"key": "Nel",
+									"value": "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000 ; includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 05 Aug 2024 07:04:25 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"timestamp\": \"2024-08-05T07:04:25.254+00:00\",\n    \"status\": 401,\n    \"error\": \"Unauthorized\",\n    \"path\": \"/dietician/dietician/750\"\n}"
+						}
+					]
 				},
 				{
 					"name": "DeletedieticanByInvdID",
@@ -5282,7 +5376,101 @@
 						"header": [],
 						"url": "{{base_URL}}/dietician/{{132187}}}"
 					},
-					"response": []
+					"response": [
+						{
+							"id": "82bdf4c3-8777-4536-8275-420079efbffd",
+							"name": "DeletedieticanByInvdID",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "{{base_URL}}/dietician/{{132187}}}"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Report-To",
+									"value": "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1722841510&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=rXIp6iKZ4B5xUKS78bKqUshBGvodD2u9te260twvWNc%3D\"}]}"
+								},
+								{
+									"key": "Reporting-Endpoints",
+									"value": "heroku-nel=https://nel.heroku.com/reports?ts=1722841510&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=rXIp6iKZ4B5xUKS78bKqUshBGvodD2u9te260twvWNc%3D"
+								},
+								{
+									"key": "Nel",
+									"value": "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000 ; includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 05 Aug 2024 07:05:10 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"errorCode\": \"Illegal_Argument\",\n    \"errorMessage\": \"For input string: \\\"{{132187}}}\\\"\"\n}"
+						}
+					]
 				},
 				{
 					"name": "DeletedieticanByVldID",
@@ -5305,6 +5493,21 @@
 				},
 				{
 					"name": "LogoutwithNoAuth",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cf0d361c-9f9c-4bdf-956d-def95b37f8b7",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "5cbdb153-832f-4e89-826e-4dae09f4da1d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
