@@ -3792,7 +3792,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"setabcr\",\n\"LastName\": \"sdetyze\",\n\"ContactNumber\": \"9123656789\",\n\"Email\": \"asddetb@gmail.com\",\n\"Allergy\": \"PECAN\",\n\"FoodPreference\": \"Vegan\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1985-12-14\"\n}\n"
+									"value": "{ \"FirstName\": \"{{fname}}\",\n\"LastName\": \"{{lname}}\",\n\"ContactNumber\": \"{{contactno}}\",\n\"Email\": \"{{pemail}}\",\n\"Allergy\": \"{{allergy}}\",\n\"FoodPreference\": \"{{foodpref}}\",\n\"CuisineCategory\":\"{{cuisine}}\",\n\"DateOfBirth\": \"{{dob}}\"\n}"
 								},
 								{
 									"key": "Reports",
@@ -3805,7 +3805,7 @@
 								},
 								{
 									"key": "vitals",
-									"value": "{\n       “Weight“ : 45.0,\n       “Height” : 5.5,\n        “Temperature” : 99.0,\n        “SP” : 4,\n        “DP” : 5\n \n             \t}\n",
+									"value": "{\n       “Weight“ : \"{{weight}}\",\n       “Height” : \"{{height}}\",\n        “Temperature” : \"{{temperature}}\",\n        “SP” : \"{{sp}}\",\n        “DP” : \"{{dp}}\" \n             \t}\n",
 									"type": "text"
 								}
 							]
@@ -3860,7 +3860,7 @@
 								},
 								{
 									"key": "vitals",
-									"value": "{\n       “Weight“ : 45.0,\n       “Height” : 5.5,\n        “Temperature” : 99.0,\n        “SP” : 4,\n        “DP” : 5\n \n             \t}\n",
+									"value": "{\n       “Weight“ : \"{{weight}}\",\n       “Height” : \"{{height}}\",\n        “Temperature” : \"{{temperature}}\",\n        “SP” : \"{{sp}}\",\n        “DP” : \"{{dp}}\" \n             \t}\n",
 									"type": "text"
 								}
 							]
@@ -4125,7 +4125,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"setabcr\",\n\"LastName\": \"sdetyze\",\n\"ContactNumber\": \"9123656789\",\n\"Email\": \"asddetb@gmail.com\",\n\"Allergy\": \"PECAN\",\n\"FoodPreference\": \"Vegan\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1985-12-14\"\n}\n"
+									"value": "{ \"FirstName\": \"{{fname}}\",\n\"LastName\": \"{{lname}}\",\n\"ContactNumber\": \"{{contactno}}\",\n\"Email\": \"{{pemail}}\",\n\"Allergy\": \"{{allergy}}\",\n\"FoodPreference\": \"{{foodpref}}\",\n\"CuisineCategory\":\"{{cuisine}}\",\n\"DateOfBirth\": \"{{dob}}\"\n}"
 								},
 								{
 									"key": "Reports",
@@ -4138,7 +4138,7 @@
 								},
 								{
 									"key": "vitals",
-									"value": "{\n       “Weight“ : 45.0,\n       “Height” : 5.5,\n        “Temperature” : 99.0,\n        “SP” : 4,\n        “DP” : 5\n \n             \t}\n",
+									"value": "{\n       “Weight“ : \"{{weight}}\",\n       “Height” : \"{{height}}\",\n        “Temperature” : \"{{temperature}}\",\n        “SP” : \"{{sp}}\",\n        “DP” : \"{{dp}}\" \n             \t}\n",
 									"type": "text"
 								}
 							]
@@ -4182,8 +4182,8 @@
 							"formdata": [
 								{
 									"key": "patientInfo",
-									"type": "file",
-									"src": "yRo6FHDny/patient.json"
+									"type": "text",
+									"value": "{ \"FirstName\": \"{{fname}}\",\n\"LastName\": \"{{lname}}\",\n\"ContactNumber\": \"{{contactno}}\",\n\"Email\": \"{{pemail}}\",\n\"Allergy\": \"{{allergy}}\",\n\"FoodPreference\": \"{{foodpref}}\",\n\"CuisineCategory\":\"{{cuisine}}\",\n\"DateOfBirth\": \"{{dob}}\"\n}"
 								},
 								{
 									"key": "Reports",
@@ -4232,8 +4232,8 @@
 							"formdata": [
 								{
 									"key": "patientInfo",
-									"type": "file",
-									"src": "yRo6FHDny/patient.json"
+									"type": "text",
+									"value": "{ \"FirstName\": \"{{fname}}\",\n\"LastName\": \"{{lname}}\",\n\"ContactNumber\": \"{{contactno}}\",\n\"Email\": \"{{pemail}}\",\n\"Allergy\": \"{{allergy}}\",\n\"FoodPreference\": \"{{foodpref}}\",\n\"CuisineCategory\":\"{{cuisine}}\",\n\"DateOfBirth\": \"{{dob}}\"\n}"
 								},
 								{
 									"key": "Reports",
