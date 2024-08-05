@@ -2199,6 +2199,62 @@
 				},
 				{
 					"name": "GetAllPatients",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "236a4724-1b09-45be-b81c-61b68ac3a2c6",
+								"exec": [
+									"pm.test(\"First name is not empty\", function () {",
+									"    pm.expect(response.FirstName).to.not.be.empty;",
+									"});",
+									"pm.test(\"Last name is not empty\", function () {",
+									"    pm.expect(response.LastName).to.not.be.empty;",
+									"});",
+									"pm.test(\"Email is not empty\",function(){",
+									"    pm.expect(response.Email).to.not.be.empty;",
+									"});",
+									"pm.test(\"ContactNumber is not empty\",function(){",
+									"    pm.expect(response.ContactNumber).to.not.be.empty;",
+									"});",
+									"pm.test(\"DateOfBirth is not empty\",function(){",
+									"    pm.expect(response.DateOfBirth).to.not.be.empty;",
+									"});",
+									"pm.test(\"Allergies is not empty\",function(){",
+									"    pm.expect(response.Allergy).to.not.be.empty;",
+									"});",
+									"",
+									"pm.test(\"CuisineCategory is not empty\",function(){",
+									"    pm.expect(response.CuisineCategory).to.not.be.empty;",
+									"});",
+									"// Parse the response JSON",
+									"let res = pm.response.json();",
+									"",
+									"// Extract the fileId",
+									"let fileId = Object.keys(res.FileMorbidity)[0];",
+									"",
+									"// Save the fileId to a collection variable",
+									"pm.collectionVariables.set(\"fileId\", fileId);",
+									"",
+									"// Optionally, log the fileId to verify",
+									"console.log(\"fileId saved to collection variable: \", fileId);",
+									"",
+									"// Check if the response time is less than 500ms",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"",
+									"// Check if the response has a JSON content type",
+									"pm.test(\"Content-Type is application/json\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\", /application\\/json/);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "1e566add-363e-4c3a-83f3-53aed026f73f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
