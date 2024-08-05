@@ -1809,6 +1809,78 @@
 				},
 				{
 					"name": "Get_Dietcian_infoBy_ValidID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "788fbcac-15be-493b-a37c-6ba5611fac5b",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"const schema = {\r",
+									"  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\r",
+									"  \"type\": \"object\",\r",
+									"  \"properties\": {\r",
+									"    \"id\": {\r",
+									"      \"type\": \"integer\"\r",
+									"    },\r",
+									"    \"Firstname\": {\r",
+									"      \"type\": \"string\"\r",
+									"    },\r",
+									"    \"Lastname\": {\r",
+									"      \"type\": \"string\"\r",
+									"    },\r",
+									"    \"ContactNumber\": {\r",
+									"      \"type\": \"string\"\r",
+									"    },\r",
+									"    \"DateOfBirth\": {\r",
+									"      \"type\": \"string\"\r",
+									"    },\r",
+									"    \"Email\": {\r",
+									"      \"type\": \"string\"\r",
+									"    },\r",
+									"    \"HospitalName\": {\r",
+									"      \"type\": \"string\"\r",
+									"    },\r",
+									"    \"HospitalStreet\": {\r",
+									"      \"type\": \"string\"\r",
+									"    },\r",
+									"    \"HospitalCity\": {\r",
+									"      \"type\": \"string\"\r",
+									"    },\r",
+									"    \"HospitalPincode\": {\r",
+									"      \"type\": \"string\"\r",
+									"    },\r",
+									"    \"Education\": {\r",
+									"      \"type\": \"string\"\r",
+									"    }\r",
+									"  },\r",
+									"  \"required\": [\r",
+									"    \"id\",\r",
+									"    \"Firstname\",\r",
+									"    \"Lastname\",\r",
+									"    \"ContactNumber\",\r",
+									"    \"DateOfBirth\",\r",
+									"    \"Email\",\r",
+									"    \"HospitalName\",\r",
+									"    \"HospitalStreet\",\r",
+									"    \"HospitalCity\",\r",
+									"    \"HospitalPincode\",\r",
+									"    \"Education\"\r",
+									"  ]\r",
+									"}\r",
+									"pm.test(\"Response contsins valid schema data\", function () {\r",
+									"    pm.response.to.have.jsonSchema(schema);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "61a7ed2e-cae8-414d-9106-686a1269daa3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -5394,7 +5466,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "b76b7bfc-3af7-4b4e-bddf-23f4438c6303",
+				"id": "c0f6e8ab-dd9b-465e-b28a-ab151d416744",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -5405,7 +5477,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "106edabc-15da-495a-9aac-de521b553069",
+				"id": "af7d0042-7bde-4e9b-bf23-6a517b2ca754",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -5440,7 +5512,7 @@
 		},
 		{
 			"key": "dieticianId",
-			"value": ""
+			"value": "750"
 		},
 		{
 			"key": "dieticianPsw",
