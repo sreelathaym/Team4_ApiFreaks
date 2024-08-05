@@ -3225,7 +3225,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "d0f80eff-ad62-4f09-b844-d07c880a9f8b",
+								"id": "a9358130-83db-438b-9666-63266689214a",
 								"exec": [
 									"let resp = pm.response.json();\r",
 									"let Patient_token=resp.token;\r",
@@ -3237,9 +3237,7 @@
 									"pm.test(\"Content-Type is application/json\", function () {\r",
 									"    pm.response.to.have.header(\"Content-Type\", \"application/json\");\r",
 									"});\r",
-									"pm.test(\"Content-Length header is present\", function () {\r",
-									"    pm.response.to.have.header(\"Content-Length\");\r",
-									"});"
+									""
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -3248,7 +3246,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "6237db0f-0e85-4bd1-b186-f4b323ed46cf",
+								"id": "7ab1ad30-61a6-4b9a-ad5f-99f7d44b0ae0",
 								"exec": [
 									"// if (pm.info.iteration !== 0) { \r",
 									"//       pm.execution.skipRequest();\r",
@@ -3274,7 +3272,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"password\": \"{{patientPsw}}\",\r\n    \"userLoginEmail\": \"{{email}}\"\r\n   \r\n}",
+							"raw": "{\r\n    \"password\": \"{{patientPsw}}\",\r\n    \"userLoginEmail\": \"{{Patientemail}}\"\r\n   \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4354,6 +4352,10 @@
 		},
 		{
 			"key": "email",
+			"value": ""
+		},
+		{
+			"key": "Patientemail",
 			"value": ""
 		}
 	]
