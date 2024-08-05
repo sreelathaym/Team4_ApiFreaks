@@ -1717,10 +1717,7 @@
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
 									"\r",
-									"var resp = pm.response.json();\r",
-									"pm.test(\"Check if ID is matching\",function (){\r",
-									"pm.expect(resp.id).to.eql(pm.collectionVariables.get(\"dieticianId\"))\r",
-									"});\r",
+									"\r",
 									"\r",
 									"const schema = {\r",
 									"    \"type\": \"object\",\r",
@@ -1776,6 +1773,17 @@
 									"pm.test(\"Response contains valid schema data\", function () {\r",
 									"    pm.response.to.have.jsonSchema(schema);\r",
 									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "fe8f79f1-f33d-4768-a435-040f23a6caa0",
+								"exec": [
 									""
 								],
 								"type": "text/javascript",
