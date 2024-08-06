@@ -14663,7 +14663,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_URL}}/patient/testReports/viewFile/:filei{{fileId}}",
+							"raw": "{{base_URL}}/patient/testReports/viewFile/:fileid",
 							"host": [
 								"{{base_URL}}"
 							],
@@ -14671,12 +14671,12 @@
 								"patient",
 								"testReports",
 								"viewFile",
-								":filei{{fileId}}"
+								":fileid"
 							],
 							"variable": [
 								{
-									"key": "filei{{fileId}}",
-									"value": ""
+									"key": "fileid",
+									"value": "{{fi"
 								}
 							]
 						}
