@@ -11675,7 +11675,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "\r\n{\r\n  \"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\",//here added counter\r\n  \"DateOfBirth\": \"{{BirthYear}}{{Dateofbirth}}\",//append year\r\n  \"Education\": \"{{education}}\",\r\n  \"Email\": \"{{email}}_{{emailCounter}}@gmail.com\",   //added counter with domain name\r\n  \"Firstname\": \"{{firstname}}\",\r\n  \"HospitalCity\": \"{{hospitalcity}}\",\r\n  \"HospitalName\": \"{{hospitalname}}\",\r\n  \"HospitalPincode\": \"{{hospitalpincode}}\",\r\n  \"HospitalStreet\": \"{{hospitalstreet}}\",\r\n  \"Lastname\": \"{{lastname}}\"\r\n \r\n}\r\n\r\n",
+							"raw": "\r\n{\r\n  \"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\", //here added counter\r\n  \"DateOfBirth\": \"{{BirthYear}}{{Dateofbirth}}\",//append year\r\n  \"Education\": \"{{education}}\",\r\n  \"Email\": \"{{email}}_{{emailCounter}}@gmail.com\",   //added counter with domain name\r\n  \"Firstname\": \"{{firstname}}\",\r\n  \"HospitalCity\": \"{{hospitalcity}}\",\r\n  \"HospitalName\": \"{{hospitalname}}\",\r\n  \"HospitalPincode\": \"{{hospitalpincode}}\",\r\n  \"HospitalStreet\": \"{{hospitalstreet}}\",\r\n  \"Lastname\": \"{{lastname}}\"\r\n \r\n}\r\n\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
