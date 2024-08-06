@@ -14268,7 +14268,7 @@
 			"id": "4107a1e1-80d4-4249-8dec-1cf1fc6a9bfc"
 		},
 		{
-			"name": "New Folder Copy",
+			"name": "New Folder Copy 2",
 			"item": [
 				{
 					"name": "Admin_login_With_valid_Endpoint Copy",
@@ -14346,7 +14346,7 @@
 							}
 						}
 					],
-					"id": "c55135b5-e499-4583-a3b2-fd2071bb8b45",
+					"id": "f199cf3a-40f6-4893-8873-2a2a1a1ecdce",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -14441,19 +14441,20 @@
 									"// if (pm.iterationData.get(\"Request\") !== 'CreateRequest') {\r",
 									"//     pm.execution.skipRequest();\r",
 									"// }\r",
-									"const phonenumber = require('lodash').random(1900,2020);\r",
-									"pm.collectionVariables.set(\"randomNumber\", phonenumber )\r",
-									"console.log(phonenumber);\r",
-									"const BirthYear = require('lodash').random(1900,2020);\r",
-									"pm.collectionVariables.set(\"BirthYear\", BirthYear )\r",
-									"console.log(BirthYear);"
+									"// const phonenumber = require('lodash').random(1900,2020);\r",
+									"// pm.collectionVariables.set(\"randomNumber\", phonenumber )\r",
+									"// console.log(phonenumber);\r",
+									"// const BirthYear = require('lodash').random(1900,2020);\r",
+									"// pm.collectionVariables.set(\"BirthYear\", BirthYear )\r",
+									"// console.log(BirthYear);\r",
+									"const adminToken = pm.environment.get(\"Admin_Token\");"
 								],
 								"type": "text/javascript",
 								"packages": {}
 							}
 						}
 					],
-					"id": "9953006b-74ea-40ed-a5c5-9cdde71368e4",
+					"id": "784f3e73-062c-4319-a9b9-c6690212c620",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -14605,7 +14606,7 @@
 							}
 						}
 					],
-					"id": "2004bd47-1022-427a-938b-457145c0763d",
+					"id": "505223f2-ed48-43bc-b86d-7a4e7e960a36",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -14658,7 +14659,7 @@
 							}
 						}
 					],
-					"id": "4e48bc22-45af-4952-929e-62879358059e",
+					"id": "d779e7b3-46b6-4924-9163-0fec8ef3d8f8",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -14790,7 +14791,7 @@
 							}
 						}
 					],
-					"id": "9d59c7e7-bd5a-4297-b51d-9d9d06de8ec8",
+					"id": "0bc1a171-cb5f-49f8-8192-ccb8fb05b814",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -14879,7 +14880,7 @@
 							}
 						}
 					],
-					"id": "cb6b1a5b-f310-482a-85e3-bc7b37babc58",
+					"id": "b5766285-a97e-4a60-9784-25a470e512bb",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -15116,7 +15117,7 @@
 							}
 						}
 					],
-					"id": "087286f5-a505-4e71-ba91-390d69eaa089",
+					"id": "17a9acda-ed43-4f28-bd69-2e71981987bf",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -15148,7 +15149,7 @@
 					},
 					"response": [
 						{
-							"id": "d68270ad-f1ae-4578-beaa-ccd125b17180",
+							"id": "79409d71-3cb6-4156-a4ff-2172673dcccf",
 							"name": "New Request",
 							"originalRequest": {
 								"method": "POST",
@@ -15256,7 +15257,7 @@
 							"body": "{\n    \"patientId\": 472,\n    \"FirstName\": \"h\",\n    \"LastName\": \"d\",\n    \"ContactNumber\": \"1110000000\",\n    \"Email\": \"S124@acbd.com\",\n    \"Allergy\": \"Soy\",\n    \"FoodPreference\": \"jain\",\n    \"CuisineCategory\": \"Indian\",\n    \"FileMorbidity\": {\n        \"66adae9f4717cf471aaad21d\": {\n            \"HbA1c\": \"6.5 %\",\n            \"Average Glucose\": \"131.0 mg/dl\"\n        }\n    },\n    \"FileMorbidityCondition\": {\n        \"66adae9f4717cf471aaad21d\": \"Prediabetic \\nBlood Pressure: Hypotension \\n\"\n    },\n    \"DateOfBirth\": \"1988-07-05\",\n    \"DieticianId\": 871,\n    \"Vitals\": {\n        \"66adae9f4717cf471aaad21d\": {\n            \"Weight\": 0,\n            \"Height\": 0,\n            \"Temperature\": 0,\n            \"SP\": 0,\n            \"DP\": 0\n        }\n    },\n    \"LastVisitDate\": \"2024-08-03T04:14:23.627+00:00\"\n}"
 						},
 						{
-							"id": "60cafe50-c97a-42b6-be2a-fc8f59837398",
+							"id": "23bfe569-175c-411e-8296-817c5d373715",
 							"name": "New Request",
 							"originalRequest": {
 								"method": "POST",
@@ -15456,7 +15457,7 @@
 							}
 						}
 					],
-					"id": "c0152549-afdc-4747-8f41-285852e4fb88",
+					"id": "a1f5170f-1918-44e7-bfbe-d5e6d76f6a8e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -15473,7 +15474,7 @@
 					},
 					"response": [
 						{
-							"id": "d699393c-1a1e-479e-957e-abd3c8fdcf57",
+							"id": "663300ef-cf20-4cf1-b852-443c1686eec2",
 							"name": "GetAllPatients",
 							"originalRequest": {
 								"method": "GET",
@@ -15799,7 +15800,7 @@
 							}
 						}
 					],
-					"id": "3e821c6a-ee7f-4f1c-a2c5-acf79fffd44f",
+					"id": "62d4ecd1-71e7-458a-ba01-6ed6e193753a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -15831,7 +15832,7 @@
 					},
 					"response": [
 						{
-							"id": "ece73871-7162-4f8f-acdb-62ddc6cd3d38",
+							"id": "de2ddad3-5558-4059-9d4b-55a9fc9eac28",
 							"name": "New Request",
 							"originalRequest": {
 								"method": "POST",
@@ -16111,7 +16112,7 @@
 							}
 						}
 					],
-					"id": "24563883-903d-45ec-952f-71e446d3af1f",
+					"id": "1dd1efc3-2f62-4447-b311-245810b01955",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -16322,7 +16323,7 @@
 							}
 						}
 					],
-					"id": "51babdc9-bddc-42be-8c2b-25e1c94e7235",
+					"id": "99a5de25-6914-4d1d-865c-eeba8f97e50d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -16399,7 +16400,7 @@
 							}
 						}
 					],
-					"id": "32fca4f6-c30d-4eb1-9bbe-07e75f66a40d",
+					"id": "3f1a4c9f-ffad-4de6-8b59-a73d248dad1b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -16458,7 +16459,7 @@
 							}
 						}
 					],
-					"id": "65a7fd73-e1c0-4d84-b816-fdf61faba84d",
+					"id": "e957a471-44fe-4f73-b01e-361f43667776",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -16531,7 +16532,7 @@
 							}
 						}
 					],
-					"id": "75dc5b42-d019-488b-be93-bd045e339271",
+					"id": "6e47c0ca-6c27-449e-b4be-dc1b26d534e8",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -16565,7 +16566,7 @@
 							}
 						}
 					],
-					"id": "efbc0865-85d4-4ca7-a4a6-f01595d78736",
+					"id": "5fd4e86a-56cc-4718-ba1a-34ec2da42a54",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -16599,7 +16600,7 @@
 							}
 						}
 					],
-					"id": "fdd54967-f76c-43ab-ab95-074e28818488",
+					"id": "45e0e688-956f-4332-9e36-692df31bb02d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -16633,7 +16634,7 @@
 							}
 						}
 					],
-					"id": "f8cc8e09-ff86-4fb4-a9c8-1a267b4ebb27",
+					"id": "e9bbe815-6b9c-4245-876a-2e7641fdab11",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -16667,7 +16668,7 @@
 							}
 						}
 					],
-					"id": "1a30b10f-f335-4c1d-8f5d-f45452bcab3d",
+					"id": "c8a113a3-8d41-40f7-9fc5-be142658ad21",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -16701,7 +16702,7 @@
 							}
 						}
 					],
-					"id": "d5fe28fb-7db3-466f-b390-b78761409dd3",
+					"id": "484fc4af-e69f-46ea-afcc-fbd9fce171d1",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -16793,7 +16794,7 @@
 							}
 						}
 					],
-					"id": "257b2e7f-6e28-4e44-a6b0-c806a5c64099",
+					"id": "13c89cb9-0e05-405c-86bc-6895db66914e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -16860,7 +16861,7 @@
 							}
 						}
 					],
-					"id": "fd3cb164-5515-44ff-96e5-15a6f67aaa0e",
+					"id": "549360a6-8a4d-49fd-9745-742270fe6924",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -16919,7 +16920,7 @@
 							}
 						}
 					],
-					"id": "2516cdb1-38dd-4030-8d36-f33b17e96d8d",
+					"id": "217b7361-39fd-4ed5-89a6-06ff3041a2fd",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -16964,7 +16965,7 @@
 							}
 						}
 					],
-					"id": "1f2adfe0-2e1d-4fe4-8b2d-e5b0bd7f307e",
+					"id": "f63b2449-41e8-47d6-8549-d9ddd58afd2b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -17014,7 +17015,7 @@
 							}
 						}
 					],
-					"id": "d32b6afe-272a-406b-9204-c55860e0a18e",
+					"id": "3a14857e-5c7b-4da5-807e-48ea103414ea",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -17064,7 +17065,7 @@
 							}
 						}
 					],
-					"id": "fa1bf6ff-815e-4616-bd96-a9d9bd73384b",
+					"id": "bf3ef9cc-7a27-49a2-88e7-3ae23695eddb",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -17082,7 +17083,7 @@
 					"response": []
 				}
 			],
-			"id": "329d7c73-31e5-4350-9dc7-ed6274d2f090"
+			"id": "45321ef6-6561-4ecb-af40-f823079fef24"
 		}
 	],
 	"event": [
