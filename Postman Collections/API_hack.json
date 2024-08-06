@@ -14861,11 +14861,19 @@
 									"// pm.test(\"Status code is 200\", function () {\r",
 									"//     pm.resp.to.have.status(200);\r",
 									"// });\r",
-									"var jsonData = JSON.parse(pm.response.text());\r",
-									"pm.collectionVariables.set(\"Dietician_token\", jsonData.token);\r",
-									"pm.test(\"Status code is 200\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
-									"});\r",
+									"// var jsonData = JSON.parse(pm.response.text());\r",
+									"// pm.collectionVariables.set(\"Dietician_token\", jsonData.token);\r",
+									"// pm.test(\"Status code is 200\", function () {\r",
+									"//     pm.response.to.have.status(200);\r",
+									"// });\r",
+									"\r",
+									"if (pm.response.code === 200) {\r",
+									"    pm.collectionVariables.set(\"Dietician_token\", pm.response.json().token);\r",
+									"    pm.execution.setNextRequest(\"create_Patient\");\r",
+									"} else {\r",
+									"    pm.execution.setNextRequest(null); // Stop the request chain if the login fails\r",
+									"}\r",
+									"\r",
 									"\r",
 									"const schema = {\r",
 									"  \"type\": \"object\",\r",
@@ -14947,7 +14955,7 @@
 					"response": []
 				},
 				{
-					"name": "create_Patient Copy",
+					"name": "create_Patient",
 					"event": [
 						{
 							"listen": "test",
@@ -15150,7 +15158,12 @@
 									"//     pm.execution.skipRequest();\r",
 									"// }\r",
 									"\r",
-									"pm.collectionVariables.set(\"statuscode\", pm.iterationData.get('statuscode'));"
+									"pm.collectionVariables.set(\"statuscode\", pm.iterationData.get('statuscode'));\r",
+									"const dieticianToken = pm.collectionVariables.get(\"Dietician_token\");\r",
+									"pm.request.headers.add({\r",
+									"    key: \"Authorization\",\r",
+									"    value: `Bearer ${dieticianToken}`\r",
+									"});"
 								],
 								"type": "text/javascript",
 								"packages": {}
