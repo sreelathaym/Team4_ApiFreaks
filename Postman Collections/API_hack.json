@@ -14675,14 +14675,14 @@
 									"    validCount++;\r",
 									"    pm.collectionVariables.set(\"validCount\", validCount);\r",
 									"    if (validCount === 2) {  // second valid scenario (first was in create dietician)\r",
-									"        pm.execution.setNextRequest(\"Get Dietician by ID\");\r",
+									"        pm.execution.setNextRequest(\"Get_Dietcian_infoBy_ValidID \");\r",
 									"    } else {\r",
 									"    pm.execution.setNextRequest(\"UpdateDietician\");\r",
 									"    }\r",
 									"} else {\r",
 									"    invalidCount++;\r",
 									"    pm.collectionVariables.set(\"invalidCount\", invalidCount);\r",
-									"    pm.e.setNextRequest(\"Put Dietician\");\r",
+									"    pm.execution.setNextRequest(\"UpdateDietician\");\r",
 									"}\r",
 									"\r",
 									"\r",
@@ -14738,7 +14738,7 @@
 					"response": []
 				},
 				{
-					"name": "Get_Dietcian_infoBy_ValidID Copy",
+					"name": "Get_Dietcian_infoBy_ValidID",
 					"event": [
 						{
 							"listen": "test",
