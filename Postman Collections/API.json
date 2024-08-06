@@ -9115,6 +9115,8 @@
 							"script": {
 								"id": "93b0622b-9e60-4ac5-b2c0-1dc6021c0bd4",
 								"exec": [
+									"",
+									"//verify status code",
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
 									"});",
@@ -9241,6 +9243,7 @@
 							"script": {
 								"id": "d55202cd-58c9-497b-a08d-cfc188b2d208",
 								"exec": [
+									"//varify status code",
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
 									"});",
