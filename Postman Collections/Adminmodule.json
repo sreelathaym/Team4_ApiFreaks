@@ -211,6 +211,7 @@
 									"var resp = pm.response.json();\r",
 									"pm.collectionVariables.set(\"Admin_Token\", resp.token);\r",
 									"\r",
+									"\r",
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
@@ -1656,12 +1657,17 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "788fbcac-15be-493b-a37c-6ba5611fac5b",
+								"id": "044c5067-d989-4c17-9dac-06c0be45a1bb",
 								"exec": [
 									"// Updated assertion to compare response value as a string\r",
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"\r",
 									"\r",
 									"\r",
 									"\r",
@@ -1728,7 +1734,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "fe8f79f1-f33d-4768-a435-040f23a6caa0",
+								"id": "9904cd19-54a3-40ec-9952-ed1938141fee",
 								"exec": [
 									""
 								],
