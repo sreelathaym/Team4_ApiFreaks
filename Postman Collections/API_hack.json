@@ -11780,10 +11780,10 @@
 							"script": {
 								"id": "d81bffd2-6805-4e28-936d-0e29a1d3fda5",
 								"exec": [
-									"if (!(pm.iterationData.get(\"Dieiticanstatuscode\")== 201 && (pm.iterationData.get(\"Request\") == \"CreateUser\")))\r",
-									"    {\r",
-									"    pm.execution.skipRequest();\r",
-									"    }\r",
+									"// if (!(pm.iterationData.get(\"Dieiticanstatuscode\")== 201 && (pm.iterationData.get(\"Request\") == \"CreateUser\")))\r",
+									"//     {\r",
+									"//     pm.execution.skipRequest();\r",
+									"//     }\r",
 									""
 								],
 								"type": "text/javascript",
@@ -11977,9 +11977,9 @@
 									"//     pm.execution.skipRequest();\r",
 									"// }\r",
 									"\r",
-									"if ((pm.iterationData.get(\"Dieiticanstatuscode\")== 200 && (pm.iterationData.get(\"Request\") == \"UpdateRequest\")))\r",
+									"if (!(pm.iterationData.get(\"Dieiticanstatuscode\")== 200 && (pm.iterationData.get(\"Request\") == \"UpdateRequest\")))\r",
 									"    {\r",
-									"    pm.execution.setNextRequest(\"Get_Dietcian_infoBy_ValidID Copy\");\r",
+									"    pm.execution.skipRequest;\r",
 									"    }"
 								],
 								"type": "text/javascript",
