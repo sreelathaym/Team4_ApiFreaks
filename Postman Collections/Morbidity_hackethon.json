@@ -12666,7 +12666,7 @@
 									"if (pm.response.code === 201) {",
 									"    // Set collection variables for later use",
 									"    pm.collectionVariables.set(\"patientId\", patientId);",
-									"    pm.collectionVariables.set(\"PEmail\", patientEmail);",
+									"    pm.collectionVariables.set(\"PatientEmail\", patientEmail);",
 									"}",
 									"pm.test(\"Status code\", function () {",
 									"    pm.response.to.have.status(pm.collectionVariables.get(\"statuscode\"));",
@@ -14296,7 +14296,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"setebcr\",\n\"LastName\": \"sdetyze\",\n\"ContactNumber\": \"9193656789\",\n\"Email\": \"asddetb1@gmail.com\",\n\"Allergy\": \"PECAN\",\n\"FoodPreference\": \"Vegan\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1985-12-14\"\n}\n"
+									"value": "{ \"FirstName\": \"{{firstname}}\",\n\"LastName\": \"{{lastname}}\",\n\"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\",\n\"Email\": \"{{email}}\",\n\"Allergy\": \"{{Allergy}}\",\n\"FoodPreference\": \"{{FoodPref}}\",\n\"CuisineCategory\":\"{{Cuisine}}\",\n \"DateOfBirth\": \"{{BirthYear}}{{Dateofbirth}}\",\n}"
 								},
 								{
 									"key": "Reports",
@@ -14507,7 +14507,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"{{fname}}\",\n\"LastName\": \"{{lname}}\",\n\"ContactNumber\": \"{{contactno}}\",\n\"Email\": \"{{pemail}}\",\n\"Allergy\": \"{{allergy}}\",\n\"FoodPreference\": \"{{foodpref}}\",\n\"CuisineCategory\":\"{{cuisine}}\",\n\"DateOfBirth\": \"{{dob}}\"\n}"
+									"value": "{ \"FirstName\": \"{{firstname}}\",\n\"LastName\": \"{{lastname}}\",\n\"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\",\n\"Email\": \"{{email}}\",\n\"Allergy\": \"{{Allergy}}\",\n\"FoodPreference\": \"{{FoodPref}}\",\n\"CuisineCategory\":\"{{Cuisine}}\",\n \"DateOfBirth\": \"{{BirthYear}}{{Dateofbirth}}\",\n}"
 								},
 								{
 									"key": "Reports",
