@@ -11819,10 +11819,17 @@
 									" //pm.collectionVariables.set(\"statuscode\", pm.iterationData.get('statuscode'));\r",
 									"// let statuscode1 = pm.collectionVariables.get(\"statuscode\");\r",
 									"// console.log(statuscode1);\r",
+									"if ((pm.iterationData.get(\"Dieiticanstatuscode\")== 201 && (pm.iterationData.get(\"Request\") == \"CreateUser\")))\r",
+									"    {\r",
+									"    pm.execution.setNextRequest(\"UpdateDietician Copy\");\r",
+									"    }\r",
 									"\r",
-									"if (pm.iterationData.get(\"Request\") !== 'UpdateRequest') {\r",
+									"else if (pm.iterationData.get(\"Request\") !== 'UpdateRequest') {\r",
 									"    pm.execution.skipRequest();\r",
-									"}"
+									"}\r",
+									"\r",
+									"\r",
+									""
 								],
 								"type": "text/javascript",
 								"packages": {}
