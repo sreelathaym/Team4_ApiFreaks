@@ -7186,7 +7186,23 @@
 						},
 						"method": "GET",
 						"header": [],
-						"url": "{{base_URL}}/patient/testReports/{{patientId}}"
+						"url": {
+							"raw": "{{base_URL}}/patient/testReports/:patientId",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"patient",
+								"testReports",
+								":patientId"
+							],
+							"variable": [
+								{
+									"key": "patientId",
+									"value": ""
+								}
+							]
+						}
 					},
 					"response": []
 				}
