@@ -11844,9 +11844,21 @@
 									"//     {\r",
 									"//     pm.execution.setNextRequest(\"UpdateDietician Copy\");\r",
 									"//     }\r",
+									"\r",
 									" if (pm.iterationData.get(\"Request\") !== 'UpdateRequest') {\r",
 									"    pm.execution.skipRequest();\r",
 									"}\r",
+									"var phoneCounter = pm.collectionVariables.get(\"phoneCounter\") || 1000;\r",
+									"// Increment the counter for the next run\r",
+									"phoneCounter++;\r",
+									"pm.collectionVariables.set(\"phoneCounter\", phoneCounter )\r",
+									"console.log(phoneCounter);\r",
+									"\r",
+									"var BirthYear = pm.collectionVariables.get(\"BirthYear\") || 1930;\r",
+									"// Increment the counter for the next run\r",
+									"BirthYear++;\r",
+									"pm.collectionVariables.set(\"BirthYear\", BirthYear )\r",
+									"console.log(BirthYear);\r",
 									"\r",
 									"\r",
 									""
@@ -11931,7 +11943,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\r\n  \"ContactNumber\": \"{{contactnumber}}\",\r\n  \"DateOfBirth\": \"{{Dateofbirth}}\",\r\n  \"Education\": \"{{education}}\",\r\n  \"Email\": \"{{dieticianEmail}}\",\r\n  \"Firstname\": \"{{firstname}}\",\r\n  \"HospitalCity\":\" {{hospitalcity}}\",\r\n  \"HospitalName\": \"{{hospitalname}}\",\r\n  \"HospitalPincode\": \"{{hospitalpincode}}\",\r\n  \"HospitalStreet\":\"{{hospitalstreet}}\",\r\n  \"Lastname\": \"{{lastname}}\"\r\n \r\n}",
+							"raw": "{\r\n\r\n  \"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\",//here added counter\r\n \"DateOfBirth\": \"{{BirthYear}}{{Dateofbirth}}\",//append year\r\n  \"Education\": \"{{education}}\",\r\n  \"Email\": \"{{dieticianEmail}}\",\r\n  \"Firstname\": \"{{firstname}}\",\r\n  \"HospitalCity\":\" {{hospitalcity}}\",\r\n  \"HospitalName\": \"{{hospitalname}}\",\r\n  \"HospitalPincode\": \"{{hospitalpincode}}\",\r\n  \"HospitalStreet\":\"{{hospitalstreet}}\",\r\n  \"Lastname\": \"{{lastname}}\"\r\n \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
