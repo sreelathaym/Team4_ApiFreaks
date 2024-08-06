@@ -6973,7 +6973,7 @@
 						},
 						"method": "GET",
 						"header": [],
-						"url": "{{base_URL}}/patient/testReports/viewFile/fieldId"
+						"url": "{{base_URL}}/patient/testReports/viewFile/fiename"
 					},
 					"response": []
 				},
@@ -11823,7 +11823,7 @@
 							"script": {
 								"id": "0bc97771-a44d-41e6-8223-3230175e1671",
 								"exec": [
-									"// pm.collectionVariables.set(\"statuscode\", pm.iterationData.get('statuscode'));\r",
+									" pm.collectionVariables.set(\"statuscode\", pm.iterationData.get('statuscode'));\r",
 									"// let statuscode1 = pm.collectionVariables.get(\"statuscode\");\r",
 									"// console.log(statuscode1);\r",
 									"\r",
@@ -12008,7 +12008,8 @@
 								"id": "d0f80eff-ad62-4f09-b844-d07c880a9f8b",
 								"exec": [
 									"let resp = pm.response.json();\r",
-									"pm.collectionVariables.set(\"Dietician_Token\", resp.token);pm.test(\"Status code is 200\", function () {\r",
+									"pm.collectionVariables.set(\"Dietician_Token\", resp.token);\r",
+									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.resp.to.have.status(200);\r",
 									"});\r",
 									"\r",
