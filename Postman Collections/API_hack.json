@@ -12043,7 +12043,7 @@
 									"    \"roles\"\r",
 									"  ]\r",
 									"}\r",
-									"pm.test(\"Response contsins valid schema data\", function () {\r",
+									"pm.test(\"Response contains valid schema data\", function () {\r",
 									"    pm.response.to.have.jsonSchema(schema);\r",
 									"});"
 								],
@@ -12111,7 +12111,9 @@
 									"    pm.collectionVariables.set(\"patientId\", patientId);",
 									"    pm.collectionVariables.set(\"PEmail\", patientEmail);",
 									"}",
-									"",
+									"pm.test(\"Status code\", function () {",
+									"    pm.response.to.have.status(pm.collectionVariables.get(\"statuscode\"));",
+									"});",
 									"// Tests to validate response data",
 									"pm.test(\"First name is not empty\", function () {",
 									"    pm.expect(response.FirstName).to.not.be.empty;",
@@ -12294,7 +12296,7 @@
 									"//     pm.execution.skipRequest();\r",
 									"// }\r",
 									"\r",
-									""
+									"pm.collectionVariables.set(\"statuscode\", pm.iterationData.get('statuscode'));"
 								],
 								"type": "text/javascript",
 								"packages": {}
