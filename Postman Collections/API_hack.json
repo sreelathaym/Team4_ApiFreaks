@@ -11860,7 +11860,7 @@
 									"});\r",
 									"var jsonData = pm.response.json();\r",
 									"\r",
-									"// pm.collectionVariables.set(\"dieticianEmail\",jsonData.Email);\r",
+									"pm.collectionVariables.set(\"dieticianEmail\",jsonData.Email);\r",
 									"\r",
 									"//validate mandatory fields are not empty\r",
 									"pm.test(\"First name is not empty\", function () {\r",
