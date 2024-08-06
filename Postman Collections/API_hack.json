@@ -14442,7 +14442,13 @@
 									"// const BirthYear = require('lodash').random(1900,2020);\r",
 									"// pm.collectionVariables.set(\"BirthYear\", BirthYear )\r",
 									"// console.log(BirthYear);\r",
-									"const adminToken = pm.environment.get(\"Admin_Token\");"
+									"const adminToken = pm.environment.get(\"Admin_Token\");\r",
+									"\r",
+									"pm.request.headers.add({\r",
+									"    key: \"Authorization\",\r",
+									"    value: `Bearer ${adminToken}`\r",
+									"});\r",
+									""
 								],
 								"type": "text/javascript",
 								"packages": {}
