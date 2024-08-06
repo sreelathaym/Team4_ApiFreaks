@@ -14510,7 +14510,7 @@
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
-									"postman.setNextRequest(\"Put Dietician\");\r",
+									"pm.execution.setNextRequest(\"Put Dietician\");\r",
 									"\r",
 									"const schema = {\r",
 									"  \"type\": \"array\",\r",
@@ -14644,7 +14644,7 @@
 					"response": []
 				},
 				{
-					"name": "UpdateDietician Copy",
+					"name": "UpdateDietician",
 					"event": [
 						{
 							"listen": "prerequest",
@@ -14668,6 +14668,22 @@
 							"script": {
 								"id": "9930ae85-9889-442f-8edf-db5e33873f0f",
 								"exec": [
+									"let validCount = parseInt(pm.collectionVariables.get(\"validCount\"));\r",
+									"let invalidCount = parseInt(pm.collectionVariables.get(\"invalidCount\"));\r",
+									"\r",
+									"if (pm.response.code === 200) {\r",
+									"    validCount++;\r",
+									"    pm.collectionVariables.set(\"validCount\", validCount);\r",
+									"    if (validCount === 2) {  // second valid scenario (first was in create dietician)\r",
+									"        pm.execution.setNextRequest(\"Get Dietician by ID\");\r",
+									"    } else {\r",
+									"    pm.execution.setNextRequest(\"UpdateDietician\");\r",
+									"    }\r",
+									"} else {\r",
+									"    invalidCount++;\r",
+									"    pm.collectionVariables.set(\"invalidCount\", invalidCount);\r",
+									"    pm.e.setNextRequest(\"Put Dietician\");\r",
+									"}\r",
 									"\r",
 									"\r",
 									"pm.test(\"Status code\", function () {\r",
