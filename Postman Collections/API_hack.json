@@ -14324,7 +14324,10 @@
 									"pm.test(\"Response contsins valid schema data\", function () {\r",
 									"    pm.response.to.have.jsonSchema(schema);\r",
 									"});\r",
-									""
+									"if (pm.response.code === 200) {\r",
+									"    pm.environment.set(\"Admin_Token\", pm.response.json().token);\r",
+									"   pm.execution.setNextRequest(\"CreateDietician \");\r",
+									"} "
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -14375,18 +14378,6 @@
 									"pm.test(\"Content-Type is present\", function () {\r",
 									"    pm.response.to.have.header(\"Content-Type\");\r",
 									"});\r",
-									"\r",
-									"const responseCode = pm.response.code;\r",
-									"const dieticianStatusCode = pm.iterationData.get(\"Dieiticanstatuscode\");\r",
-									"\r",
-									"if (responseCode === parseInt(dieticianStatusCode)) {\r",
-									"    pm.collectionVariables.set(\"dieticianId\", pm.response.json().id);\r",
-									"    pm.collectionVariables.set(\"dieticianPsw\", pm.response.json().password);\r",
-									"    pm.collectionVariables.set(\"dieticianEmail\", pm.response.json().Email);\r",
-									"    pm.execution.setNextRequest(\"GetallDietcianinfo\");\r",
-									"    } else {\r",
-									"        pm.execution.setNextRequest(\"CreateDietician\");\r",
-									"   \r",
 									"//validate mandatory fields are not empty\r",
 									"pm.test(\"First name is not empty\", function () {\r",
 									"    pm.expect(jsonData.Firstname).to.not.be.empty;\r",
@@ -14418,7 +14409,19 @@
 									"pm.test(\"Education is not empty\",function(){\r",
 									"    pm.expect(jsonData.Education).to.be.not.empty;\r",
 									"});\r",
-									"  "
+									"  \r",
+									"const responseCode = pm.response.code;\r",
+									"const dieticianStatusCode = pm.iterationData.get(\"Dieiticanstatuscode\");\r",
+									"\r",
+									"if (responseCode === parseInt(dieticianStatusCode)) {\r",
+									"    pm.collectionVariables.set(\"dieticianId\", pm.response.json().id);\r",
+									"    pm.collectionVariables.set(\"dieticianPsw\", pm.response.json().password);\r",
+									"    pm.collectionVariables.set(\"dieticianEmail\", pm.response.json().Email);\r",
+									"    pm.execution.setNextRequest(\"GetallDietcianinfo\");\r",
+									"    } else {\r",
+									"        pm.execution.setNextRequest(\"CreateDietician\");\r",
+									"   \r",
+									""
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -14492,7 +14495,7 @@
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
-									"pm.execution.setNextRequest(\"Put Dietician\");\r",
+									"\r",
 									"\r",
 									"const schema = {\r",
 									"  \"type\": \"array\",\r",
@@ -14586,7 +14589,7 @@
 									"pm.test(\"Response contains valid schema data\", function () {\r",
 									"    pm.response.to.have.jsonSchema(schema);\r",
 									"});\r",
-									""
+									"pm.execution.setNextRequest(\"Put Dietician\");"
 								],
 								"type": "text/javascript",
 								"packages": {}
