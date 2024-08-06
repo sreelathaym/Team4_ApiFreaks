@@ -14471,7 +14471,9 @@
 									"\r",
 									"// if (pm.iterationData.get(\"Request\") !== 'CreateRequest') {\r",
 									"//     pm.execution.skipRequest();\r",
-									"// }"
+									"// }\r",
+									"const randomNumber = _.random(1000000000,9999999999)\r",
+									"pm.variables.set(‘randomNumber’, randomNumber )"
 								],
 								"type": "text/javascript",
 								"packages": {}
