@@ -13900,7 +13900,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"{{firstname}}\",\n\"LastName\": \"{{lastname}}\",\n\"ContactNumber\": \"{{contactnumber}}\",\n\"Email\": \"{{email}}\",\n\"Allergy\": \"{{allergy}}\",\n\"FoodPreference\": \"{{FoodPref}}\",\n\"CuisineCategory\":\"{{Cuisine}}\",\n\"DateOfBirth\": \"{{Dateofbirth}}\"\n}"
+									"value": "{ \"FirstName\": \"{{firstname}}\",\n\"LastName\": \"{{lastname}}\",\n\"ContactNumber\": \"{{contactnumber}}\",\n\"Email\": \"{{email}}\",\n\"Allergy\": \"{{Allergy}}\",\n\"FoodPreference\": \"{{FoodPref}}\",\n\"CuisineCategory\":\"{{Cuisine}}\",\n\"DateOfBirth\": \"{{Dateofbirth}}\"\n}"
 								},
 								{
 									"key": "file",
@@ -18040,6 +18040,38 @@
 			"key": "base_URL",
 			"value": "https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician",
 			"type": "string"
+		},
+		{
+			"key": "dieticianId",
+			"value": ""
+		},
+		{
+			"key": "dieticianPsw",
+			"value": ""
+		},
+		{
+			"key": "dieticianEmail",
+			"value": ""
+		},
+		{
+			"key": "Dietician_token",
+			"value": ""
+		},
+		{
+			"key": "statuscode",
+			"value": ""
+		},
+		{
+			"key": "patientId",
+			"value": ""
+		},
+		{
+			"key": "PEmail",
+			"value": ""
+		},
+		{
+			"key": "fileId",
+			"value": ""
 		}
 	]
 }
