@@ -11531,7 +11531,12 @@
 								"exec": [
 									"// if (pm.info.iteration !== 0) { \r",
 									"//       pm.execution.skipRequest();\r",
-									"// }"
+									"// }\r",
+									"\r",
+									"if(pm.iterationData!==\"CreateRequest\")\r",
+									"{\r",
+									"  pm.execution.skipRequest;\r",
+									"}"
 								],
 								"type": "text/javascript",
 								"packages": {}
