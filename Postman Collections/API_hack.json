@@ -14441,10 +14441,10 @@
 									"// if (pm.iterationData.get(\"Request\") !== 'CreateRequest') {\r",
 									"//     pm.execution.skipRequest();\r",
 									"// }\r",
-									"const phonenumber = _.random(1900,2020);\r",
+									"const phonenumber = require('lodash').random(1900,2020);\r",
 									"pm.collectionVariables.set(\"randomNumber\", phonenumber )\r",
 									"console.log(phonenumber);\r",
-									"const BirthYear = _.random(1900,2020);\r",
+									"const BirthYear = require('lodash').random(1900,2020);\r",
 									"pm.collectionVariables.set(\"BirthYear\", BirthYear )\r",
 									"console.log(BirthYear);"
 								],
