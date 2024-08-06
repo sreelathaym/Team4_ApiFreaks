@@ -14608,7 +14608,13 @@
 									"console.log(pm.info.iteration, pm.info.iterationCount)\r",
 									"if ( pm.info.iteration < pm.info.iterationCount - 1) {\r",
 									"    pm.execution.skipRequest();\r",
-									"}"
+									"}\r",
+									"// if (!(pm.iterationData.get(\"statuscode\")== 200 && (pm.iterationData.get(\"Request\") == \"UpdatePatient\")))\r",
+									"//     {\r",
+									"//     pm.execution.skipRequest;\r",
+									"//     }\r",
+									"\r",
+									""
 								],
 								"type": "text/javascript",
 								"packages": {}
