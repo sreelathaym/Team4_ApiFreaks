@@ -13158,7 +13158,12 @@
 									"//     {\r",
 									"//     pm.execution.skipRequest();\r",
 									"//     }\r",
-									""
+									"\r",
+									"\r",
+									"if (pm.iterationData.get(\"Request\") !== 'CreatePatient') \r",
+									"{\r",
+									"    pm.execution.skipRequest();\r",
+									"}"
 								],
 								"type": "text/javascript",
 								"packages": {}
