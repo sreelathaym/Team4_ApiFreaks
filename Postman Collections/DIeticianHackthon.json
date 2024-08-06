@@ -5974,6 +5974,7 @@
 							"script": {
 								"id": "d55202cd-58c9-497b-a08d-cfc188b2d208",
 								"exec": [
+									"//validate status code",
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
 									"});",
@@ -6026,6 +6027,7 @@
 									"    pm.expect(response[0].morbidityMarkerMaxVal).to.be.a(\"number\");",
 									"});",
 									"",
+									"//validate schema",
 									"const schema = {",
 									"  //\"$schema\": \"http://json-schema.org/draft-04/schema#\",",
 									"  \"type\": \"array\",",
@@ -6102,6 +6104,7 @@
 							"script": {
 								"id": "d55202cd-58c9-497b-a08d-cfc188b2d208",
 								"exec": [
+									"//validate status",
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
 									"});",
@@ -6175,6 +6178,7 @@
 									"    });",
 									"});",
 									"",
+									"//validate schema",
 									"const schema = {",
 									"  ",
 									"  \"type\": \"array\",",
@@ -6325,6 +6329,7 @@
 							"script": {
 								"id": "d55202cd-58c9-497b-a08d-cfc188b2d208",
 								"exec": [
+									"//validate status code",
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
 									"});",
@@ -6388,6 +6393,7 @@
 									"    });",
 									"});",
 									"",
+									"//validate schema",
 									"const schema = {",
 									"  //\"$schema\": \"http://json-schema.org/draft-04/schema#\",",
 									"  \"type\": \"array\",",
