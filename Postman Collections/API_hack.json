@@ -14201,7 +14201,22 @@
 						},
 						"method": "DELETE",
 						"header": [],
-						"url": "{{base_URL}}/patient/{{patientId}}"
+						"url": {
+							"raw": "{{base_URL}}/patient/:id",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"patient",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1268"
+								}
+							]
+						}
 					},
 					"response": []
 				},
