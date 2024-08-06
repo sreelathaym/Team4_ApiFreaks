@@ -15073,9 +15073,9 @@
 							"script": {
 								"id": "6aef159b-84e6-42f2-87cc-66ff0de7d380",
 								"exec": [
-									"if (pm.iterationData.get(\"Request\") !== 'UpdatePatient') {\r",
-									"    pm.execution.skipRequest();\r",
-									"}"
+									"// if (pm.iterationData.get(\"Request\") !== 'UpdatePatient') {\r",
+									"//     pm.execution.skipRequest();\r",
+									"// }"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -15135,9 +15135,9 @@
 							"script": {
 								"id": "c0519ca1-3df5-4214-a409-4524f0ec4946",
 								"exec": [
-									"if (pm.iterationData.get(\"Request\") !== 'UpdateRequest') {\r",
-									"    pm.execution.skipRequest();\r",
-									"}"
+									"// if (pm.iterationData.get(\"Request\") !== 'UpdateRequest') {\r",
+									"//     pm.execution.skipRequest();\r",
+									"// }"
 								],
 								"type": "text/javascript",
 								"packages": {}
