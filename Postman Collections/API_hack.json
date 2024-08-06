@@ -15064,22 +15064,7 @@
 						},
 						"method": "DELETE",
 						"header": [],
-						"url": {
-							"raw": "{{base_URL}}/patient/:id",
-							"host": [
-								"{{base_URL}}"
-							],
-							"path": [
-								"patient",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "1493"
-								}
-							]
-						}
+						"url": "{{base_URL}}/patient/{{patientId}}"
 					},
 					"response": []
 				},
@@ -15094,6 +15079,19 @@
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
 									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "c0519ca1-3df5-4214-a409-4524f0ec4946",
+								"exec": [
+									"if (pm.iterationData.get(\"Request\") !== 'UpdateRequest') {\r",
+									"    pm.execution.skipRequest();\r",
+									"}"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -15113,6 +15111,15 @@
 						},
 						"method": "DELETE",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "{{base_URL}}/dietician/:dietid",
 							"host": [
@@ -15125,7 +15132,7 @@
 							"variable": [
 								{
 									"key": "dietid",
-									"value": "{{dieticianId}}"
+									"value": "2707"
 								}
 							]
 						}
