@@ -14278,12 +14278,20 @@
 							"script": {
 								"id": "d0f80eff-ad62-4f09-b844-d07c880a9f8b",
 								"exec": [
-									"var resp = pm.response.json();\r",
-									"pm.collectionVariables.set(\"Admin_Token\", resp.token);\r",
+									"// var resp = pm.response.json();\r",
+									"// pm.collectionVariables.set(\"Admin_Token\", resp.token);\r",
 									"\r",
-									"pm.test(\"Status code is 200\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
-									"});\r",
+									"// pm.test(\"Status code is 200\", function () {\r",
+									"//     pm.response.to.have.status(200);\r",
+									"// });\r",
+									"\r",
+									"if (pm.response.code === 200) {\r",
+									"    pm.environment.set(\"Admin_Token\", pm.response.json().token);\r",
+									"    postman.setNextRequest(\"CreateDietician \");\r",
+									"} else {\r",
+									"    postman.setNextRequest(null); // Stop the request chain if the login fails\r",
+									"}\r",
+									"\r",
 									"\r",
 									"const schema = {\r",
 									"  \"type\": \"object\",\r",
@@ -14359,7 +14367,7 @@
 					"response": []
 				},
 				{
-					"name": "CreateDietician Copy",
+					"name": "CreateDietician",
 					"event": [
 						{
 							"listen": "test",
