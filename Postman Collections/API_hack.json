@@ -11533,9 +11533,8 @@
 									"//       pm.execution.skipRequest();\r",
 									"// }\r",
 									"\r",
-									"if(pm.iterationData!==\"CreateRequest\")\r",
-									"{\r",
-									"  pm.execution.skipRequest;\r",
+									"if (pm.iterationData.get(\"Request\") !== 'CreateRequest') {\r",
+									"    pm.execution.skipRequest();\r",
 									"}"
 								],
 								"type": "text/javascript",
@@ -12306,9 +12305,9 @@
 							"script": {
 								"id": "27cd307c-b49b-4959-8cf1-5539bdd1082d",
 								"exec": [
-									"// if (pm.iterationData.get(\"Request\") !== 'CreatePatient') {\r",
-									"//     pm.execution.skipRequest();\r",
-									"// }\r",
+									"if (pm.iterationData.get(\"Request\") !== 'CreatePatient') {\r",
+									"    pm.execution.skipRequest();\r",
+									"}\r",
 									"\r",
 									"pm.collectionVariables.set(\"statuscode\", pm.iterationData.get('statuscode'));"
 								],
