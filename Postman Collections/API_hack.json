@@ -14285,11 +14285,6 @@
 									"//     pm.response.to.have.status(200);\r",
 									"// });\r",
 									"\r",
-									"if (pm.response.code === 200) {\r",
-									"    pm.environment.set(\"Admin_Token\", pm.response.json().token);\r",
-									"   pm.execution.setNextRequest(\"CreateDietician \");\r",
-									"} \r",
-									"\r",
 									"\r",
 									"const schema = {\r",
 									"  \"type\": \"object\",\r",
@@ -14420,8 +14415,7 @@
 									"    pm.execution.setNextRequest(\"GetallDietcianinfo\");\r",
 									"    } else {\r",
 									"        pm.execution.setNextRequest(\"CreateDietician\");\r",
-									"   \r",
-									""
+									"    }"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -14432,25 +14426,6 @@
 							"script": {
 								"id": "5b4459cc-18af-4817-b3fa-cb0d2835621f",
 								"exec": [
-									"// pm.collectionVariables.set(\"statuscode\", pm.iterationData.get('Dieiticanstatuscode'));\r",
-									"// let statuscode1 = pm.collectionVariables.get(\"Dieiticanstatuscode\");\r",
-									"// console.log(statuscode1);\r",
-									"\r",
-									"// if (pm.iterationData.get(\"Request\") !== 'CreateRequest') {\r",
-									"//     pm.execution.skipRequest();\r",
-									"// }\r",
-									"// const phonenumber = require('lodash').random(1900,2020);\r",
-									"// pm.collectionVariables.set(\"randomNumber\", phonenumber )\r",
-									"// console.log(phonenumber);\r",
-									"// const BirthYear = require('lodash').random(1900,2020);\r",
-									"// pm.collectionVariables.set(\"BirthYear\", BirthYear )\r",
-									"// console.log(BirthYear);\r",
-									"const adminToken = pm.environment.get(\"Admin_Token\");\r",
-									"\r",
-									"pm.request.headers.add({\r",
-									"    key: \"Authorization\",\r",
-									"    value: `Bearer ${adminToken}`\r",
-									"});\r",
 									""
 								],
 								"type": "text/javascript",
@@ -14643,12 +14618,7 @@
 									"// if (pm.iterationData.get(\"Request\") !== 'UpdateRequest') {\r",
 									"//     pm.execution.skipRequest();\r",
 									"// }\r",
-									"const adminToken = pm.collectionVariables.get(\"admin_token\");\r",
-									"\r",
-									"pm.request.headers.add({\r",
-									"    key: \"Authorization\",\r",
-									"    value: `Bearer ${adminToken}`\r",
-									"});"
+									""
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -15150,11 +15120,11 @@
 									"// }\r",
 									"\r",
 									"// pm.collectionVariables.set(\"statuscode\", pm.iterationData.get('statuscode'));\r",
-									"const dieticianToken = pm.collectionVariables.get(\"Dietician_token\");\r",
-									"pm.request.headers.add({\r",
-									"    key: \"Authorization\",\r",
-									"    value: `Bearer ${dieticianToken}`\r",
-									"});"
+									"// const dieticianToken = pm.collectionVariables.get(\"Dietician_token\");\r",
+									"// pm.request.headers.add({\r",
+									"//     key: \"Authorization\",\r",
+									"//     value: `Bearer ${dieticianToken}`\r",
+									"// });"
 								],
 								"type": "text/javascript",
 								"packages": {}
