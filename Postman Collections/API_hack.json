@@ -13178,7 +13178,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{Dietician_Token}}"
+								"token": "{{Dietician_token}}"
 							}
 						},
 						"method": "GET",
@@ -13910,7 +13910,7 @@
 								{
 									"key": "file",
 									"type": "file",
-									"src": "9Xsx4k7uG/Diabetic and Hemogram Test_Thyrocare lab.pdf (1).pdf"
+									"src": "_R7wRVBwO/HyperThyroid_Report_final.pdf"
 								}
 							]
 						},
