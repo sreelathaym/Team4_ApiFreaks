@@ -6574,6 +6574,7 @@
 							"script": {
 								"id": "d55202cd-58c9-497b-a08d-cfc188b2d208",
 								"exec": [
+									"//validate status code",
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
 									"});",
@@ -6637,6 +6638,8 @@
 									"    });",
 									"});",
 									"",
+									"",
+									"//validate schema",
 									"const schema = {",
 									"  //\"$schema\": \"http://json-schema.org/draft-04/schema#\",",
 									"  \"type\": \"array\",",
@@ -14659,7 +14662,24 @@
 						},
 						"method": "GET",
 						"header": [],
-						"url": "{{base_URL}}/patient/testReports/viewFile/{{fileId}}"
+						"url": {
+							"raw": "{{base_URL}}/patient/testReports/viewFile/:filei{{fileId}}",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"patient",
+								"testReports",
+								"viewFile",
+								":filei{{fileId}}"
+							],
+							"variable": [
+								{
+									"key": "filei{{fileId}}",
+									"value": ""
+								}
+							]
+						}
 					},
 					"response": []
 				},
