@@ -14488,7 +14488,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "\r\n{\r\n  \"ContactNumber\": \"{{contactnumber}}{{Phonenumber}}\",//phonenumber added\r\n  \"DateOfBirth\": \"{{Dateofbirth}}/{{BirthYear}}\",\r\n  \"Education\": \"{{education}}\",\r\n  \"Email\": \"{{email}}_{{BirthYear}}@gmail.com\",\r\n  \"Firstname\": \"{{firstname}}\",\r\n  \"HospitalCity\": \"{{hospitalcity}}\",\r\n  \"HospitalName\": \"{{hospitalname}}\",\r\n  \"HospitalPincode\": \"{{hospitalpincode}}\",\r\n  \"HospitalStreet\": \"{{hospitalstreet}}\",\r\n  \"Lastname\": \"{{lastname}}\"\r\n \r\n}\r\n\r\n",
+							"raw": "\r\n{\r\n  \"ContactNumber\": \"{{contactnumber}}\",\r\n  \"DateOfBirth\": \"{{Dateofbirth}}\",\r\n  \"Education\": \"{{education}}\",\r\n  \"Email\": \"{{email}}\",\r\n  \"Firstname\": \"{{firstname}}\",\r\n  \"HospitalCity\": \"{{hospitalcity}}\",\r\n  \"HospitalName\": \"{{hospitalname}}\",\r\n  \"HospitalPincode\": \"{{hospitalpincode}}\",\r\n  \"HospitalStreet\": \"{{hospitalstreet}}\",\r\n  \"Lastname\": \"{{lastname}}\"\r\n \r\n}\r\n\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -14968,11 +14968,11 @@
 									"var patientId = response.patientId;",
 									"var patientEmail = response.Email;",
 									"",
-									"if (pm.response.code === 201) {",
-									"    // Set collection variables for later use",
-									"    pm.collectionVariables.set(\"patientId\", patientId);",
-									"    pm.collectionVariables.set(\"PEmail\", patientEmail);",
-									"}",
+									"// if (pm.response.code === 201) {",
+									"//     // Set collection variables for later use",
+									"//     pm.collectionVariables.set(\"patientId\", patientId);",
+									"//     pm.collectionVariables.set(\"PEmail\", patientEmail);",
+									"// }",
 									"pm.test(\"Status code\", function () {",
 									"    pm.response.to.have.status(pm.collectionVariables.get(\"statuscode\"));",
 									"});",
@@ -14983,6 +14983,8 @@
 									"if (pm.response.code === 201) {",
 									"    validCount++;",
 									"    pm.collectionVariables.set(\"validCount\", validCount);",
+									"     pm.collectionVariables.set(\"patientId\", patientId);",
+									"    pm.collectionVariables.set(\"PEmail\", patientEmail);",
 									"    if (validCount === 3) {  // third valid scenario (first in create dietician, second in update dietician)",
 									"    pm.execution.setNextRequest(GetAllPatients ); ",
 									"    } else {",
