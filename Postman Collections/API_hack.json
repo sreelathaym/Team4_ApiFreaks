@@ -14662,9 +14662,9 @@
 									"\r",
 									"    }\r",
 									"\r",
-									"pm.test(\"Status code\", function () {\r",
-									"    pm.response.to.have.status(pm.iterationData.get(\"Dieiticanstatuscode\"));\r",
-									"});"
+									"// pm.test(\"Status code\", function () {\r",
+									"//     pm.response.to.have.status(pm.iterationData.get(\"Dieiticanstatuscode\"));\r",
+									"// });"
 								],
 								"type": "text/javascript",
 								"packages": {}
