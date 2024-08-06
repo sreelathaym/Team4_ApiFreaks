@@ -11614,7 +11614,7 @@
 									"// });\r",
 									"\r",
 									"pm.test(\"Status code\", function () {\r",
-									"    pm.response.to.have.status(pm.collectionVariables.get(\"Dieiticanstatuscode\"));\r",
+									"    pm.response.to.have.status(pm.iterationData.get(\"Dieiticanstatuscode\"));\r",
 									"});\r",
 									"var jsonData = pm.response.json();\r",
 									"pm.collectionVariables.set(\"dieticianId\",jsonData.id);\r",
@@ -11665,9 +11665,9 @@
 							"script": {
 								"id": "5b4459cc-18af-4817-b3fa-cb0d2835621f",
 								"exec": [
-									"pm.collectionVariables.set(\"statuscode\", pm.iterationData.get('Dieiticanstatuscode'));\r",
-									"let statuscode1 = pm.collectionVariables.get(\"Dieiticanstatuscode\");\r",
-									"console.log(statuscode1);\r",
+									"// pm.collectionVariables.set(\"statuscode\", pm.iterationData.get('Dieiticanstatuscode'));\r",
+									"// let statuscode1 = pm.collectionVariables.get(\"Dieiticanstatuscode\");\r",
+									"// console.log(statuscode1);\r",
 									"\r",
 									"// if (pm.iterationData.get(\"Request\") !== 'CreateRequest') {\r",
 									"//     pm.execution.skipRequest();\r",
@@ -11855,7 +11855,7 @@
 							"script": {
 								"id": "0bc97771-a44d-41e6-8223-3230175e1671",
 								"exec": [
-									" pm.collectionVariables.set(\"statuscode\", pm.iterationData.get('statuscode'));\r",
+									" //pm.collectionVariables.set(\"statuscode\", pm.iterationData.get('statuscode'));\r",
 									"// let statuscode1 = pm.collectionVariables.get(\"statuscode\");\r",
 									"// console.log(statuscode1);\r",
 									"\r",
@@ -11875,7 +11875,7 @@
 									"\r",
 									"\r",
 									"pm.test(\"Status code\", function () {\r",
-									"    pm.response.to.have.status(pm.collectionVariables.get(\"Dieiticanstatuscode\"));\r",
+									"    pm.response.to.have.status(pm.iterationData.get(\"Dieiticanstatuscode\"));\r",
 									"});"
 								],
 								"type": "text/javascript",
