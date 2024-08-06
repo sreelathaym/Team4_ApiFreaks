@@ -12844,7 +12844,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"{{firstname}}\",\n\"LastName\": \"{{lastname}}\",\n\"ContactNumber\": \"{{contactnumber}}\",\n\"Email\": \"{{email}}\",\n\"Allergy\": \"{{allergy}}\",\n\"FoodPreference\": \"{{FoodPref}}\",\n\"CuisineCategory\":\"{{Cuisine}}\",\n\"DateOfBirth\": \"{{Dateofbirth}}\"\n}"
+									"value": "{ \"FirstName\": \"{{firstname}}\",\n\"LastName\": \"{{lastname}}\",\n\"ContactNumber\": \"{{contactnumber}}\",\n\"Email\": \"{{email}}\",\n\"Allergy\": \"{{Allergy}}\",\n\"FoodPreference\": \"{{FoodPref}}\",\n\"CuisineCategory\":\"{{Cuisine}}\",\n\"DateOfBirth\": \"{{Dateofbirth}}\"\n}"
 								},
 								{
 									"key": "file",
