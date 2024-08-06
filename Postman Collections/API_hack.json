@@ -12833,7 +12833,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{Dietician_Token}}"
+								"token": "{{Dietician_token}}"
 							}
 						},
 						"method": "POST",
@@ -13889,7 +13889,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{Dietician_Token}}"
+								"token": "{{Dietician_token}}"
 							}
 						},
 						"method": "PUT",
@@ -18001,7 +18001,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "d9abf580-1bc9-4a98-949e-b3f9b68743e6",
+				"id": "231591ea-f060-4f75-b054-1f9d09dd4e75",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -18012,7 +18012,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "dafb64b1-738a-4443-8603-a6955faee8be",
+				"id": "aa18ad5f-44e7-4bdf-9950-099b9a526a84",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -18040,26 +18040,6 @@
 			"key": "base_URL",
 			"value": "https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician",
 			"type": "string"
-		},
-		{
-			"key": "dieticianId",
-			"value": ""
-		},
-		{
-			"key": "dieticianPsw",
-			"value": ""
-		},
-		{
-			"key": "dieticianEmail",
-			"value": ""
-		},
-		{
-			"key": "Dietician_token",
-			"value": ""
-		},
-		{
-			"key": "statuscode",
-			"value": ""
 		}
 	]
 }
