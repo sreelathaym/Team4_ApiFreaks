@@ -13712,7 +13712,7 @@
 									"",
 									"var schema = ",
 									"  {",
-									"  \"$schema\": \"http://json-schema.org/draft-04/schema#\",",
+									" // \"$schema\": \"http://json-schema.org/draft-04/schema#\",",
 									"  \"type\": \"object\",",
 									"  \"properties\": {",
 									"    \"patientId\": {",
@@ -13877,9 +13877,9 @@
 							"script": {
 								"id": "27cd307c-b49b-4959-8cf1-5539bdd1082d",
 								"exec": [
-									"if (pm.iterationData.get(\"Request\") !== 'UpdatePatient') {\r",
-									"    pm.execution.skipRequest();\r",
-									"}"
+									"// if (pm.iterationData.get(\"Request\") !== 'UpdatePatient') {\r",
+									"//     pm.execution.skipRequest();\r",
+									"// }"
 								],
 								"type": "text/javascript",
 								"packages": {}
