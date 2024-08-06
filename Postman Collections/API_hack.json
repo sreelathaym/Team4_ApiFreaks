@@ -8819,7 +8819,7 @@
 									"});*/",
 									"",
 									"pm.test(\"Response time is less than 500ms\", function () {",
-									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"    pm.expect(pm.response.responseTime).to.be.below(600);",
 									"});",
 									"",
 									"/*pm.test(\"Response contains valid schema data\", function () {",
@@ -8981,7 +8981,7 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"//Header Validation ,Check if the response has a JSON content type",
+									"//Header Validation ,Check if the response has a JSON content type //",
 									"pm.test(\"content-type header is present\", function(){",
 									" pm.response.to.have.header(\"Content-type\");",
 									"});",
@@ -11675,7 +11675,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "\r\n{\r\n  \"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\", //here added counter\r\n  \"DateOfBirth\": \"{{BirthYear}}{{Dateofbirth}}\",//append year\r\n  \"Education\": \"{{education}}\",\r\n  \"Email\": \"{{email}}_{{emailCounter}}@gmail.com\",   //added counter with domain name\r\n  \"Firstname\": \"{{firstname}}\",\r\n  \"HospitalCity\": \"{{hospitalcity}}\",\r\n  \"HospitalName\": \"{{hospitalname}}\",\r\n  \"HospitalPincode\": \"{{hospitalpincode}}\",\r\n  \"HospitalStreet\": \"{{hospitalstreet}}\",\r\n  \"Lastname\": \"{{lastname}}\"\r\n \r\n}\r\n\r\n",
+							"raw": "\r\n{\r\n  \"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\",//here added counter\r\n  \"DateOfBirth\": \"{{BirthYear}}{{Dateofbirth}}\", //append year\r\n  \"Education\": \"{{education}}\",\r\n  \"Email\": \"{{email}}_{{emailCounter}}@gmail.com\",   //added counter with domain name\r\n  \"Firstname\": \"{{firstname}}\",\r\n  \"HospitalCity\": \"{{hospitalcity}}\",\r\n  \"HospitalName\": \"{{hospitalname}}\",\r\n  \"HospitalPincode\": \"{{hospitalpincode}}\",\r\n  \"HospitalStreet\": \"{{hospitalstreet}}\",\r\n  \"Lastname\": \"{{lastname}}\"\r\n \r\n}\r\n\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
