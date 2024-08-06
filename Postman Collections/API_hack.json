@@ -11820,9 +11820,9 @@
 									"// let statuscode1 = pm.collectionVariables.get(\"statuscode\");\r",
 									"// console.log(statuscode1);\r",
 									"\r",
-									"// if (pm.iterationData.get(\"Request\") !== 'UpdateRequest') {\r",
-									"//     pm.execution.skipRequest();\r",
-									"// }"
+									"if (pm.iterationData.get(\"Request\") !== 'UpdateRequest') {\r",
+									"    pm.execution.skipRequest();\r",
+									"}"
 								],
 								"type": "text/javascript",
 								"packages": {}
