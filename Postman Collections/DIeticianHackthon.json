@@ -12897,15 +12897,11 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"{{firstname}}\",\n\"LastName\": \"{{lastname}}\",\n \"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\",\n\"Email\": \"{{email}}_{{emailCounter}}@gmail.com\",\n\"Allergy\": \"{{Allergy}}\",\n\"FoodPreference\": \"{{FoodPref}}\",\n\"CuisineCategory\":\"{{Cuisine}}\",\n  \"DateOfBirth\": \"{{BirthYear}}{{Dateofbirth}}\",\n}"
+									"value": "{ \"FirstName\": \"{{firstname}}\",\n\"LastName\": \"{{lastname}}\",\n \"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\",\n\"Email\": \"{{email}}_{{emailCounter}}@gmail.com\",\n\"Allergy\": \"{{Allergy}}\",\n\"FoodPreference\": \"{{FoodPref}}\",\n\"CuisineCategory\":\"{{Cuisine}}\",\n  \"DateOfBirth\": \"{{BirthYear}}{{Dateofbirth}}\"\n}"
 								},
 								{
 									"key": "file",
 									"type": "file",
-									"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
-									"filesNotInWorkingDirectory": [
-										"wKxSci8Hj/Hypo Thyroid-Report.pdf (1).pdf"
-									],
 									"src": "wKxSci8Hj/Hypo Thyroid-Report.pdf (1).pdf"
 								}
 							]
@@ -18088,23 +18084,7 @@
 						},
 						"method": "DELETE",
 						"header": [],
-						"url": {
-							"raw": "{{base_URL}}/dietician/:dietid",
-							"host": [
-								"{{base_URL}}"
-							],
-							"path": [
-								"dietician",
-								":dietid"
-							],
-							"variable": [
-								{
-									"id": "043ff041-6e80-457d-883e-c445d38e4e81",
-									"key": "dietid",
-									"value": "2170"
-								}
-							]
-						}
+						"url": "{{base_URL}}/dietician/{{dieticianId}}"
 					},
 					"response": []
 				},
