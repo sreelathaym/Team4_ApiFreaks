@@ -14746,9 +14746,13 @@
 								"id": "788fbcac-15be-493b-a37c-6ba5611fac5b",
 								"exec": [
 									"// Updated assertion to compare response value as a string\r",
+									"// pm.test(\"Status code is 200\", function () {\r",
+									"//     pm.response.to.have.status(200);\r",
+									"// });\r",
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
+									"pm.execution.setNextRequest(\"Dietician_ogin\");\r",
 									"\r",
 									"\r",
 									"\r",
@@ -14845,7 +14849,7 @@
 					"response": []
 				},
 				{
-					"name": "Dietician_login Copy",
+					"name": "Dietician_login",
 					"event": [
 						{
 							"listen": "test",
