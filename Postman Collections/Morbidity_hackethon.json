@@ -9372,6 +9372,7 @@
 							"script": {
 								"id": "b40e3f53-dee7-4a8c-9782-292b38e2bb70",
 								"exec": [
+									"//verify status code",
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
 									"});",
@@ -9653,6 +9654,7 @@
 									"    });",
 									"});",
 									"",
+									"//schema validation",
 									"const schema = {",
 									"  //\"$schema\": \"http://json-schema.org/draft-04/schema#\",",
 									"  \"type\": \"array\",",
@@ -9834,6 +9836,7 @@
 							"script": {
 								"id": "7e2a0e98-7729-4f8d-af3f-f8e31b8551e6",
 								"exec": [
+									"//verify status code",
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
 									"});",
@@ -9897,6 +9900,7 @@
 									"    });",
 									"});",
 									"",
+									"//verify schema",
 									"const schema = {",
 									"  //\"$schema\": \"http://json-schema.org/draft-04/schema#\",",
 									"  \"type\": \"array\",",
@@ -14636,7 +14640,13 @@
 							}
 						},
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"url": "{{base_URL}}/patient/testReports/viewFile/{{fileId}}"
 					},
 					"response": []
