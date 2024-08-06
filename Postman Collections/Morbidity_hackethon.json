@@ -13980,15 +13980,11 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"{{firstname}}\",\n\"LastName\": \"{{lastname}}\",\n\"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\",\n\"Email\": \"{{email}}\",\n\"Allergy\": \"{{Allergy}}\",\n\"FoodPreference\": \"{{FoodPref}}\",\n\"CuisineCategory\":\"{{Cuisine}}\",\n \"DateOfBirth\": \"{{BirthYear}}{{Dateofbirth}}\",\n}"
+									"value": "{ \"FirstName\": \"{{firstname}}\",\n\"LastName\": \"{{lastname}}\",\n\"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\",\n\"Email\": \"{{PatientEmail}}\",\n\"Allergy\": \"{{Allergy}}\",\n\"FoodPreference\": \"{{FoodPref}}\",\n\"CuisineCategory\":\"{{Cuisine}}\",\n \"DateOfBirth\": \"{{BirthYear}}{{Dateofbirth}}\",\n}"
 								},
 								{
 									"key": "file",
 									"type": "file",
-									"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
-									"filesNotInWorkingDirectory": [
-										"_R7wRVBwO/HyperThyroid_Report_final.pdf"
-									],
 									"src": "_R7wRVBwO/HyperThyroid_Report_final.pdf"
 								}
 							]
@@ -14275,6 +14271,33 @@
 								"type": "text/javascript",
 								"packages": {}
 							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "ece53d83-9739-43c7-9c95-46cebd005c79",
+								"exec": [
+									"var emailCounter = pm.collectionVariables.get(\"emailCounter\") || 1;",
+									"// Increment the counter for the next run",
+									"emailCounter++;",
+									"pm.collectionVariables.set(\"emailCounter\", emailCounter )",
+									"console.log(emailCounter);",
+									"",
+									"var phoneCounter = pm.collectionVariables.get(\"phoneCounter\") || 1000;",
+									"// Increment the counter for the next run",
+									"phoneCounter++;",
+									"pm.collectionVariables.set(\"phoneCounter\", phoneCounter )",
+									"console.log(phoneCounter);",
+									"",
+									"var BirthYear = pm.collectionVariables.get(\"BirthYear\") || 1930;",
+									"// Increment the counter for the next run",
+									"BirthYear++;",
+									"pm.collectionVariables.set(\"BirthYear\", BirthYear )",
+									"console.log(BirthYear);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
 						}
 					],
 					"id": "623a8a27-1404-482e-ada2-fc96b1d6461f",
@@ -14482,6 +14505,33 @@
 									"pm.test(\"Schema is valid\", function () {",
 									"    pm.response.to.have.jsonSchema(schema);",
 									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "45e9e448-61a7-4ee2-998c-436997d336b7",
+								"exec": [
+									"var emailCounter = pm.collectionVariables.get(\"emailCounter\") || 1;",
+									"// Increment the counter for the next run",
+									"emailCounter++;",
+									"pm.collectionVariables.set(\"emailCounter\", emailCounter )",
+									"console.log(emailCounter);",
+									"",
+									"var phoneCounter = pm.collectionVariables.get(\"phoneCounter\") || 1000;",
+									"// Increment the counter for the next run",
+									"phoneCounter++;",
+									"pm.collectionVariables.set(\"phoneCounter\", phoneCounter )",
+									"console.log(phoneCounter);",
+									"",
+									"var BirthYear = pm.collectionVariables.get(\"BirthYear\") || 1930;",
+									"// Increment the counter for the next run",
+									"BirthYear++;",
+									"pm.collectionVariables.set(\"BirthYear\", BirthYear )",
+									"console.log(BirthYear);"
 								],
 								"type": "text/javascript",
 								"packages": {}
