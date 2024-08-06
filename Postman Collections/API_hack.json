@@ -7062,7 +7062,23 @@
 						},
 						"method": "GET",
 						"header": [],
-						"url": "{{base_URL}}/patient/testReports/patientId"
+						"url": {
+							"raw": "{{base_URL}}/patient/testReports/:patentId",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"patient",
+								"testReports",
+								":patentId"
+							],
+							"variable": [
+								{
+									"key": "patentId",
+									"value": "{{patientId}}"
+								}
+							]
+						}
 					},
 					"response": []
 				},
@@ -7111,7 +7127,7 @@
 						},
 						"method": "GET",
 						"header": [],
-						"url": "{{base_URL}}/patient/testReports/patientId"
+						"url": "{{base_URL}}/patient/testReports/patientName"
 					},
 					"response": []
 				},
@@ -14210,7 +14226,7 @@
 							"variable": [
 								{
 									"key": "dietid",
-									"value": "2026"
+									"value": "2170"
 								}
 							]
 						}
