@@ -13760,7 +13760,9 @@
 									"if (pm.response.code === 201) {",
 									"    // Set collection variables for later use",
 									"    pm.collectionVariables.set(\"patientId\", patientId);",
-									"    pm.collectionVariables.set(\"PEmail\", patientEmail);",
+									"    pm.collectionVariables.set(\"PatientEmail\", patientEmail);",
+									"    pm.collectionVariables.set(\"PatientDOB\", DateOfBirth);",
+									"    pm.collectionVariables.set(\"PatientContactNo\", ContactNumber);",
 									"}",
 									"",
 									"// Tests to validate response data",
@@ -14587,15 +14589,11 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"{{firstname}}\",\n\"LastName\": \"{{lastname}}\",\n\"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\",\n\"Email\": \"{{email}}\",\n\"Allergy\": \"{{Allergy}}\",\n\"FoodPreference\": \"{{FoodPref}}\",\n\"CuisineCategory\":\"{{Cuisine}}\",\n \"DateOfBirth\": \"{{BirthYear}}{{Dateofbirth}}\",\n}"
+									"value": "{ \"FirstName\": \"{{firstname}}\",\n\"LastName\": \"{{lastname}}\",\n\"ContactNumber\": \"{{PatientContactNo}}\",\n\"Email\": \"{{PatientEmail}}\",\n\"Allergy\": \"{{Allergy}}\",\n\"FoodPreference\": \"{{FoodPref}}\",\n\"CuisineCategory\":\"{{Cuisine}}\",\n \"DateOfBirth\": \"{{PatientDOB}}\"\n}"
 								},
 								{
 									"key": "Reports",
 									"type": "file",
-									"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
-									"filesNotInWorkingDirectory": [
-										"_DuXivL8A/Diabetic and Hemogram Test_Thyrocare lab.pdf.pdf"
-									],
 									"src": "_DuXivL8A/Diabetic and Hemogram Test_Thyrocare lab.pdf.pdf"
 								}
 							]
