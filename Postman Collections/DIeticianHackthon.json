@@ -14329,7 +14329,10 @@
 									"// Increment the counter for the next run",
 									"BirthYear++;",
 									"pm.collectionVariables.set(\"BirthYear\", BirthYear )",
-									"console.log(BirthYear);"
+									"console.log(BirthYear);",
+									"if (pm.iterationData.get(\"Request\") !== 'AddReports') {",
+									"    pm.execution.skipRequest();",
+									"}"
 								],
 								"type": "text/javascript",
 								"packages": {}
