@@ -12256,6 +12256,8 @@
 									"// Extract the patient ID and email",
 									"var patientId = response.patientId;",
 									"var patientEmail = response.Email;",
+									"var PatientDOB = response.DateOfBirth;",
+									"var PatientContactNo = response.ContactNumber;",
 									"",
 									"if (pm.response.code === 201) {",
 									"    // Set collection variables for later use",
@@ -14591,7 +14593,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "723c5a8a-99d9-4d90-a287-3cdb6d685cd6",
+				"id": "ddbf8732-d0c3-432f-9c40-eaf2b31d38e4",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -14602,7 +14604,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "e8be410e-4350-4ecd-8700-28b3ffba53ef",
+				"id": "c5681e1a-7567-4bee-93bc-0544e23f98a0",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -14630,70 +14632,6 @@
 			"key": "base_URL",
 			"value": "https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician",
 			"type": "string"
-		},
-		{
-			"key": "dieticianId",
-			"value": ""
-		},
-		{
-			"key": "dieticianPsw",
-			"value": ""
-		},
-		{
-			"key": "dieticianEmail",
-			"value": ""
-		},
-		{
-			"key": "Dietician_token",
-			"value": ""
-		},
-		{
-			"key": "statuscode",
-			"value": ""
-		},
-		{
-			"key": "patientId",
-			"value": ""
-		},
-		{
-			"key": "PEmail",
-			"value": ""
-		},
-		{
-			"key": "fileId",
-			"value": ""
-		},
-		{
-			"key": "emailCounter",
-			"value": ""
-		},
-		{
-			"key": "phoneCounter",
-			"value": ""
-		},
-		{
-			"key": "BirthYear",
-			"value": ""
-		},
-		{
-			"key": "PatientEmail",
-			"value": ""
-		},
-		{
-			"key": "Dietician_Token",
-			"value": ""
-		},
-		{
-			"key": "birthYear",
-			"value": ""
-		},
-		{
-			"key": "month",
-			"value": ""
-		},
-		{
-			"key": "date",
-			"value": ""
 		}
 	]
 }
