@@ -13541,14 +13541,11 @@
 								{
 									"key": "Reports",
 									"type": "file",
-									"src": [
-										"Z62HDOVuz/trail Positiveandnegative(Sheet1) (1).csv",
-										"3zfvV9j0G/Diabetic and Hemogram Test_Thyrocare lab.pdf.pdf"
-									]
+									"src": "swtasUw9M/Diabetic and Hemogram Test_Thyrocare lab.pdf.pdf"
 								}
 							]
 						},
-						"url": "{{base_URL}}/patient/newReports/1981"
+						"url": "https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/patient/newReports/1981"
 					},
 					"response": []
 				},
