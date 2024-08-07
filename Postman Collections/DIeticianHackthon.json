@@ -12517,7 +12517,7 @@
 									"const moment = require('moment');\r",
 									"\r",
 									"// Assuming the CSV column name is 'date'\r",
-									"let rawDate = pm.iterationData.get('dateDateofbirth');\r",
+									"let rawDate = pm.iterationData.get('Dateofbirth');\r",
 									"\r",
 									"if (rawDate) {\r",
 									"    // Format the date to \"yyyy-mm-dd\"\r",
