@@ -12097,7 +12097,7 @@
 									"// if ( pm.info.iteration < pm.info.iterationCount - 1) {\r",
 									"//     pm.execution.skipRequest();\r",
 									"// }\r",
-									"console.log(pm.iterationData.get(\"Dieiticanstatuscode\"))\r",
+									"console.log(\"my value \" + pm.iterationData.get(\"Dieiticanstatuscode\"))\r",
 									"if (pm.iterationData.get(\"Dieiticanstatuscode\")== 400)\r",
 									"    {\r",
 									"    pm.execution.skipRequest;\r",
