@@ -13551,7 +13551,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"{{patientFname}}\",\n\"LastName\": \"{{patientLname}}\",\n\"ContactNumber\": \"{{patientContactNo}}\",\n\"Email\": \"{{patientEmail}}\",\n\"Allergy\": \"{{foodAllergy}}\",\n\"FoodPreference\": \"{{foodpref\"}}\",\n\"CuisineCategory\":\"{{cuisineType}}\",\n \"DateOfBirth\": \"{{patientDOB}}\"\n}"
+									"value": "{ \"FirstName\": \"{{patientFname}}\",\n\"LastName\": \"{{patientLname}}\",\n\"ContactNumber\": \"{{patientContactNo}}\",\n\"Email\": \"{{patientEmail}}\",\n\"Allergy\": \"{{foodAllergy}}\",\n\"FoodPreference\": \"{{foodPref}}\",\n\"CuisineCategory\":\"{{cuisineType}}\",\n \"DateOfBirth\": \"{{patientDOB}}\"\n}"
 								},
 								{
 									"key": "Reports",
@@ -13645,7 +13645,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"{{patientFname}}\",\n\"LastName\": \"{{patientLname}}\",\n\"ContactNumber\": \"{{patientContactNo}}\",\n\"Email\": \"{{patientEmail}}\",\n\"Allergy\": \"{{foodAllergy}}\",\n\"FoodPreference\": \"{{foodpref\"}}\",\n\"CuisineCategory\":\"{{cuisineType}}\",\n \"DateOfBirth\": \"{{patientDOB}}\"\n}"
+									"value": "{ \"FirstName\": \"{{patientFname}}\",\n\"LastName\": \"{{patientLname}}\",\n\"ContactNumber\": \"{{patientContactNo}}\",\n\"Email\": \"{{patientEmail}}\",\n\"Allergy\": \"{{foodAllergy}}\",\n\"FoodPreference\": \"{{foodPref}}\",\n\"CuisineCategory\":\"{{cuisineType}}\",\n \"DateOfBirth\": \"{{patientDOB}}\"\n}"
 								},
 								{
 									"key": "Reports",
