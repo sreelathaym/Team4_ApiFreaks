@@ -11897,12 +11897,20 @@
 									"pm.collectionVariables.set(\"phoneCounter\", phoneCounter )\r",
 									"console.log(phoneCounter);\r",
 									"\r",
-									"var BirthYear = pm.collectionVariables.get(\"BirthYear\") || 1930;\r",
-									"// Increment the counter for the next run\r",
-									"BirthYear++;\r",
-									"pm.collectionVariables.set(\"BirthYear\", BirthYear )\r",
-									"console.log(BirthYear);\r",
+									"// var BirthYear = pm.collectionVariables.get(\"BirthYear\") || 1930;\r",
+									"// // Increment the counter for the next run\r",
+									"// BirthYear++;\r",
+									"// pm.collectionVariables.set(\"BirthYear\", BirthYear )\r",
+									"// console.log(BirthYear);\r",
 									"\r",
+									"const birthYear = require('lodash').random(1970,2020);\r",
+									"const month = require('lodash').random(1,28);\r",
+									"const date = require('lodash').random(1,12);\r",
+									"\r",
+									"pm.collectionVariables.set(\"birthYear\", birthYear )\r",
+									"pm.collectionVariables.set(\"month\", month )\r",
+									"pm.collectionVariables.set(\"date\", date )\r",
+									"console.log(BirthYear);\r",
 									"\r",
 									""
 								],
@@ -11989,7 +11997,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\r\n  \"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\",//here added counter\r\n \"DateOfBirth\": \"{{BirthYear}}{{Dateofbirth}}\",//append year\r\n  \"Education\": \"{{education}}\",\r\n  \"Email\": \"{{dieticianEmail}}\",\r\n  \"Firstname\": \"{{firstname}}\",\r\n  \"HospitalCity\":\" {{hospitalcity}}\",\r\n  \"HospitalName\": \"{{hospitalname}}\",\r\n  \"HospitalPincode\": \"{{hospitalpincode}}\",\r\n  \"HospitalStreet\":\"{{hospitalstreet}}\",\r\n  \"Lastname\": \"{{lastname}}\"\r\n \r\n}",
+							"raw": "{\r\n\r\n  \"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\",//here added counter\r\n \"DateOfBirth\": \"{{birthYear}}-{{month}}-{{date}}\", //append year\r\n  \"Education\": \"{{education}}\",\r\n  \"Email\": \"{{dieticianEmail}}\",\r\n  \"Firstname\": \"{{firstname}}\",\r\n  \"HospitalCity\":\" {{hospitalcity}}\",\r\n  \"HospitalName\": \"{{hospitalname}}\",\r\n  \"HospitalPincode\": \"{{hospitalpincode}}\",\r\n  \"HospitalStreet\":\"{{hospitalstreet}}\",\r\n  \"Lastname\": \"{{lastname}}\"\r\n \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -12436,7 +12444,16 @@
 									"    pm.execution.skipRequest();\r",
 									"}\r",
 									"\r",
-									"pm.collectionVariables.set(\"statuscode\", pm.iterationData.get('statuscode'));"
+									"pm.collectionVariables.set(\"statuscode\", pm.iterationData.get('statuscode'));\r",
+									"\r",
+									"const birthYear = require('lodash').random(1970,2020);\r",
+									"const month = require('lodash').random(1,28);\r",
+									"const date = require('lodash').random(1,12);\r",
+									"\r",
+									"pm.collectionVariables.set(\"birthYear\", birthYear )\r",
+									"pm.collectionVariables.set(\"month\", month )\r",
+									"pm.collectionVariables.set(\"date\", date )\r",
+									"console.log(BirthYear);"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -12462,7 +12479,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"{{Patient_Fname}}\",\n\"LastName\": \"{{Patient_Lname}}\",\n\"ContactNumber\": \"{{Patient_ContactNo}}\",\n\"Email\": \"{{Patient_emailId}}\",\n\"Allergy\": \"{{allergy}}\",\n\"FoodPreference\": \"{{FoodPref}}\",\n\"CuisineCategory\":\"{{Cuisine}}\",\n\"DateOfBirth\": \"{{Patient_DOB}}\"\n}"
+									"value": "{ \"FirstName\": \"{{Patient_Fname}}\",\n\"LastName\": \"{{Patient_Lname}}\",\n\"ContactNumber\": \"{{Patient_ContactNo}}\",\n\"Email\": \"{{Patient_emailId}}\",\n\"Allergy\": \"{{allergy}}\",\n\"FoodPreference\": \"{{FoodPref}}\",\n\"CuisineCategory\":\"{{Cuisine}}\",\n\"DateOfBirth\": \"{{birthYear}}-{{month}}-{{date}}\"\n}"
 								},
 								{
 									"key": "file",
