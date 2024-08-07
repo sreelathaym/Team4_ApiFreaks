@@ -12098,12 +12098,15 @@
 									"//     pm.execution.skipRequest();\r",
 									"// }\r",
 									"\r",
-									"// if (!(pm.iterationData.get(\"Dieiticanstatuscode\")=== 200) && (pm.iterationData.get(\"Request\") !== \"UpdateRequest\"))\r",
+									"// if ((pm.iterationData.get(\"Dieiticanstatuscode\")=== 200) && (pm.iterationData.get(\"Request\") !== \"UpdateRequest\"))\r",
 									"//     {\r",
 									"//     pm.execution.skipRequest;\r",
 									"//     }\r",
 									"\r",
-									""
+									"if (((pm.iterationData.get(\"Request\") !== \"UpdateRequest\")&& (pm.iterationData.get(\"Dieiticanstatuscode\")=== 400)) || ((pm.iterationData.get(\"Request\") === \"UpdateRequest\")&&(pm.iterationData.get(\"Dieiticanstatuscode\")=== 400 )))\r",
+									"    {\r",
+									"    pm.execution.skipRequest;\r",
+									"    }"
 								],
 								"type": "text/javascript",
 								"packages": {}
