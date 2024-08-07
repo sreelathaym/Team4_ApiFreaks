@@ -13550,7 +13550,7 @@
 					"response": []
 				},
 				{
-					"name": "TrailUpdateAddNewReprtsWithVital",
+					"name": "UpdateAddNewReprtsWithVital",
 					"event": [
 						{
 							"listen": "test",
@@ -13944,7 +13944,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"{{patientFname}}\",\n\"LastName\": \"{{patientLname}}\",\n\"ContactNumber\": \"{{patientContactNo}}\",\n\"Email\": \"{{patientEmail}}\",\n\"Allergy\": \"{{foodAllergy}}\",\n\"FoodPreference\": \"{{foodPref}}\",\n\"CuisineCategory\":\"{{cuisineType}}\",\n \"DateOfBirth\": \"{{patientDOB}}\"\n}"
+									"value": "{ \"FirstName\": \"{{firstname}}\",\n\"LastName\": \"{{lastname}}\",\n\"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\",\n\"Email\": \"{{patientEmail}}\",\n\"Allergy\": \"{{Allergy}}\",\n\"FoodPreference\": \"{{FoodPref}}\",\n\"CuisineCategory\":\"{{Cuisine}}\",\n \"DateOfBirth\": \"{{formattedDate}}\"\n}"
 								},
 								{
 									"key": "Reports",
@@ -13959,7 +13959,7 @@
 								}
 							]
 						},
-						"url": "{{base_URL}}/patient/newReports/1988"
+						"url": "{{base_URL}}/patient/newReports/{{patientId}}"
 					},
 					"response": []
 				},
