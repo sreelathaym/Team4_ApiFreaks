@@ -13541,7 +13541,17 @@
 								{
 									"key": "Reports",
 									"type": "file",
+									"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
+									"filesNotInWorkingDirectory": [
+										"swtasUw9M/Diabetic and Hemogram Test_Thyrocare lab.pdf.pdf"
+									],
 									"src": "swtasUw9M/Diabetic and Hemogram Test_Thyrocare lab.pdf.pdf"
+								},
+								{
+									"key": "vitals",
+									"value": "{\n       “Weight“ : 50.0,\n       “Height” : 20.0,\n        “Temperature” : 99.0,\n        “SP” : 2,\n        “DP” : 3\n \n             \t}\n",
+									"type": "text",
+									"disabled": true
 								}
 							]
 						},
