@@ -12701,8 +12701,8 @@
 									"    // Set collection variables for later use",
 									"    pm.collectionVariables.set(\"patientId\", patientId);",
 									"    pm.collectionVariables.set(\"PatientEmail\", patientEmail);",
-									"    pm.collectionVariables.set(\"PatientDOB\", Da);",
-									"    pm.collectionVariables.set(\"PatientContactNo.\", patientEmail);",
+									"    pm.collectionVariables.set(\"PatientDOB\", DateOfBirth);",
+									"    pm.collectionVariables.set(\"PatientContactNo\", ContactNumber);",
 									"}",
 									"pm.test(\"Status code\", function () {",
 									"    pm.response.to.have.status(pm.collectionVariables.get(\"statuscode\"));",
@@ -14351,7 +14351,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"{{firstname}}\",\n\"LastName\": \"{{lastname}}\",\n\"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\",\n\"Email\": \"{{PatientEmail}}\",\n\"Allergy\": \"{{Allergy}}\",\n\"FoodPreference\": \"{{FoodPref}}\",\n\"CuisineCategory\":\"{{Cuisine}}\",\n \"DateOfBirth\": \"{{BirthYear}}{{Dateofbirth}}\"\n}"
+									"value": "{ \"FirstName\": \"{{firstname}}\",\n\"LastName\": \"{{lastname}}\",\n\"ContactNumber\": \"{{PatientContactNo}}\",\n\"Email\": \"{{PatientEmail}}\",\n\"Allergy\": \"{{Allergy}}\",\n\"FoodPreference\": \"{{FoodPref}}\",\n\"CuisineCategory\":\"{{Cuisine}}\",\n \"DateOfBirth\": \"{{PatientDOB}}\"\n}"
 								},
 								{
 									"key": "Reports",
