@@ -13755,7 +13755,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"{{patientFname}}\",\n\"LastName\": \"{{patientLname}}\",\n\"ContactNumber\": \"{{patientContactNo}}\",\n\"Email\": \"{{patientEmail}}\",\n\"Allergy\": \"{{foodAllergy}}\",\n\"FoodPreference\": \"{{foodPref}}\",\n\"CuisineCategory\":\"{{cuisineType}}\",\n \"DateOfBirth\": \"{{patientDOB}}\"\n}"
+									"value": "{ \"FirstName\": \"{{patientFname}}\",\n\"LastName\": \"{{patientLname}}\",\n\"ContactNumber\": \"{{patientContactNo}}\",\n\"Email\": \"{{patientEmail}}\",\n\"Allergy\": \"{{foodAllergy}}\",\n\"FoodPreference\": \"{{foodPref}}\",\n\"CuisineCategory\": \"{{cuisineType}}\",\n \"DateOfBirth\": \"{{patientDOB}}\"\n}"
 								},
 								{
 									"key": "Reports",
@@ -13769,7 +13769,27 @@
 								}
 							]
 						},
-						"url": "{{base_URL}}/patient/newReports/{{patientId}}"
+						"url": {
+							"raw": "https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/patient/newReports/:id",
+							"protocol": "https",
+							"host": [
+								"dietician-july-api-hackathon-80f2590665cc",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"dietician",
+								"patient",
+								"newReports",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
 					},
 					"response": []
 				},
