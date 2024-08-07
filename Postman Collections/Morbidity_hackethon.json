@@ -13215,7 +13215,7 @@
 									"pm.collectionVariables.set(\"phoneCounter\", phoneCounter )\r",
 									"console.log(phoneCounter);\r",
 									"\r",
-									"/"
+									""
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -14711,6 +14711,26 @@
 		},
 		{
 			"key": "fileId",
+			"value": ""
+		},
+		{
+			"key": "patientFname",
+			"value": ""
+		},
+		{
+			"key": "patientLname",
+			"value": ""
+		},
+		{
+			"key": "foodPref",
+			"value": ""
+		},
+		{
+			"key": "foodAllergy",
+			"value": ""
+		},
+		{
+			"key": "cuisineType",
 			"value": ""
 		}
 	]
