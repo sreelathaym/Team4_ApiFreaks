@@ -15376,22 +15376,7 @@
 						},
 						"method": "DELETE",
 						"header": [],
-						"url": {
-							"raw": "{{base_URL}}/patient/:id",
-							"host": [
-								"{{base_URL}}"
-							],
-							"path": [
-								"patient",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "1493"
-								}
-							]
-						}
+						"url": "{{base_URL}}/patient/{{patientId}}"
 					},
 					"response": []
 				},
