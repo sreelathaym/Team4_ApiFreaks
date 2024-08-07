@@ -2650,31 +2650,23 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "9278e75e-9340-4fff-b6c3-27740f54607e",
+								"id": "389d6d61-5df6-47a8-90e6-bc1afd6aa63a",
 								"exec": [
+									"var response = pm.response.json();",
 									"",
-									"const response = pm.response.json();",
+									"// Extract the patient ID and email",
+									"var patientId = response.patientId;",
+									"var patientEmail = response.Email;",
 									"",
-									"// // Extract the program name and program status",
-									" const patientId = response.patientId;",
-									" const PatientEmail=response.Email",
-									"",
-									" if (pm.response.code === 201 ) {",
-									"   // Set collection variables for later use",
-									"pm.collectionVariables.set(\"patientId\", patientId);",
-									"pm.collectionVariables.set(\"PEmail\", PatientEmail);",
-									" }",
-									" console.log(\"patientId\", patientId);",
-									" console.log(\"PatientEmail\",PatientEmail);",
-									"",
-									"//Before storing collection variable validating",
-									"pm.test(\"patientId is stored as a collection variable\", function () {",
-									"    pm.expect(pm.collectionVariables.get(\"patientId\")).to.eql(patientId);",
-									"    ",
+									"if (pm.response.code === 201) {",
+									"    // Set collection variables for later use",
+									"    pm.collectionVariables.set(\"patientId\", patientId);",
+									"    pm.collectionVariables.set(\"PEmail\", patientEmail);",
+									"}",
+									"pm.test(\"Status code\", function () {",
+									"    pm.response.to.have.status(pm.collectionVariables.get(\"statuscode\"));",
 									"});",
-									"pm.test(\"Email is correct\", function () {",
-									"    pm.expect(response.Email).to.eql(expectedEmail);",
-									"",
+									"// Tests to validate response data",
 									"pm.test(\"First name is not empty\", function () {",
 									"    pm.expect(response.FirstName).to.not.be.empty;",
 									"});",
@@ -2696,10 +2688,11 @@
 									"pm.test(\"CuisineCategory is not empty\", function () {",
 									"    pm.expect(response.CuisineCategory).to.not.be.empty;",
 									"});",
-									"// Parse the response JSON",
+									"",
+									"// Parse the response JSON again for file morbidity",
 									"let res = pm.response.json();",
 									"",
-									"// Extract the fileId",
+									"// Extract the fileId from the FileMorbidity object",
 									"let fileId = Object.keys(res.FileMorbidity)[0];",
 									"",
 									"// Save the fileId to a collection variable",
@@ -2716,7 +2709,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "27cd307c-b49b-4959-8cf1-5539bdd1082d",
+								"id": "7d896d5d-d9ba-41b6-8312-743f2401b80e",
 								"exec": [
 									"// if (pm.iterationData.get(\"Request\") !== 'CreatePatient') {\r",
 									"//     pm.execution.skipRequest();\r",
@@ -2749,14 +2742,14 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"heeell\",\n\"LastName\": \"dyed\",\n\"ContactNumber\": \"1111340001\",\n\"Email\": \"Sde15235@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1972-08-05\"}"
+									"value": "{ \"FirstName\": \"heeell\",\n\"LastName\": \"dyed\",\n\"ContactNumber\": \"1121050001\",\n\"Email\": \"Sde15235673@acbd.com\",\n\"Allergy\": \"Soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"Indian\",\n\"DateOfBirth\": \"1977-08-05\"}"
 								},
 								{
 									"key": "file",
 									"type": "file",
 									"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
 									"filesNotInWorkingDirectory": [
-										"3Cryk6-G6/Diabetic and Hemogram Test_Thyrocare lab.pdf (1).pdf"
+										"BOWIfND3z/Hypo Thyroid-Report.pdf.pdf"
 									],
 									"src": "BOWIfND3z/Hypo Thyroid-Report.pdf.pdf"
 								}
