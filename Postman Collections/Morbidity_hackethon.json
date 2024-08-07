@@ -12106,11 +12106,10 @@
 							"script": {
 								"id": "fe8f79f1-f33d-4768-a435-040f23a6caa0",
 								"exec": [
-									"// console.log(pm.info.iteration, pm.info.iterationCount)\r",
-									"// if ( pm.info.iteration < pm.info.iterationCount - 1) {\r",
-									"//     pm.execution.skipRequest();\r",
-									"// }\r",
-									"console.log(\"my value \" + pm.iterationData.get(\"Dieiticanstatuscode\"))\r",
+									"console.log(pm.info.iteration, pm.info.iterationCount)\r",
+									"if ( pm.info.iteration < pm.info.iterationCount - 1) {\r",
+									"    pm.execution.skipRequest();\r",
+									"}\r",
 									"\r",
 									" \r",
 									"\r",
