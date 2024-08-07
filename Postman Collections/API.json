@@ -12274,11 +12274,7 @@
 							"script": {
 								"id": "d0f80eff-ad62-4f09-b844-d07c880a9f8b",
 								"exec": [
-									"// let resp = pm.response.json();\r",
-									"// pm.collectionVariables.set(\"Dietician_Token\", resp.token);\r",
-									"// pm.test(\"Status code is 200\", function () {\r",
-									"//     pm.resp.to.have.status(200);\r",
-									"// });\r",
+									"\r",
 									"var jsonData = JSON.parse(pm.response.text());\r",
 									"pm.collectionVariables.set(\"Dietician_token\", jsonData.token);\r",
 									"pm.test(\"Status code is 200\", function () {\r",
@@ -13525,7 +13521,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{Admin_Token}}"
+								"token": "{{Dietician_token}}"
 							}
 						},
 						"method": "PUT",
