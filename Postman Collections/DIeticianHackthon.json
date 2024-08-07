@@ -12986,7 +12986,7 @@
 								"id": "9278e75e-9340-4fff-b6c3-27740f54607e",
 								"exec": [
 									"",
-									"if(pm.iterationData.get(\"statuscode\")==201)",
+									"if(pm.iterationData.get(\"statuscode\")==200)",
 									"{",
 									"// Parse the JSON response",
 									"var jsonData = pm.response.json();",
