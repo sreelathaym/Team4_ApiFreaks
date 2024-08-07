@@ -15353,10 +15353,10 @@
 									"// if (pm.iterationData.get(\"Request\") !== 'UpdatePatient') {\r",
 									"//     pm.execution.skipRequest();\r",
 									"// }\r",
-									"// console.log(pm.info.iteration, pm.info.iterationCount)\r",
-									"// if ( pm.info.iteration < pm.info.iterationCount - 1) {\r",
-									"//     pm.execution.skipRequest();\r",
-									"// }"
+									"console.log(pm.info.iteration, pm.info.iterationCount)\r",
+									"if ( pm.info.iteration < pm.info.iterationCount - 1) {\r",
+									"    pm.execution.skipRequest();\r",
+									"}"
 								],
 								"type": "text/javascript",
 								"packages": {}
