@@ -11718,7 +11718,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "\r\n{\r\n  \"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\",//here added counter\r\n  \"DateOfBirth\": \"{{Dateofbirth}}{{BirthYear}}\", //append year\r\n  \"Education\": \"{{education}}\",\r\n  \"Email\": \"{{email}}_{{emailCounter}}@gmail.com\",   //added counter with domain name\r\n  \"Firstname\": \"{{firstname}}\",\r\n  \"HospitalCity\": \"{{hospitalcity}}\",\r\n  \"HospitalName\": \"{{hospitalname}}\",\r\n  \"HospitalPincode\": \"{{hospitalpincode}}\",\r\n  \"HospitalStreet\": \"{{hospitalstreet}}\",\r\n  \"Lastname\": \"{{lastname}}\"\r\n \r\n}\r\n\r\n",
+							"raw": "\r\n{\r\n  \"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\",//here added counter\r\n  \"DateOfBirth\": \"{{BirthYear}}{{Dateofbirth}}{{BirthYear}}\", //append year\r\n  \"Education\": \"{{education}}\",\r\n  \"Email\": \"{{email}}_{{emailCounter}}@gmail.com\",   //added counter with domain name\r\n  \"Firstname\": \"{{firstname}}\",\r\n  \"HospitalCity\": \"{{hospitalcity}}\",\r\n  \"HospitalName\": \"{{hospitalname}}\",\r\n  \"HospitalPincode\": \"{{hospitalpincode}}\",\r\n  \"HospitalStreet\": \"{{hospitalstreet}}\",\r\n  \"Lastname\": \"{{lastname}}\"\r\n \r\n}\r\n\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -11997,7 +11997,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\r\n  \"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\",//here added counter\r\n \"DateOfBirth\": \"{{birthYear}}-{{month}}-{{date}}\", //append year\r\n  \"Education\": \"{{education}}\",\r\n  \"Email\": \"{{dieticianEmail}}\",\r\n  \"Firstname\": \"{{firstname}}\",\r\n  \"HospitalCity\":\" {{hospitalcity}}\",\r\n  \"HospitalName\": \"{{hospitalname}}\",\r\n  \"HospitalPincode\": \"{{hospitalpincode}}\",\r\n  \"HospitalStreet\":\"{{hospitalstreet}}\",\r\n  \"Lastname\": \"{{lastname}}\"\r\n \r\n}",
+							"raw": "{\r\n\r\n  \"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\",//here added counter\r\n \"DateOfBirth\": \"{{BirthYear}}{{Dateofbirth}}\", //append year\r\n  \"Education\": \"{{education}}\",\r\n  \"Email\": \"{{dieticianEmail}}\",\r\n  \"Firstname\": \"{{firstname}}\",\r\n  \"HospitalCity\":\" {{hospitalcity}}\",\r\n  \"HospitalName\": \"{{hospitalname}}\",\r\n  \"HospitalPincode\": \"{{hospitalpincode}}\",\r\n  \"HospitalStreet\":\"{{hospitalstreet}}\",\r\n  \"Lastname\": \"{{lastname}}\"\r\n \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -12446,14 +12446,14 @@
 									"\r",
 									"pm.collectionVariables.set(\"statuscode\", pm.iterationData.get('statuscode'));\r",
 									"\r",
-									"const birthYear = require('lodash').random(1970,2020);\r",
-									"const month = require('lodash').random(1,28);\r",
-									"const date = require('lodash').random(1,12);\r",
+									"// const birthYear = require('lodash').random(1970,2020);\r",
+									"// const month = require('lodash').random(1,28);\r",
+									"// const date = require('lodash').random(1,12);\r",
 									"\r",
-									"pm.collectionVariables.set(\"birthYear\", birthYear )\r",
-									"pm.collectionVariables.set(\"month\", month )\r",
-									"pm.collectionVariables.set(\"date\", date )\r",
-									"console.log(BirthYear);"
+									"// pm.collectionVariables.set(\"birthYear\", birthYear )\r",
+									"// pm.collectionVariables.set(\"month\", month )\r",
+									"// pm.collectionVariables.set(\"date\", date )\r",
+									"// console.log(BirthYear);"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -12479,7 +12479,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"{{Patient_Fname}}\",\n\"LastName\": \"{{Patient_Lname}}\",\n\"ContactNumber\": \"{{Patient_ContactNo}}\",\n\"Email\": \"{{Patient_emailId}}\",\n\"Allergy\": \"{{allergy}}\",\n\"FoodPreference\": \"{{FoodPref}}\",\n\"CuisineCategory\":\"{{Cuisine}}\",\n\"DateOfBirth\": \"{{birthYear}}-{{month}}-{{date}}\"\n}"
+									"value": "{ \"FirstName\": \"{{Patient_Fname}}\",\n\"LastName\": \"{{Patient_Lname}}\",\n\"ContactNumber\": \"{{Patient_ContactNo}}\",\n\"Email\": \"{{Patient_emailId}}\",\n\"Allergy\": \"{{allergy}}\",\n\"FoodPreference\": \"{{FoodPref}}\",\n\"CuisineCategory\":\"{{Cuisine}}\",\n\"DateOfBirth\": \"{{Dateofbirth}}{{BirthYear}}\"\n}"
 								},
 								{
 									"key": "file",
