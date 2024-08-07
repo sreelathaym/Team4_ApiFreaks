@@ -13525,7 +13525,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{Dietician_token}}"
+								"token": "{{Admin_Token}}"
 							}
 						},
 						"method": "PUT",
@@ -13545,7 +13545,7 @@
 								}
 							]
 						},
-						"url": "https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/patient/newReports/1981"
+						"url": "{{base_URL}}/patient/newReports/{{patientId}}"
 					},
 					"response": []
 				},
