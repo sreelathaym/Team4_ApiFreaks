@@ -13989,24 +13989,7 @@
 						},
 						"method": "GET",
 						"header": [],
-						"url": {
-							"raw": "{{base_URL}}/patient/testReports/viewFile/:fileid",
-							"host": [
-								"{{base_URL}}"
-							],
-							"path": [
-								"patient",
-								"testReports",
-								"viewFile",
-								":fileid"
-							],
-							"variable": [
-								{
-									"key": "fileid",
-									"value": "{{fi"
-								}
-							]
-						}
+						"url": "{{base_URL}}/patient/testReports/viewFile/{{fileId}}"
 					},
 					"response": []
 				},
