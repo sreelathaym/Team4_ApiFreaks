@@ -12701,6 +12701,8 @@
 									"    // Set collection variables for later use",
 									"    pm.collectionVariables.set(\"patientId\", patientId);",
 									"    pm.collectionVariables.set(\"PatientEmail\", patientEmail);",
+									"    pm.collectionVariables.set(\"PatientDOB\", Da);",
+									"    pm.collectionVariables.set(\"PatientContactNo.\", patientEmail);",
 									"}",
 									"pm.test(\"Status code\", function () {",
 									"    pm.response.to.have.status(pm.collectionVariables.get(\"statuscode\"));",
@@ -13968,11 +13970,11 @@
 									"    pm.execution.skipRequest();\r",
 									"}\r",
 									"\r",
-									"var emailCounter = pm.collectionVariables.get(\"emailCounter\") || 1;\r",
-									"// Increment the counter for the next run\r",
-									"emailCounter++;\r",
-									"pm.collectionVariables.set(\"emailCounter\", emailCounter )\r",
-									"console.log(emailCounter);\r",
+									"// var emailCounter = pm.collectionVariables.get(\"emailCounter\") || 1;\r",
+									"// // Increment the counter for the next run\r",
+									"// emailCounter++;\r",
+									"// pm.collectionVariables.set(\"emailCounter\", emailCounter )\r",
+									"// console.log(emailCounter);\r",
 									"\r",
 									"var phoneCounter = pm.collectionVariables.get(\"phoneCounter\") || 1000;\r",
 									"// Increment the counter for the next run\r",
@@ -14349,15 +14351,11 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"{{firstname}}\",\n\"LastName\": \"{{lastname}}\",\n\"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\",\n\"Email\": \"{{email}}\",\n\"Allergy\": \"{{Allergy}}\",\n\"FoodPreference\": \"{{FoodPref}}\",\n\"CuisineCategory\":\"{{Cuisine}}\",\n \"DateOfBirth\": \"{{BirthYear}}{{Dateofbirth}}\",\n}"
+									"value": "{ \"FirstName\": \"{{firstname}}\",\n\"LastName\": \"{{lastname}}\",\n\"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\",\n\"Email\": \"{{PatientEmail}}\",\n\"Allergy\": \"{{Allergy}}\",\n\"FoodPreference\": \"{{FoodPref}}\",\n\"CuisineCategory\":\"{{Cuisine}}\",\n \"DateOfBirth\": \"{{BirthYear}}{{Dateofbirth}}\"\n}"
 								},
 								{
 									"key": "Reports",
 									"type": "file",
-									"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
-									"filesNotInWorkingDirectory": [
-										"_DuXivL8A/Diabetic and Hemogram Test_Thyrocare lab.pdf.pdf"
-									],
 									"src": "_DuXivL8A/Diabetic and Hemogram Test_Thyrocare lab.pdf.pdf"
 								},
 								{
