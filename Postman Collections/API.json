@@ -12985,7 +12985,7 @@
 							"script": {
 								"id": "9278e75e-9340-4fff-b6c3-27740f54607e",
 								"exec": [
-									"var response = pm.response.json();",
+									"",
 									"",
 									"// // Extract the patient ID and email",
 									"// var patientId = response.patientId;",
@@ -14679,7 +14679,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "07a3b483-4c8f-427b-8197-f2b0666f683c",
+				"id": "0be3d50d-00fa-443e-b051-640a2c8ba61b",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -14690,7 +14690,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "ba26867d-e51f-4c26-b87f-3dcd786074e5",
+				"id": "e24ca0ba-da91-4d83-9ed8-dc73c71cbf60",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -14720,6 +14720,38 @@
 			"type": "string"
 		},
 		{
+			"key": "emailCounter",
+			"value": ""
+		},
+		{
+			"key": "phoneCounter",
+			"value": ""
+		},
+		{
+			"key": "formattedDate",
+			"value": ""
+		},
+		{
+			"key": "dieticianId",
+			"value": ""
+		},
+		{
+			"key": "dieticianPsw",
+			"value": ""
+		},
+		{
+			"key": "dieticianEmail",
+			"value": ""
+		},
+		{
+			"key": "BirthYear",
+			"value": ""
+		},
+		{
+			"key": "Dietician_token",
+			"value": ""
+		},
+		{
 			"key": "statuscode",
 			"value": ""
 		},
@@ -14737,10 +14769,6 @@
 		},
 		{
 			"key": "patientContactNo",
-			"value": ""
-		},
-		{
-			"key": "formattedDate",
 			"value": ""
 		},
 		{
