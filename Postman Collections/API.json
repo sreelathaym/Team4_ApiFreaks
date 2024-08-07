@@ -11928,6 +11928,9 @@
 									"pm.test(\"Status code\", function () {\r",
 									"    pm.response.to.have.status(pm.iterationData.get(\"Dieiticanstatuscode\"));\r",
 									"});\r",
+									"\r",
+									"if(pm.iterationData.get(\"Dieiticanstatuscode\")==200)\r",
+									"{\r",
 									"var jsonData = pm.response.json();\r",
 									"\r",
 									"\r",
@@ -11962,7 +11965,7 @@
 									"pm.test(\"Education is not empty\",function(){\r",
 									"    pm.expect(jsonData.Education).to.be.not.empty;\r",
 									"});\r",
-									"  "
+									"}"
 								],
 								"type": "text/javascript",
 								"packages": {}
