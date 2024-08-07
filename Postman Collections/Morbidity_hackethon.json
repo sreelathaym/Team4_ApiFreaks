@@ -13969,6 +13969,8 @@
 									"if (pm.iterationData.get(\"Request\") !== 'UpdatePatient') {\r",
 									"    pm.execution.skipRequest();\r",
 									"}\r",
+									" pm.collectionVariables.set(\"PatientDOB\", DateOfBirth);\r",
+									"    pm.collectionVariables.set(\"PatientContactNo\", ContactNumber);\r",
 									"\r",
 									"// var emailCounter = pm.collectionVariables.get(\"emailCounter\") || 1;\r",
 									"// // Increment the counter for the next run\r",
