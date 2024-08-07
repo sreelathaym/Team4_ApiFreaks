@@ -11689,7 +11689,7 @@
 									"// pm.collectionVariables.set(\"BirthYear\", BirthYear )\r",
 									"// console.log(BirthYear);\r",
 									"\r",
-									"const birthYear = require('lodash').random(1900,2020);\r",
+									"const birthYear = require('lodash').random(1970,2020);\r",
 									"const month = require('lodash').random(1,28);\r",
 									"const date = require('lodash').random(1,12);\r",
 									"\r",
