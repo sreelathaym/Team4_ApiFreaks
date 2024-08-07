@@ -13764,6 +13764,7 @@
 							"script": {
 								"id": "da827469-56e0-438e-83dd-5441a9581a42",
 								"exec": [
+									"",
 									"// const response = pm.response.json();",
 									"",
 									"",
@@ -13915,10 +13916,18 @@
 								"id": "ece53d83-9739-43c7-9c95-46cebd005c79",
 								"exec": [
 									"",
-									"console.log(pm.info.iteration, pm.info.iterationCount)",
-									"if ( pm.info.iteration < pm.info.iterationCount - 1) {",
+									"// console.log(pm.info.iteration, pm.info.iterationCount)",
+									"// if ( pm.info.iteration < pm.info.iterationCount - 1) {",
+									"//     pm.execution.skipRequest();",
+									"// }",
+									"if (pm.iterationData.get(\"Request\") !== 'UpdatePatient') {",
 									"    pm.execution.skipRequest();",
-									"}"
+									"}",
+									"var phoneCounter = pm.collectionVariables.get(\"phoneCounter\") || 1000;",
+									"// Increment the counter for the next run",
+									"phoneCounter++;",
+									"pm.collectionVariables.set(\"phoneCounter\", phoneCounter )",
+									"console.log(phoneCounter);"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -13949,7 +13958,7 @@
 								{
 									"key": "Reports",
 									"type": "file",
-									"src": "postman-cloud:///1ef54052-b4b4-4ea0-9470-7f15c7c91652"
+									"src": "FtOx6zvex/Diabetic and Hemogram Test_Thyrocare lab.pdf.pdf"
 								},
 								{
 									"key": "vitals",
