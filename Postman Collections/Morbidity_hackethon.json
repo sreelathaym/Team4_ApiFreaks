@@ -11298,7 +11298,22 @@
 						},
 						"method": "DELETE",
 						"header": [],
-						"url": "{{base_URL}}/dietician/{{dieticianId}}"
+						"url": {
+							"raw": "{{base_URL}}/dietician/:id",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"dietician",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2618"
+								}
+							]
+						}
 					},
 					"response": []
 				},
