@@ -14834,6 +14834,20 @@
 								"type": "text/javascript",
 								"packages": {}
 							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "2e2d427e-f9f6-438e-9803-576068840e04",
+								"exec": [
+									"console.log(pm.info.iteration, pm.info.iterationCount)\r",
+									"if ( pm.info.iteration < pm.info.iterationCount - 1) {\r",
+									"    pm.execution.skipRequest();\r",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
 						}
 					],
 					"id": "1bf484c0-06db-497b-86f7-f837d29e7225",
@@ -14864,6 +14878,20 @@
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
 									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "816c206f-813c-45a2-b91d-baafbae49e1a",
+								"exec": [
+									"console.log(pm.info.iteration, pm.info.iterationCount)\r",
+									"if ( pm.info.iteration < pm.info.iterationCount - 1) {\r",
+									"    pm.execution.skipRequest();\r",
+									"}"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -14902,6 +14930,20 @@
 								"type": "text/javascript",
 								"packages": {}
 							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "2953e70e-4ce7-45f4-8be7-95911664a821",
+								"exec": [
+									"console.log(pm.info.iteration, pm.info.iterationCount)\r",
+									"if ( pm.info.iteration < pm.info.iterationCount - 1) {\r",
+									"    pm.execution.skipRequest();\r",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
 						}
 					],
 					"id": "e4e428e7-ef38-4b39-ae0e-2951af2c7a87",
@@ -14932,6 +14974,20 @@
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
 									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "9b6d979d-0853-47b7-affa-c3ec6217cdac",
+								"exec": [
+									"console.log(pm.info.iteration, pm.info.iterationCount)\r",
+									"if ( pm.info.iteration < pm.info.iterationCount - 1) {\r",
+									"    pm.execution.skipRequest();\r",
+									"}"
 								],
 								"type": "text/javascript",
 								"packages": {}
