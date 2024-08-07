@@ -14337,6 +14337,11 @@
 									"console.log(BirthYear);",
 									"if (pm.iterationData.get(\"Request\") !== 'AddReports') {",
 									"    pm.execution.skipRequest();",
+									"}",
+									"",
+									"console.log(pm.info.iteration, pm.info.iterationCount)",
+									"if ( pm.info.iteration < pm.info.iterationCount - 1) {",
+									"    pm.execution.skipRequest();",
 									"}"
 								],
 								"type": "text/javascript",
@@ -14571,7 +14576,11 @@
 									"// Increment the counter for the next run",
 									"BirthYear++;",
 									"pm.collectionVariables.set(\"BirthYear\", BirthYear )",
-									"console.log(BirthYear);"
+									"console.log(BirthYear);",
+									"console.log(pm.info.iteration, pm.info.iterationCount)",
+									"if ( pm.info.iteration < pm.info.iterationCount - 1) {",
+									"    pm.execution.skipRequest();",
+									"}"
 								],
 								"type": "text/javascript",
 								"packages": {}
