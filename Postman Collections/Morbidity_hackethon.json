@@ -13525,7 +13525,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{Admin_Token}}"
+								"token": "{{Dietician_token}}"
 							}
 						},
 						"method": "PUT",
