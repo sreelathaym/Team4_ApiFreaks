@@ -13576,13 +13576,13 @@
 									"let res = pm.response.json();",
 									"",
 									"// Extract the fileId",
-									"let fileId = Object.keys(res.FileMorbidity)[0];",
+									"// let fileId = Object.keys(res.FileMorbidity)[0];",
 									"",
-									"// Save the fileId to a collection variable",
-									"pm.collectionVariables.set(\"fileId\", fileId);",
+									"// // Save the fileId to a collection variable",
+									"// pm.collectionVariables.set(\"fileId\", fileId);",
 									"",
-									"// Optionally, log the fileId to verify",
-									"console.log(\"fileId saved to collection variable: \", fileId);",
+									"// // Optionally, log the fileId to verify",
+									"// console.log(\"fileId saved to collection variable: \", fileId);",
 									"",
 									"",
 									"const schema = {",
@@ -14289,7 +14289,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"password\": \"{{patientPsw}}\",\r\n    \"userLoginEmail\": \"{{Patientemail}}\"\r\n   \r\n}",
+							"raw": "{\r\n    \"password\": \"{{AdminPsw}}\",\r\n    \"userLoginEmail\": \"{{PatientEmail}}\"\r\n   \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
