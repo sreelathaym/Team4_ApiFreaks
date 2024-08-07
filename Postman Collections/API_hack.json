@@ -12312,7 +12312,7 @@
 									"pm.collectionVariables.set(\"patientDOB\",jsonData.DateOfBirth);",
 									"var jsonData = pm.response.json(); ",
 									"pm.collectionVariables.set(\"patientContactNo\",jsonData.ContactNumber);",
-									"}",
+									"",
 									"",
 									"",
 									"pm.test(\"Status code\", function () {",
@@ -12340,7 +12340,7 @@
 									"pm.test(\"CuisineCategory is not empty\", function () {",
 									"    pm.expect(response.CuisineCategory).to.not.be.empty;",
 									"});",
-									"",
+									"}",
 									"// Parse the response JSON again for file morbidity",
 									"let res = pm.response.json();",
 									"",
@@ -12562,7 +12562,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"{{firstname}}\",\n\"LastName\": \"{{lastname}}\",\n \"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\",\n\"Email\": \"{{email}}_{{emailCounter}}@gmail.com\",\n\"Allergy\": \"{{Allergy}}\",\n\"FoodPreference\": \"{{FoodPref}}\",\n\"CuisineCategory\":\"{{Cuisine}}\",\n  \"DateOfBirth\": \"formattedDate\"\n}"
+									"value": "{ \"FirstName\": \"{{firstname}}\",\n\"LastName\": \"{{lastname}}\",\n \"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\",\n\"Email\": \"{{email}}_{{emailCounter}}@gmail.com\",\n\"Allergy\": \"{{Allergy}}\",\n\"FoodPreference\": \"{{FoodPref}}\",\n\"CuisineCategory\":\"{{Cuisine}}\",\n  \"DateOfBirth\": \"{{formattedDate}}\"\n}"
 								},
 								{
 									"key": "file",
@@ -14791,6 +14791,10 @@
 		},
 		{
 			"key": "formattedDate",
+			"value": ""
+		},
+		{
+			"key": "fileId",
 			"value": ""
 		}
 	]
