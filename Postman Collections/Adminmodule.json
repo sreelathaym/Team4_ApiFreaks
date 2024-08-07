@@ -13551,7 +13551,23 @@
 								}
 							]
 						},
-						"url": "{{base_URL}}/patient/newReports/{{patientId}}"
+						"url": {
+							"raw": "{{base_URL}}/patient/newReports/:id",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"patient",
+								"newReports",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{patientId}}"
+								}
+							]
+						}
 					},
 					"response": []
 				},
