@@ -14740,6 +14740,54 @@
 			"key": "base_URL",
 			"value": "https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician",
 			"type": "string"
+		},
+		{
+			"key": "emailCounter",
+			"value": ""
+		},
+		{
+			"key": "phoneCounter",
+			"value": ""
+		},
+		{
+			"key": "dieticianId",
+			"value": ""
+		},
+		{
+			"key": "dieticianPsw",
+			"value": ""
+		},
+		{
+			"key": "dieticianEmail",
+			"value": ""
+		},
+		{
+			"key": "BirthYear",
+			"value": ""
+		},
+		{
+			"key": "Dietician_token",
+			"value": ""
+		},
+		{
+			"key": "statuscode",
+			"value": ""
+		},
+		{
+			"key": "patientId",
+			"value": ""
+		},
+		{
+			"key": "patientEmail",
+			"value": ""
+		},
+		{
+			"key": "patientDOB",
+			"value": ""
+		},
+		{
+			"key": "patientContactNo",
+			"value": ""
 		}
 	]
 }
