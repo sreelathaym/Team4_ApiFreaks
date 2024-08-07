@@ -12856,10 +12856,10 @@
 									"//     }\r",
 									"\r",
 									"\r",
-									"if (pm.iterationData.get(\"Request\") !== 'CreatePatient') \r",
-									"{\r",
-									"    pm.execution.skipRequest();\r",
-									"}"
+									"// if (pm.iterationData.get(\"Request\") !== 'CreatePatient') \r",
+									"// {\r",
+									"//     pm.execution.skipRequest();\r",
+									"// }"
 								],
 								"type": "text/javascript",
 								"packages": {}
