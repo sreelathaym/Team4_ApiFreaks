@@ -14363,7 +14363,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"{{firstname}}\",\n\"LastName\": \"{{lastname}}\",\n\"ContactNumber\": \"{{PatientContactNo}}\",\n\"Email\": \"{{PatientEmail}}\",\n\"Allergy\": \"{{Allergy}}\",\n\"FoodPreference\": \"{{FoodPref}}\",\n\"CuisineCategory\":\"{{Cuisine}}\",\n \"DateOfBirth\": \"{{PatientDOB}}\"\n}"
+									"value": "{ \"FirstName\": \"{{PatientFname}}\",\n\"LastName\": \"{{PatientLname}}\",\n\"ContactNumber\": \"{{PatientContactNo}}\",\n\"Email\": \"{{PatientEmail}}\",\n\"Allergy\": \"{{foodAllergy}}\",\n\"FoodPreference\": \"{{foodpref\"}}\",\n\"CuisineCategory\":\"{{cuisineType}}\",\n \"DateOfBirth\": \"{{PatientDOB}}\"\n}"
 								},
 								{
 									"key": "Reports",
