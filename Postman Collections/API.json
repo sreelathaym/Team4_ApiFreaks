@@ -13794,7 +13794,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"{{PatientFname}}\",\n\"LastName\": \"{{PatientLname}}\",\n\"ContactNumber\": \"{{PatientContactNo}}\",\n\"Email\": \"{{PatientEmail}}\",\n\"Allergy\": \"{{foodAllergy}}\",\n\"FoodPreference\": \"{{foodpref\"}}\",\n\"CuisineCategory\":\"{{cuisineType}}\",\n \"DateOfBirth\": \"{{PatientDOB}}\"\n}"
+									"value": "{ \"FirstName\": \"{{patientFname}}\",\n\"LastName\": \"{{patientLname}}\",\n\"ContactNumber\": \"{{patientContactNo}}\",\n\"Email\": \"{{patientEmail}}\",\n\"Allergy\": \"{{foodAllergy}}\",\n\"FoodPreference\": \"{{foodpref\"}}\",\n\"CuisineCategory\":\"{{cuisineType}}\",\n \"DateOfBirth\": \"{{patientDOB}}\"\n}"
 								},
 								{
 									"key": "Reports",
@@ -14655,7 +14655,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "ddbf8732-d0c3-432f-9c40-eaf2b31d38e4",
+				"id": "063f3e21-bac1-410b-a7db-de7004c38d48",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -14666,7 +14666,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "c5681e1a-7567-4bee-93bc-0544e23f98a0",
+				"id": "3c84572f-b453-4ccf-8924-6482ad94d457",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -14732,10 +14732,6 @@
 			"value": ""
 		},
 		{
-			"key": "PatientEmail",
-			"value": ""
-		},
-		{
 			"key": "patientEmail",
 			"value": ""
 		},
@@ -14749,10 +14745,6 @@
 		},
 		{
 			"key": "fileId",
-			"value": ""
-		},
-		{
-			"key": "Patient_Token",
 			"value": ""
 		}
 	]
