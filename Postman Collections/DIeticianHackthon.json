@@ -12267,7 +12267,7 @@
 									"//     pm.collectionVariables.set(\"PatientContactNo\", ContactNumber);",
 									"// }",
 									"",
-									"// Extract the patient ID and email",
+									"/// Extract the patient ID and email",
 									"var response = pm.response.json();",
 									"var patientId = response.patientId;",
 									"var patientEmail = response.Email;",
@@ -12281,6 +12281,7 @@
 									"    pm.collectionVariables.set(\"patientDOB\", patientDOB);",
 									"    pm.collectionVariables.set(\"patientContactNo\", patientContactNo);",
 									"}",
+									"",
 									"",
 									"pm.test(\"Status code\", function () {",
 									"    pm.response.to.have.status(pm.collectionVariables.get(\"statuscode\"));",
@@ -13228,11 +13229,11 @@
 									"pm.collectionVariables.set(\"phoneCounter\", phoneCounter )\r",
 									"console.log(phoneCounter);\r",
 									"\r",
-									"var BirthYear = pm.collectionVariables.get(\"BirthYear\") || 1930;\r",
-									"// Increment the counter for the next run\r",
-									"BirthYear++;\r",
-									"pm.collectionVariables.set(\"BirthYear\", BirthYear )\r",
-									"console.log(BirthYear);"
+									"// var BirthYear = pm.collectionVariables.get(\"BirthYear\") || 1930;\r",
+									"// // Increment the counter for the next run\r",
+									"// BirthYear++;\r",
+									"// pm.collectionVariables.set(\"BirthYear\", BirthYear )\r",
+									"// console.log(BirthYear);"
 								],
 								"type": "text/javascript",
 								"packages": {}
