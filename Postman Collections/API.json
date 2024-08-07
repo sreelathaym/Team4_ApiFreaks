@@ -13764,7 +13764,7 @@
 									"    pm.collectionVariables.set(\"PatientDOB\", DateOfBirth);",
 									"    pm.collectionVariables.set(\"PatientContactNo\", ContactNumber);",
 									"      pm.collectionVariables.set(\"PatientFname\", patientEmail);",
-									"    pm.collectionVariables.set(\"\", DateOfBirth);",
+									"    pm.collectionVariables.set(\"PatientLname\", DateOfBirth);",
 									"    pm.collectionVariables.set(\"PatientContactNo\", ContactNumber);",
 									"}",
 									"",
