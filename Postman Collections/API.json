@@ -15026,6 +15026,20 @@
 								"type": "text/javascript",
 								"packages": {}
 							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "375fe819-7fb7-4bfe-b2d4-80b1a2f2566d",
+								"exec": [
+									"console.log(pm.info.iteration, pm.info.iterationCount)\r",
+									"if ( pm.info.iteration < pm.info.iterationCount - 1) {\r",
+									"    pm.execution.skipRequest();\r",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
 						}
 					],
 					"id": "d971d890-d6ac-4011-b7c9-b4e4fc80fc8a",
@@ -15056,6 +15070,20 @@
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
 									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "04b077b2-e4b8-428d-b3a3-cbfdd00e9358",
+								"exec": [
+									"console.log(pm.info.iteration, pm.info.iterationCount)\r",
+									"if ( pm.info.iteration < pm.info.iterationCount - 1) {\r",
+									"    pm.execution.skipRequest();\r",
+									"}"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -15147,7 +15175,11 @@
 								"exec": [
 									"// if (pm.info.iteration !== 0) { \r",
 									"//       pm.execution.skipRequest();\r",
-									"// }"
+									"// }\r",
+									"console.log(pm.info.iteration, pm.info.iterationCount)\r",
+									"if ( pm.info.iteration < pm.info.iterationCount - 1) {\r",
+									"    pm.execution.skipRequest();\r",
+									"}"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -15320,6 +15352,10 @@
 								"exec": [
 									"// if (pm.iterationData.get(\"Request\") !== 'UpdatePatient') {\r",
 									"//     pm.execution.skipRequest();\r",
+									"// }\r",
+									"// console.log(pm.info.iteration, pm.info.iterationCount)\r",
+									"// if ( pm.info.iteration < pm.info.iterationCount - 1) {\r",
+									"//     pm.execution.skipRequest();\r",
 									"// }"
 								],
 								"type": "text/javascript",
@@ -15335,7 +15371,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{Dietician_token}}"
+								"token": "{{Dietician_Token}}"
 							}
 						},
 						"method": "DELETE",
@@ -15382,7 +15418,11 @@
 								"exec": [
 									"// if (pm.iterationData.get(\"Request\") !== 'UpdateRequest') {\r",
 									"//     pm.execution.skipRequest();\r",
-									"// }"
+									"// }\r",
+									"console.log(pm.info.iteration, pm.info.iterationCount)\r",
+									"if ( pm.info.iteration < pm.info.iterationCount - 1) {\r",
+									"    pm.execution.skipRequest();\r",
+									"}"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -15426,6 +15466,20 @@
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
 									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "ef3fdc86-8c35-4a15-9db6-eddaf8559665",
+								"exec": [
+									"console.log(pm.info.iteration, pm.info.iterationCount)\r",
+									"if ( pm.info.iteration < pm.info.iterationCount - 1) {\r",
+									"    pm.execution.skipRequest();\r",
+									"}"
 								],
 								"type": "text/javascript",
 								"packages": {}
