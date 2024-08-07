@@ -11683,11 +11683,11 @@
 									"pm.collectionVariables.set(\"phoneCounter\", phoneCounter )\r",
 									"console.log(phoneCounter);\r",
 									"\r",
-									"var BirthYear = pm.collectionVariables.get(\"BirthYear\") || 1930;\r",
-									"// Increment the counter for the next run\r",
-									"BirthYear++;\r",
-									"pm.collectionVariables.set(\"BirthYear\", BirthYear )\r",
-									"console.log(BirthYear);\r",
+									"// var BirthYear = pm.collectionVariables.get(\"BirthYear\") || 1930;\r",
+									"// // Increment the counter for the next run\r",
+									"// BirthYear++;\r",
+									"// pm.collectionVariables.set(\"BirthYear\", BirthYear )\r",
+									"// console.log(BirthYear);\r",
 									"\r",
 									"const birthYear = require('lodash').random(1900,2020);\r",
 									"const month = require('lodash').random(1,28);\r",
@@ -15471,6 +15471,18 @@
 		},
 		{
 			"key": "Dietician_Token",
+			"value": ""
+		},
+		{
+			"key": "birthYear",
+			"value": ""
+		},
+		{
+			"key": "month",
+			"value": ""
+		},
+		{
+			"key": "date",
 			"value": ""
 		}
 	]
