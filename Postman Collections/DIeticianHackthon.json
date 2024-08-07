@@ -14133,7 +14133,7 @@
 					]
 				},
 				{
-					"name": "UpdateAddNewReprtsWithVital Copy",
+					"name": "UpdateAddNewReprtsWithVital",
 					"event": [
 						{
 							"listen": "test",
@@ -14635,10 +14635,10 @@
 							"script": {
 								"id": "18f35a46-9c66-4ccd-b567-2c79a99718df",
 								"exec": [
-									"// console.log(pm.info.iteration, pm.info.iterationCount)\r",
-									"// if ( pm.info.iteration < pm.info.iterationCount - 1) {\r",
-									"//     pm.execution.skipRequest();\r",
-									"// }\r",
+									"console.log(pm.info.iteration, pm.info.iterationCount)\r",
+									"if ( pm.info.iteration < pm.info.iterationCount - 1) {\r",
+									"    pm.execution.skipRequest();\r",
+									"}\r",
 									"// if (!(pm.iterationData.get(\"statuscode\")== 200 && (pm.iterationData.get(\"Request\") == \"UpdatePatient\")))\r",
 									"//     {\r",
 									"//     pm.execution.skipRequest;\r",
