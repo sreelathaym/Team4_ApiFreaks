@@ -11683,6 +11683,23 @@
 									"pm.collectionVariables.set(\"phoneCounter\", phoneCounter )\r",
 									"console.log(phoneCounter);\r",
 									"\r",
+									"const moment = require('moment');\r",
+									"\r",
+									"// Assuming the CSV column name is 'date'\r",
+									"let rawDate = pm.iterationData.get('dateDateofbirth');\r",
+									"\r",
+									"if (rawDate) {\r",
+									"    // Format the date to \"yyyy-mm-dd\"\r",
+									"    let formattedDate = moment(rawDate, \"YYYYMMDD\").format(\"YYYY-MM-DD\");\r",
+									"\r",
+									"    // Set the formatted date as an environment variable or use it as needed\r",
+									"    pm.collectionVariables.set(\"formattedDate\", formattedDate);\r",
+									"\r",
+									"    console.log(formattedDate);\r",
+									"} else {\r",
+									"    console.error(\"Date not found in CSV data\");\r",
+									"}\r",
+									"\r",
 									"// var BirthYear = pm.collectionVariables.get(\"BirthYear\") || 1930;\r",
 									"// // Increment the counter for the next run\r",
 									"// BirthYear++;\r",
@@ -11718,7 +11735,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "\r\n{\r\n  \"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\",\r\n  \"DateOfBirth\": \"{{Dateofbirth}}\", \r\n  \"Education\": \"{{education}}\",\r\n  \"Email\": \"{{email}}_{{emailCounter}}@gmail.com\",  \r\n  \"Firstname\": \"{{firstname}}\",\r\n  \"HospitalCity\": \"{{hospitalcity}}\",\r\n  \"HospitalName\": \"{{hospitalname}}\",\r\n  \"HospitalPincode\": \"{{hospitalpincode}}\",\r\n  \"HospitalStreet\": \"{{hospitalstreet}}\",\r\n  \"Lastname\": \"{{lastname}}\"\r\n \r\n}\r\n\r\n",
+							"raw": "\r\n{\r\n  \"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\",\r\n  \"DateOfBirth\": \"{{formattedDate}}\", \r\n  \"Education\": \"{{education}}\",\r\n  \"Email\": \"{{email}}_{{emailCounter}}@gmail.com\",  \r\n  \"Firstname\": \"{{firstname}}\",\r\n  \"HospitalCity\": \"{{hospitalcity}}\",\r\n  \"HospitalName\": \"{{hospitalname}}\",\r\n  \"HospitalPincode\": \"{{hospitalpincode}}\",\r\n  \"HospitalStreet\": \"{{hospitalstreet}}\",\r\n  \"Lastname\": \"{{lastname}}\"\r\n \r\n}\r\n\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -12530,7 +12547,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"{{firstname}}\",\n\"LastName\": \"{{lastname}}\",\n \"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\",\n\"Email\": \"{{email}}_{{emailCounter}}@gmail.com\",\n\"Allergy\": \"{{Allergy}}\",\n\"FoodPreference\": \"{{FoodPref}}\",\n\"CuisineCategory\":\"{{Cuisine}}\",\n  \"DateOfBirth\": \"{{Dateofbirth}}\"\n}"
+									"value": "{ \"FirstName\": \"{{firstname}}\",\n\"LastName\": \"{{lastname}}\",\n \"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\",\n\"Email\": \"{{email}}_{{emailCounter}}@gmail.com\",\n\"Allergy\": \"{{Allergy}}\",\n\"FoodPreference\": \"{{FoodPref}}\",\n\"CuisineCategory\":\"{{Cuisine}}\",\n  \"DateOfBirth\": \"formattedDate\"\n}"
 								},
 								{
 									"key": "file",
