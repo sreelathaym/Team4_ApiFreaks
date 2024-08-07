@@ -13791,7 +13791,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{Dietician_Token}}"
+								"token": "{{Dietician_token}}"
 							}
 						},
 						"method": "GET",
@@ -13859,7 +13859,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{Dietician_Token}}"
+								"token": "{{Dietician_token}}"
 							}
 						},
 						"method": "GET",
@@ -13946,7 +13946,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{Dietician_Token}}"
+								"token": "{{Dietician_token}}"
 							}
 						},
 						"method": "GET",
@@ -13994,7 +13994,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{Dietician_Token}}"
+								"token": "{{Dietician_token}}"
 							}
 						},
 						"method": "GET",
@@ -14042,7 +14042,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{Dietician_Token}}"
+								"token": "{{Dietician_token}}"
 							}
 						},
 						"method": "GET",
@@ -14090,7 +14090,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{Dietician_Token}}"
+								"token": "{{Dietician_token}}"
 							}
 						},
 						"method": "GET",
@@ -14138,7 +14138,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{Dietician_Token}}"
+								"token": "{{Dietician_token}}"
 							}
 						},
 						"method": "GET",
@@ -14186,7 +14186,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{Dietician_Token}}"
+								"token": "{{Dietician_token}}"
 							}
 						},
 						"method": "GET",
@@ -14282,7 +14282,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{Dietician_Token}}"
+								"token": "{{Dietician_token}}"
 							}
 						},
 						"method": "POST",
@@ -14349,7 +14349,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{Dietician_Token}}"
+								"token": "{{Dietician_token}}"
 							}
 						},
 						"method": "GET",
@@ -14408,7 +14408,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{Dietician_Token}}"
+								"token": "{{Dietician_token}}"
 							}
 						},
 						"method": "GET",
