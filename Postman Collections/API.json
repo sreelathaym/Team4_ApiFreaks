@@ -13846,7 +13846,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"{{patientFname}}\",\n\"LastName\": \"{{patientLname}}\",\n\"ContactNumber\": \"{{patientContactNo}}\",\n\"Email\": \"{{patientEmail}}\",\n\"Allergy\": \"{{foodAllergy}}\",\n\"FoodPreference\": \"{{foodPref}}\",\n\"CuisineCategory\":\"{{cuisineType}}\",\n \"DateOfBirth\": \"{{patientDOB}}\"\n}"
+									"value": "{ \"FirstName\": \"pFname\",\n\"LastName\": \"Lname\",\n\"ContactNumber\": \"4564564567\",\n\"Email\": \"pmai@acb.com\",\n\"Allergy\": \"soy\",\n\"FoodPreference\": \"jain\",\n\"CuisineCategory\":\"indian\",\n \"DateOfBirth\": \"1988-02-07\"\n}"
 								},
 								{
 									"key": "Reports",
@@ -13860,7 +13860,23 @@
 								}
 							]
 						},
-						"url": "{{base_URL}}/patient/newReports/{{patientId}}"
+						"url": {
+							"raw": "{{base_URL}}/patient/newReports/:id",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"patient",
+								"newReports",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1899"
+								}
+							]
+						}
 					},
 					"response": []
 				},
