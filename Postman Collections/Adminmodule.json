@@ -12412,9 +12412,6 @@
 									"    pm.expect(jsonData.CuisineCategory).to.not.be.empty;",
 									"});",
 									"",
-									"// // Parse the response JSON again for file morbidity",
-									"// let res = pm.response.json();",
-									"",
 									"// Extract the fileId from the FileMorbidity object",
 									"let fileId = Object.keys(jsonData.FileMorbidity)[0];",
 									"",
@@ -12498,8 +12495,6 @@
 									"// pm.test(\"Response contsins valid schema data\", function () {",
 									"//     pm.response.to.have.jsonSchema(schema);",
 									"// });",
-									"",
-									"",
 									"}"
 								],
 								"type": "text/javascript",
