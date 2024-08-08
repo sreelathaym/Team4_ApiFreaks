@@ -2729,7 +2729,7 @@
 					"response": []
 				},
 				{
-					"name": "DeletedieticanByNoAuth",
+					"name": "N-DeletedieticanByNoAuth",
 					"event": [
 						{
 							"listen": "test",
@@ -2854,7 +2854,7 @@
 					]
 				},
 				{
-					"name": "DeletedieticanByInvdID",
+					"name": "N-DeletedieticanByInvdID",
 					"event": [
 						{
 							"listen": "test",
@@ -2982,56 +2982,7 @@
 					]
 				},
 				{
-					"name": "DeletedieticanByVldID",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "9dab26ca-83a5-4d4c-ab96-04434d06a4fd",
-								"exec": [
-									"pm.test(\"Status code is 200\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"id": "abc139b1-06b6-40d0-800c-9ba1ccac2efe",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{Admin_Token}}"
-							}
-						},
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "{{base_URL}}/dietician/:id",
-							"host": [
-								"{{base_URL}}"
-							],
-							"path": [
-								"dietician",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "2909"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "LogoutwithNoAuth",
+					"name": "N-LogoutwithNoAuth",
 					"event": [
 						{
 							"listen": "test",
@@ -3062,7 +3013,7 @@
 					"response": []
 				},
 				{
-					"name": "Logoutwithinvalidendpoint",
+					"name": "N-Logoutwithinvalidendpoint",
 					"event": [
 						{
 							"listen": "test",
@@ -3188,40 +3139,6 @@
 							"body": "{\n    \"timestamp\": \"2024-08-05T07:07:39.024+00:00\",\n    \"status\": 404,\n    \"error\": \"Not Found\",\n    \"path\": \"/dietician/logoutdietician123\"\n}"
 						}
 					]
-				},
-				{
-					"name": "Logoutwithvalidendpoint",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "51d59360-0f02-4ba7-bd34-423ac0bd4457",
-								"exec": [
-									"pm.test(\"Status code is 200\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"id": "2cb2551c-8cdb-4645-a6e5-30ba2fc8e988",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{Admin_Token}}"
-							}
-						},
-						"method": "GET",
-						"header": [],
-						"url": "{{base_URL}}/logoutdietician"
-					},
-					"response": []
 				}
 			],
 			"id": "63eadd0b-84d2-47a1-9f83-f26f1d7e107f"
@@ -4085,6 +4002,11 @@
 							"script": {
 								"id": "9278e75e-9340-4fff-b6c3-27740f54607e",
 								"exec": [
+									"pm.test(\"Status code\", function () {",
+									"    pm.response.to.have.status(pm.iterationData.get(\"statuscode\"));",
+									"});",
+									"",
+									"",
 									"",
 									"if(pm.iterationData.get(\"statuscode\")==201)",
 									"{",
@@ -4097,11 +4019,6 @@
 									"",
 									"pm.collectionVariables.set(\"patientContactNo\",jsonData.ContactNumber);",
 									"",
-									"",
-									"",
-									"pm.test(\"Status code\", function () {",
-									"    pm.response.to.have.status(pm.iterationData.get(\"statuscode\"));",
-									"});",
 									"// Tests to validate response data",
 									"pm.test(\"First name is not empty\", function () {",
 									"    pm.expect(jsonData.FirstName).to.not.be.empty;",
