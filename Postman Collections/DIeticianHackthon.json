@@ -3358,9 +3358,6 @@
 							"script": {
 								"id": "5b4459cc-18af-4817-b3fa-cb0d2835621f",
 								"exec": [
-									"// pm.collectionVariables.set(\"statuscode\", pm.iterationData.get('Dieiticanstatuscode'));\r",
-									"// let statuscode1 = pm.collectionVariables.get(\"Dieiticanstatuscode\");\r",
-									"// console.log(statuscode1);\r",
 									"\r",
 									"if (pm.iterationData.get(\"Request\") !== 'CreateRequest') {\r",
 									"    pm.execution.skipRequest();\r",
@@ -3393,21 +3390,7 @@
 									"} else {\r",
 									"    console.error(\"Date not found in CSV data\");\r",
 									"}\r",
-									"\r",
-									"// var BirthYear = pm.collectionVariables.get(\"BirthYear\") || 1930;\r",
-									"// // Increment the counter for the next run\r",
-									"// BirthYear++;\r",
-									"// pm.collectionVariables.set(\"BirthYear\", BirthYear )\r",
-									"// console.log(BirthYear);\r",
-									"\r",
-									"// const birthYear = require('lodash').random(1970,2020);\r",
-									"// const month = require('lodash').random(1,28);\r",
-									"// const date = require('lodash').random(1,12);\r",
-									"\r",
-									"// pm.collectionVariables.set(\"birthYear\", birthYear )\r",
-									"// pm.collectionVariables.set(\"month\", month )\r",
-									"// pm.collectionVariables.set(\"date\", date )\r",
-									"// console.log(BirthYear);"
+									""
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -4007,8 +3990,7 @@
 									"});",
 									"",
 									"",
-									"if(pm.iterationData.get(\"statuscode\")==201)",
-									"{",
+									"if(pm.iterationData.get(\"statuscode\") === 201){",
 									"var jsonData = pm.response.json();",
 									"pm.collectionVariables.set(\"patientId\",jsonData.patientId);",
 									"",
