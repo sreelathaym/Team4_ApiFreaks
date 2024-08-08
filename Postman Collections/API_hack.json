@@ -11575,13 +11575,13 @@
 							"script": {
 								"id": "f69b24d9-269d-4fac-a4d7-702e2f5ce64d",
 								"exec": [
-									"// if (pm.info.iteration !== 0) { \r",
-									"//       pm.execution.skipRequest();\r",
-									"// }\r",
+									"if (pm.info.iteration !== -1) { \r",
+									"      pm.execution.skipRequest();\r",
+									"}\r",
 									"\r",
-									"if (pm.iterationData.get(\"Request\") !== 'CreateRequest') {\r",
-									"    pm.execution.skipRequest();\r",
-									"}"
+									"// if (pm.iterationData.get(\"Request\") !== 'CreateRequest') {\r",
+									"//     pm.execution.skipRequest();\r",
+									"// }"
 								],
 								"type": "text/javascript",
 								"packages": {}
