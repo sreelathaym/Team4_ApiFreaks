@@ -4007,7 +4007,6 @@
 									"});",
 									"",
 									"",
-									"",
 									"if(pm.iterationData.get(\"statuscode\")==201)",
 									"{",
 									"var jsonData = pm.response.json();",
