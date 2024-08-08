@@ -3205,7 +3205,7 @@
 							"script": {
 								"id": "f69b24d9-269d-4fac-a4d7-702e2f5ce64d",
 								"exec": [
-									"if (pm.info.iteration !== -1) { \r",
+									"if (pm.info.iteration !== 0) { \r",
 									"      pm.execution.skipRequest();\r",
 									"}\r",
 									"\r",
@@ -3412,7 +3412,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "\r\n{\r\n  \"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\",\r\n  \"DateOfBirth\": \"{{formattedDate}}\", \r\n  \"Education\": \"{{education}}\",\r\n  \"Email\": \"{{email}}_{{emailCounter}}@boomail.com\",  \r\n  \"Firstname\": \"{{firstname}}\",\r\n  \"HospitalCity\": \"{{hospitalcity}}\",\r\n  \"HospitalName\": \"{{hospitalname}}\",\r\n  \"HospitalPincode\": \"{{hospitalpincode}}\",\r\n  \"HospitalStreet\": \"{{hospitalstreet}}\",\r\n  \"Lastname\": \"{{lastname}}\"\r\n \r\n}\r\n\r\n",
+							"raw": "\r\n{\r\n  \"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\",\r\n  \"DateOfBirth\": \"{{formattedDate}}\", \r\n  \"Education\": \"{{education}}\",\r\n  \"Email\": \"{{email}}_{{emailCounter}}@aoo.com\",  \r\n  \"Firstname\": \"{{firstname}}\",\r\n  \"HospitalCity\": \"{{hospitalcity}}\",\r\n  \"HospitalName\": \"{{hospitalname}}\",\r\n  \"HospitalPincode\": \"{{hospitalpincode}}\",\r\n  \"HospitalStreet\": \"{{hospitalstreet}}\",\r\n  \"Lastname\": \"{{lastname}}\"\r\n \r\n}\r\n\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4179,7 +4179,7 @@
 								{
 									"key": "patientInfo",
 									"type": "text",
-									"value": "{ \"FirstName\": \"{{firstname}}\",\n\"LastName\": \"{{lastname}}\",\n \"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\",\n\"Email\": \"{{email}}_{{emailCounter}}@gmail.com\",\n\"Allergy\": \"{{Allergy}}\",\n\"FoodPreference\": \"{{FoodPref}}\",\n\"CuisineCategory\":\"{{Cuisine}}\",\n  \"DateOfBirth\": \"{{formattedDate}}\"\n}"
+									"value": "{ \"FirstName\": \"{{firstname}}\",\n\"LastName\": \"{{lastname}}\",\n \"ContactNumber\": \"{{contactnumber}}{{phoneCounter}}\",\n\"Email\": \"{{email}}_{{emailCounter}}@soo.com\",\n\"Allergy\": \"{{Allergy}}\",\n\"FoodPreference\": \"{{FoodPref}}\",\n\"CuisineCategory\":\"{{Cuisine}}\",\n  \"DateOfBirth\": \"{{formattedDate}}\"\n}"
 								},
 								{
 									"key": "file",
